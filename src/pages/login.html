@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Pulsar</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="../assets/images/BlackLogo.png" alt="Logo"></a>
+    </header>
+
+    <main>
+        <div class="loginGrupo">
+            <div class="tituloLoginGrupo">
+                <h1>Bem-Vindo de volta!</h1>
+                <p>Acesse sua conta para gerenciar suas doações ou estoque.</p>
+            </div>
+
+            <form id="loginUsuario">
+                <div class="inputGrupo">
+                    <label for="email">E-mail</label>
+                    <div class="inputIcone">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input id="email" type="email" placeholder="exemplo@email.com">
+                    </div>
+                </div>
+
+                <div class="inputGrupo">
+                    <div class="senhaGrupo">
+                        <label for="senha">Senha</label>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                    <div class="inputIcone">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="senha" type="password" placeholder="Digite sua senha">
+                    </div>
+                </div>
+
+                <button class="entrarBotao" type="submit">Entrar</button>
+
+                <div class="cadastroLinha">
+                    <div></div>
+                    <span>OU</span>
+                    <div></div>
+                </div>
+
+                <p>Novo por aqui? <a href="cadastro.html">Cadastre-se</a></p>
+            </form>
+        </div>
+
+        <div class="LGPDGrupo">
+
+            <div class="criptografiaGrupo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="criptografiaConteudo">
+                    <span>ACESSO SEGURO</span>
+                    <p>Criptografia SSL</p>
+                </div>
+            </div>
+
+            <div class="criptografiaGrupo certificadoGrupo">
+                <i class="fa-solid fa-check"></i>
+                <div class="criptografiaConteudo">
+                    <span>CERTIFICADO</span>
+                    <p>Dados Protegidos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="direitosGrupo">
+            <div class="dadosGrupo">
+                <i class="fa-solid fa-lock"></i>
+                <p>Seus dados estão protegidos pela LGPD</p>
+            </div>
+
+            <div class="termosGrupo">
+                <p>Termos de Uso</p>
+                <p>Privacidade</p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../scripts/script.js"></script>
+
+</html>
