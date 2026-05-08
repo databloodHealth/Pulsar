@@ -1,16 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/styles/home.css" />
     <title>Pulsar - Blood Bank Management</title>
-</head>
-<body>
-    <div>
-        <h1>Bem vindos ao Pulsar</h1>
-        <span>Seu sistema de Gerenciamento de Banco de Sangue</span>
-    </div>
-</body>
-<script src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./src/assets/images/BlackLogo.png" alt="" />
+      </div>
+      <nav>
+        <a href="#" class="active">Inicio</a>
+        <a href="#">Sobre</a> 
+        <a href="#">Contato</a>
+        <a href="#">Triagem Online</a>
+      </nav>
+      <div class="actions">
+        <button class="secondary login">Entrar</button>
+        <button class="primary register">Cadastrar</button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="title">
+            <h1 class="title heroTitle">Doe sangue.</h1>
+            <h1 class="redTitle heroTitle">Salve vidas.</h1>
+          </div>
+          <p>
+            Seu gesto pode ser a esperança de alguém. Gerencie suas doações e ajude a manter os estoques vitais da nossa região sempre abastecidos.
+          </p>
+          <div class="buttons">
+              <button class="heroButton primary">Quero ser doador</button>
+              <button class="heroButton secondary">Saiba Mais</button>
+
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./src/assets/images/heroImg.png" alt="Hero Image" />
+        </div>
+        <div class="shape"></div>
+      </section>
+      <section class="whyDonate">
+        <div class="sectionTitle">
+            <h2>Por que doar sangue?</h2>
+            <p>Uma única doação pode salvar até quatro vidas. O processo é Simples, rápido e gera um impacto imensurável.</p>
+        </div>
+        <div class="reasons">
+            <div class="cardMuted reason impact">
+                <div class="cardTitle">
+                    <h3>Impacto Direto</h3>
+                    <span class="icon">*</span>
+                </div>
+                <p>Seu sangue é essencial para cirurgias, tratamentos de câncer e emergências. Não existe substituto sintético para o sangue humano.</p>
+                <div class="badges">
+                    <div class="badgeRed">
+                        <h3>4.500+</h3>
+                        <span>Doações necessárias por só um dia em ****</span>
+                    </div>
+                    <div class="badgeDark">
+                        <h3>4 Vidas</h3>
+                        <span>Podem ser salvas com apenas UMA doação</span>
+                    </div>
+                </div>
+                <div class="cardRed reason checkUp">
+                    <div class="cardTitle">
+                        <h3>Check-Up</h3>
+                        <span class="icon">*</span>
+                    </div>
+                </div>
+                <div class="cardRed reason cellRenewal">
+                    <div class="cardTitle">
+                        <h3>Renovação Celular</h3>
+                        <span class="icon">*</span>
+                    </div>
+                    <div class="contentReason">
+                        <p>Doar sangue ajuda na renovação das células sanguíneas do próprio doador.</p>
+                    </div>
+                </div>
+                <div class="cardDark reason slack">
+                    <div class="cardTitle">
+                        <h3>Direito a Folga</h3>
+                    </div>
+                    <div class="contentReason">
+                        <p>A legislação brasileira prevê um dia de folga anual para doadores de sangue.</p>
+                </div>
+                <div class="icon">
+                    <span>*</span>
+                </div>
+            </div>
+
+        </div>
+
+      </section>
+      <section class="process"> 
+        <div class="sectionTitle">
+            <h2>O processo de doação</h2>
+            <p>Um caminho simples, seguro e acompanhado por profissionais altamente qualificados.</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="stepNumber">
+                <span>1</span>
+                </div>
+                <h3>Cadastro</h3>
+                <p>Crie seu perfil, agende suas doações e acompanhe seu histórico de doações.</p>
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <div class="stepNumber">
+                <span>2</span>
+                </div>
+                <h3>Triagem</h3>
+                <p>Entrevista rápida e sigilosa para garantir a segurança de todos.</p>
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <div class="stepNumber">
+                <span>2</span>
+                </div>
+                <h3>Triagem</h3>
+                <p>Entrevista rápida e sigilosa para garantir a segurança de todos.</p>
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <div class="stepNumber">
+                <span>2</span>
+                </div>
+                <h3>Triagem</h3>
+                <p>Entrevista rápida e sigilosa para garantir a segurança de todos.</p>
+            </div>
+            <div class="buttonCTA">
+                <button class="primary processSection">Quero ser doador</button>
+            </div>
+      </section>
+      <section class="compatibility">
+
+
+      </section>
+
+      <section class="system">
+        <div class="colLeft">
+            <img src="./src/assets/images/DoctorTech.jpg" alt="">
+        </div>
+        <div class="colRight">
+        <h2>Cuidado que salva, tecnologia que conecta.</h2>
+        <p>Nossa plataforma utiliza os mais modernos protocolos de segurança para gerenciar o ciclo do sangue, desde a triagemm do doador até a entrega nos centros cirúrgicos.</p> 
+        <div class="list">
+            <div class="item">
+                <span class="icon">✓</span>
+                <div class="itemContent">
+                    <h3>Agendamento Online 24/7</h3>
+                    <p>Evite filas e escolha o melhor horário para a sua doação.</p>
+                </div>
+            </div>
+            <div class="item">
+                <span class="icon">✓</span>
+                <div class="itemContent">
+                    <h3>Agendamento Online 24/7</h3>
+                    <p>Evite filas e escolha o melhor horário para a sua doação.</p>
+                </div>
+            </div>
+            <div class="item">
+                <span class="icon">✓</span>
+                <div class="itemContent">
+                    <h3>Agendamento Online 24/7</h3>
+                    <p>Evite filas e escolha o melhor horário para a sua doação.</p>
+                </div>
+            </div>
+        </div>    
+        <div class="button">
+            <button class="primary">Comece agora a salvar vidas -></button>
+        </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./script.js"></script>
 </html>

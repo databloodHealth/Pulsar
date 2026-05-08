@@ -1,19 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", "Manrope";
+}
+
+:root {
+  --bg: #FFFFFF;
+  --white-e: #e3e3e3 ;
+  --card-red-bg: linear-gradient(135deg, #FF0000, #B41B0F);
+  --card-dark-bg: #0F172A;
+  --card-muted-bg: #F3F3F3;
+  --foreground: #1B1C1C;
+  --foreground-on-dark: #FFFFFF;
+  --muted-foreground: #475569;
+  --card-dark-subtitle: #E1F3FF;
+  --primary: #B41B0F;
+  --primary-light: #94140b;
+  --primary-foreground: #FFFFFF;
+  --border-red: solid 1px#B41B0F;
+  --badge-red-bg: #FFD7D3;
+  --badge-red-foreground: #B41B0F;
+  --badge-dark-bg: #2A3B63;
+  --badge-dark-muted-bg: rgba(145, 145, 145, 0.15);
+  --badge-dark-foreground: #FFFFFF;
+  --icon-primary: #B41B0F;
+  --icon-light: #FFFFFF;
 }
 
 body{
     height: 100vh;
-}
-
-div{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-direction: column;
+    overflow-x: hidden;
 }
