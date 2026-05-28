@@ -9,9 +9,9 @@
 }
 
 :root {
-  --bg: #FFFFFF;
-  --white-e: #e3e3e3;
-  --white-l: #f5f5fe;
+  --bg: #FBF9F8;
+  --gray-277: rgb(227, 227, 227);
+  --gray-245: rgb(245, 245, 245);
   --card-red-bg: linear-gradient(135deg, #FF0000, #B41B0F);
   --card-dark-bg: #0F172A;
   --card-muted-bg: #f0f0f0;
@@ -35,4 +35,5 @@ body{
     height: 100vh;
     overflow-x: hidden;
     position: relative;
+    background-color: var(--bg);
 }
