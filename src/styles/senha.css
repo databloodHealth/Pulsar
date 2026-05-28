@@ -1,63 +1,35 @@
 :root {
     --cinzaBody: #FBF9F8;
-
     --branco: #FFFFFF;
-
     --preto: #000000;
-
     --cinzaFonte: #3f3f3f;
-
     --cinzaInput: #EFEDED;
-
     --vermelhoBotao: #B41B0F;
-
     --vermelhoHover: #ee0000;
-
     --cinzaLinha: #c9c9c9;
-
     --vermelhoCadastro: #B41B0F;
-
     --cinzaFundo: #eeeeee;
-
     --verdeIconeFundo: #86F8C9;
-
     --verdeIcone: #005331;
-
     --azulIconeFundo: #D1E4FF;
-
     --azulIcone: #28496B;
-
     --azulFonte: #28496B;
-
     --cinzaIcone: #777777;
-
     --vermelhoFonte: #B41B0F;
-
     --traco: #E1BFB9;
-
     --escritaCinzaClara: #59413D;
-
     --backgroundEtapa: #E4E2E2;
-
     --azulLabel: #416084;
-
     --escritaCinzaClaraInput: #59413d79;
-
     --verdeEtapa: #86F8C9;
-
     --verdeCheckmark: #00513A;
-
     --escritaForte: #1B1C1C;
-
     --outlineVermelho: #E1BFB9;
-
     --linkVermelho: #9E2016;
-
     --linkVermelhoUnderline: #9e1f1642;
-
     --botaoVermelho: #9e1f1615;
-
-    --aHoverAzul: #4d90dd;
+    --aHoverAzul: #398ef0;
+    --lgpdBackground: #b4d4fe36;
 }
 
 * {
@@ -65,6 +37,11 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100svh;
+    background: var(--cinzaBody);
 }
 
 .content {
@@ -77,84 +54,61 @@
     gap: 50px;
 }
 
-body {
-    min-height: 100svh;
-    background: var(--cinzaBody);
-}
-
-header {
-    height: 6rem;
-    background-color: #ffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 2rem;
-}
-
-header img {
-    width: 7rem;
-}
-
 .etapas {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 45px;
-
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-        width: 40px;
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    .etapa {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-
-        h1 {
-            color: var(--escritaCinzaClara);
-            border-radius: 12px;
-            background-color: var(--backgroundEtapa);
-        }
-
-        h2 {
-            color: var(--escritaCinzaClara);
-        }
-    }
-
-    .active {
-        h1 {
-            background-color: var(--vermelhoFonte);
-            border-radius: 12px;
-            color: white;
-        }
-
-        h2 {
-            color: var(--vermelhoFonte);
-        }
-    }
-
-    .traco {
-        width: 64px;
-        height: 2px;
-        background-color: var(--traco);
-    }
-
 }
 
-.etapas .clear {
-    h1 {
-        background-color: var(--verdeEtapa);
-        position: relative;
-    }
+.etapas h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+}
+
+.etapas h2 {
+    font-size: 16px;
+}
+
+.etapas .etapa {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.etapas .etapa h1 {
+    color: var(--escritaCinzaClara);
+    border-radius: 12px;
+    background-color: var(--backgroundEtapa);
+}
+
+.etapas .etapa h2 {
+    color: var(--escritaCinzaClara);
+}
+
+.etapas .active h1 {
+    background-color: var(--vermelhoFonte);
+    border-radius: 12px;
+    color: white;
+}
+
+.etapas .active h2 {
+    color: var(--vermelhoFonte);
+}
+
+.etapas .traco {
+    width: 64px;
+    height: 2px;
+    background-color: var(--traco);
+}
+
+.etapas .clear h1 {
+    background-color: var(--verdeEtapa);
+    position: relative;
 }
 
 .etapas .checkmark {
@@ -206,7 +160,7 @@ header img {
     width: 530px;
     background: #fff;
     border: 1px solid #00000003;
-    box-shadow: 0px 20px 40px 0px #00000001;
+    box-shadow: 10px 20px 40px 0px #00000006;
     padding: 40px 40px 55px 40px;
     border-radius: 8px;
     display: flex;
@@ -214,9 +168,16 @@ header img {
     gap: 40px;
 }
 
+.senha-container .title {
+    display: flex;
+    padding-top: 5px;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .senha-container .title h1 {
     font-size: 27px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--escritaForte);
 }
 
@@ -224,13 +185,6 @@ header img {
     font-size: 16px;
     font-weight: 500;
     color: var(--escritaCinzaClara);
-}
-
-.senha-container .title {
-    display: flex;
-    padding-top: 5px;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .create_senha_form {
@@ -243,6 +197,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
 }
 
 .create_senha_form label {
@@ -260,7 +215,16 @@ header img {
     padding: 1rem;
     background-color: var(--cinzaInput);
     border-radius: 4px;
-    position: relative;
+}
+
+.create_senha_form .eye {
+    position: absolute;
+    right: 15px;
+    top: 67%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
 }
 
 .termos_checkbox {
@@ -278,7 +242,7 @@ header img {
     flex: 1;
     font-size: 14px;
     color: #59413D;
-    font-weight: 400;
+    font-weight: 500;
     word-spacing: 4px;
 }
 
@@ -359,6 +323,53 @@ header img {
     text-align: center;
     transition: color 0.5s;
 }
+
 .bot_form a:hover {
     color: var(--aHoverAzul);
+}
+
+.lgpd {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem;
+    position: fixed;
+    border-radius: 16px;
+    background-color: var(--lgpdBackground);
+    gap: 2rem;
+    bottom: 3rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.lgpd h2 {
+    font-size: 18px;
+    color: var(--azulLabel);
+    font-weight: 600;
+}
+
+.lgpd p {
+    font-size: 16px;
+    color: var(--azulFonte);
+    font-weight: 500;
+    word-spacing: 2px;
+}
+
+.confirmacao {
+    width: 50px;
+    height: 50px;
+    border-radius: 8%;
+    background-color: var(--azulLabel);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmacao img {
+    width: 20px;
 }

@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/senha.css">
+    <link rel="stylesheet" href="../styles/style_etapas.css">
     <link rel="script" href="../scripts/senha.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Registro - senha | Pulsar</title>
 </head>
 
@@ -51,23 +58,31 @@
                     </div>
 
                     <form action="" class="create_senha_form">
-                    <div class="senha-fill">
+                        <div class="senha-fill">
                             <label for="senha">Senha</label>
-                            <input type="password" name="senha" id="senha">
+                            <input type="password" name="senha" id="senha" required>
+                            <img src="../assets/images/lucide/eye-off.png" alt="" class="eye" id="toggleSenhaOff"
+                                style="display: none;">
+                            <img src="../assets/images/lucide/eye.png" alt="" class="eye" id="toggleSenha">
                         </div>
                         <div class="senha-fill">
                             <label for="conf-senha">Confirmar senha</label>
-                            <input type="password" name="conf-senha" id="conf-senha">
+                            <input type="password" name="conf-senha" id="conf-senha" required>
+                            <img src="../assets/images/lucide/eye-off.png" alt="" class="eye" id="toggleConfOff"
+                                style="display: none;">
+                            <img src="../assets/images/lucide/eye.png" alt="" class="eye" id="toggleConf">
                         </div>
                         <div class="termos_checkbox">
-                            <button class="checkbox" onclick="toggleCheckbox()"><div class="checkmark"></div></button>
+                            <button class="checkbox" onclick="toggleCheckbox()">
+                                <div class="checkmark"></div>
+                            </button>
                             <p>Li e concordo com os <a href="" class="termos_link">Termos de Uso</a> e a <a href=""
                                     class="termos_link">Política de Privacidade</a> para o tratamento de dados
                                 sensíveis.</p>
                         </div>
 
                         <div class="bot_form">
-                            <button>
+                            <button type="submit" id="finalizarCadastro">
                                 Finalizar Cadastro
                             </button>
                             <a href="">Voltar</a>
@@ -75,6 +90,18 @@
                     </form>
                 </section>
             </div>
+
+            <section class="lgpd">
+                <div class="confirmacao">
+                    <img src="../assets/images/lucide/conf-icon.png" alt="">
+                </div>
+                <div class="text">
+                    <h2>Seus dados estão protegidos</h2>
+                    <p>Utilizamos criptografia de ponta a ponta e seguimos rigorosamente a LGPD para garantir que seu
+                        histórico médico permaneça privado.</p>
+                </div>
+            </section>
+
         </div>
     </main>
     <script src="../scripts/senha.js"></script>

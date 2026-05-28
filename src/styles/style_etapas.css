@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --cinzaescuro: #475569;
+    --cinzaAzulado: #416084;
+    --cinzaClaro: #c1c1c1;
+    --cinzaCC: #dbdbdb;
+    --vermelhoClaro: #B91C1C;
+}
+
+input::placeholder {
+    color: var(--escritaCinzaClaraInput);
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input,
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    appearance: none;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+    display: none;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #FBF9F8;
+}
+
+header {
+    height: 6rem;
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+header img {
+    width: 7rem;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--cinzaescuro);
+}
+
+header nav a:hover {
+    color: var(--vermelhoClaro);
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--vermelhoClaro);
+    transition: 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header .boxUsuario {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-left: 1px solid var(--cinzaCC);
+    padding: 0 0 0 0.8rem;
+    gap: 1rem;
+}
+
+header .boxUsuario .infoUsuario #statusUsuario {
+    color: var(--cinzaAzulado);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+header .boxUsuario .infoUsuario #nomeUsuario {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+header .boxUsuario .exitIcon {
+    color: var(--cinzaescuro);
+    font-size: 1.4rem;
+    cursor: pointer;
+}

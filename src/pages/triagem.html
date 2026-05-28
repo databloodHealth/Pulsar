@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/triagem.css">
+    <link rel="stylesheet" href="../styles/style_etapas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Triagem | Pulsar</title>
+</head>
+
+<body>
+    <header>
+        <img src="../assets/images/BlackLogo.png" alt="Logo Pulsar">
+    </header>
+    <main>
+        <div class="content">
+            <div class="etapas">
+                <div class="etapa complete">
+                    <h1>
+                        <div class="checkmark"></div>
+                    </h1>
+                    <h2>Dados pessoais</h2>
+                </div>
+                <div class="traco"></div>
+                <div class="etapa active">
+                    <h1>2</h1>
+                    <h2>Triagem</h2>
+                </div>
+                <div class="traco"></div>
+                <div class="etapa">
+                    <h1>3</h1>
+                    <h2>Senha</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="adv">
+                    <div class="main_adv">
+                        <img src="../assets/images/adv_img_triagem.png" alt="imagem de triagem">
+                        <h1>Sua saúde é prioridade</h1>
+                        <p>As informações fornecidas garantem a segurança do doador e do receptor. Seus dados são
+                            confidenciais.</p>
+                    </div>
+                    <div class="priv_adv">
+                        <img src="../assets/images/priv_adv_triagem_icon.png" alt="Privacidade de Dados">
+                        <h1>Privacidade de Dados</h1>
+                        <p>Protocolos LGPD aplicados para proteção total da sua triagem clínica.</p>
+                    </div>
+                </div>
+                <div class="triagem">
+
+                    <form action="">
+                        <div class="tipagem">
+                            <div class="tipo">
+                                <label for="tipo sanguíneo">Tipo sanguíneo</label>
+                                <select name="tipo sanguíneo" id="tipo-sanguineo" required>
+                                    <option value="" disabled selected>Selecione seu tipo</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            <div class="peso">
+                                <label for="peso">Peso Atual (kg)</label>
+                                <input type="number" name="peso" id="peso" step="0.1" required placeholder="Ex: 70.5">
+                            </div>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="questionario">
+                            <h1>Questionário de Saúde</h1>
+
+                            <div class="pergunta">
+                                <div class="text">
+                                    <h2>Possui doenças crônicas?</h2>
+                                    <p>Ex: Diabetes, Hipertensão, doenças cardíacas.</p>
+                                </div>
+                                <div class="resposta">
+                                    <button class="resposta-btn active">Não</button>
+                                    <button class="resposta-btn">Sim</button>
+                                </div>
+                            </div>
+
+                            <div class="pergunta">
+                                <div class="text">
+                                    <h2>Faz uso de medicação contínua?</h2>
+                                    <p>Qualquer remédio de uso diário controlado.</p>
+                                </div>
+                                <div class="resposta">
+                                    <button class="resposta-btn active">Não</button>
+                                    <button class="resposta-btn">Sim</button>
+                                </div>
+                            </div>
+
+                            <div class="pergunta">
+                                <div class="text">
+                                    <h2>Fez tatuagem nos últimos 12 meses?</h2>
+                                    <p>Inclui micropigmentação e maquiagem definitiva.</p>
+                                </div>
+                                <div class="resposta">
+                                    <button class="resposta-btn active">Não</button>
+                                    <button class="resposta-btn">Sim</button>
+                                </div>
+                            </div>
+
+                            <div class="pergunta">
+                                <div class="text">
+                                    <h2>Doou sangue nos últimos 60 dias?</h2>
+                                    <p>Válido para homens e mulheres.</p>
+                                </div>
+                                <div class="resposta">
+                                    <button class="resposta-btn active">Não</button>
+                                    <button class="resposta-btn">Sim</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="bottom">
+                            <a href="">Voltar</a>
+                            <button type="submit">Próximo Passo</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
