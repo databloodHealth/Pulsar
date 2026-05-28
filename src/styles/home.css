@@ -19,8 +19,8 @@ header {
   transform: rotate(45deg);
 } */
 
-button{
-  border: none;
+a{
+  text-decoration: none;
 }
 
 .logo img {
@@ -80,7 +80,7 @@ nav a.active::after {
   gap: 1rem;
 }
 
-.actions button {
+.actions a {
   padding: 0.6rem 1rem;
   border: none;
   font-weight: 500;
@@ -136,21 +136,23 @@ nav a.active::after {
   }
 }
 
- button.primary {
+ a.primary {
   background-color: var(--primary);
   color: #fff;
   transition: .5s ease;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     background-color: var(--primary-light);
   }
 }
 
-button.secondary {
+a.secondary {
   background-color: var(--white-l);
   color: var(--foreground);
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     background-color: var(--white-e);
@@ -353,7 +355,7 @@ button.secondary {
   justify-content: center;
 }
 
-button.processSection{
+a.processSection{
   padding: 0.8rem;
   width: 20%;
   font-size: 1rem;
@@ -364,7 +366,7 @@ button.processSection{
   transition: background-color 0.3s ease;
 }
 
-button.processSection:hover{
+a.processSection:hover{
   background-color: var(--primary-light);
 }
 
@@ -447,7 +449,7 @@ button.processSection:hover{
   justify-content: center;
 }
 
-.button button {
+.button a {
   padding: .8rem .6rem;
   width: 100%;
   border: none;
@@ -602,7 +604,7 @@ table {
     justify-content: space-between;
   }
 
-  .donate .colLeft button{
+  .donate .colLeft a{
     padding: .8rem 1.5rem;
     background-color: var(--primary);
     font-weight: 500;
@@ -613,7 +615,7 @@ table {
     transition: background-color .5s ease;
   }
 
-  .donate .colLeft button:hover{
+  .donate .colLeft a:hover{
     background-color: var(--primary-light);
   }
 
