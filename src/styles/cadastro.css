@@ -165,7 +165,7 @@ main {
     outline: none;
     height: 50px;
     width: 100%;
-    background-color: var(--cinzaInput);
+    background-color: var(--gray-245);
     border-radius: 4px;
     font-size: 16px;
     padding: 14px;

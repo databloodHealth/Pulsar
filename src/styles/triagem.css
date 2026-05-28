@@ -34,7 +34,7 @@
 
 body {
     min-height: 100svh;
-    background-color: var(--cinzaBody);
+    background-color: var(--bg);
 }
 
 .content {
@@ -46,6 +46,7 @@ body {
     gap: 50px;
     margin-bottom: 70px;
     margin-top: 30px;
+    padding: 0 0 5rem 0;
 }
 
 .etapas {
@@ -79,7 +80,7 @@ body {
 .etapas .etapa h1 {
     color: var(--escritaCinzaClara);
     border-radius: 12px;
-    background-color: var(--backgroundEtapa);
+    background-color: var(--gray-277);
 }
 
 .etapas .etapa h2 {
@@ -87,13 +88,13 @@ body {
 }
 
 .etapas .active h1 {
-    background-color: var(--vermelhoFonte);
+    background-color: var(--primary);
     border-radius: 12px;
     color: white;
 }
 
 .etapas .active h2 {
-    color: var(--vermelhoFonte);
+    color: var(--primary);
 }
 
 .etapas .traco {
@@ -138,7 +139,7 @@ body {
 
 .main_adv {
     width: 100%;
-    background-color: var(--adv_background);
+    background-color: var(--gray-245);
     border-radius: 12px;
     padding: 30px;
     display: flex;
@@ -243,7 +244,7 @@ body {
     appearance: none;
     -webkit-appearance: none;
     outline: none;
-    background-color: var(--cinzaInput);
+    background-color: var(--gray-245);
     color: var(--containerTitulo);
 }
 
@@ -253,7 +254,7 @@ body {
     border: 0;
     font-weight: 500;
     font-size: 16px;
-    background-color: var(--cinzaInput);
+    background-color: var(--gray-245);
     color: var(--containerTitulo);
 }
 
@@ -297,7 +298,7 @@ body {
     gap: 8px;
     padding: 1rem;
     border-radius: 8px;
-    background-color: var(--cinzaInput);
+    background-color: var(--gray-245);
 }
 
 .triagem form .questionario .resposta {
