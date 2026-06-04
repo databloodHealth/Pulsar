@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+
+    --branco: #FFFFFF;
+    --preto: #000000;
+
+    --cinzaBody: #FBF9F8;
+    --cinzaEscuro: #475569;
+    --cinzaFonte: #3f3f3f;
+    --cinzaClaro: #c1c1c1;
+    --cinzaLinha: #c9c9c9;
+    --cinzaBorda: #dbdbdb;
+    --cinzaFundo: #eeeeee;
+    --cinzaClaroBackground: #eeeeee;
+    --cinzaInput: #EFEDED;
+    --cinzaIcone: #777777;
+
+    --vermelho: #DC2626;
+    --vermelhoClaro: #B91C1C;
+    --vermelhoEscuro: #B41B0F;
+    --vermelhoHero: #9E2016;
+
+    --vermelhoBotao: #B41B0F;
+    --vermelhoCadastro: #B41B0F;
+    --vermelhoFonte: #B41B0F;
+
+    --vermelhoHover: #ee0000;
+
+    --vermelhoTransparente: #dc262646;
+    --outlineVermelho: #E1BFB9;
+    --traco: #E1BFB9;
+
+    --linkVermelho: #9E2016;
+    --linkVermelhoUnderline: #9e1f1642;
+    --botaoVermelho: #9e1f1615;
+
+    --cinzaAzulado: #416084;
+    --azulLabel: #416084;
+
+    --azulFonte: #28496B;
+    --azulIcone: #28496B;
+
+    --azulIconeFundo: #D1E4FF;
+    --aHoverAzul: #398ef0;
+
+    --verdeIconeFundo: #86F8C9;
+    --verdeEtapa: #86F8C9;
+
+    --verdeIcone: #005331;
+    --verdeCheckmark: #00513A;
+
+    --escritaForte: #1B1C1C;
+    --escritaCinzaClara: #59413D;
+    --escritaCinzaClaraInput: #59413d79;
+
+    --brancoTransparenteBackground: rgba(255, 255, 255, 0.2);
+    --brancoTransparenteFonte: rgba(255, 255, 255, 0.6);
+
+    --navigationBackground: #0F172A;
+    --navigationFontGray: #94A3B8;
+    --navigationHover: #DC2626;
+
+    --backgroundEtapa: #E4E2E2;
+    --lgpdBackground: #b4d4fe36;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    background-color: var(--cinzaBody);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+}
+
+header {
+    height: 6rem;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    grid-area: header;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .boxUsuario {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-left: 1px solid var(--cinzaBorda);
+    padding-left: 0.8rem;
+    gap: 1rem;
+}
+
+header .boxUsuario .infoUsuario #statusUsuario {
+    color: var(--cinzaAzulado);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+header .boxUsuario .infoUsuario #nomeUsuario {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+header .boxUsuario .exitIcon {
+    color: var(--cinzaEscuro);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+header .boxUsuario .exitIcon:hover {
+    color: var(--vermelhoClaro);
+}
+
+.navigationGroup {
+    display: flex;
+    background-color: var(--navigationBackground);
+    flex-direction: column;
+    height: calc(100dvh - 6rem);
+    width: 16rem;
+    grid-area: sidebar;
+    position: sticky;
+    top: 6rem;
+}
+
+.roleGroup {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.6rem;
+    padding: 1rem;
+}
+
+.navigationIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--vermelho);
+    height: 2rem;
+    width: 1rem;
+    border-radius: 4px;
+}
+
+.navigationIconContainer i {
+    color: var(--branco);
+    font-size: 1.2rem;
+}
+
+.roleText h3 {
+    color: var(--branco);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.roleText span {
+    color: var(--navigationFontGray);
+    font-size: 0.8rem;
+}
+
+.navigationGroup .anchorContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 16rem;
+    padding: 1rem;
+}
+
+.navigationGroup .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 16rem;
+    border-top: 0.5px solid var(--cinzaEscuro);
+}
+
+.navigationGroup a,
+.navigationGroup button {
+    display: flex;
+    gap: 0.6rem;
+    color: var(--navigationFontGray);
+    font-size: 1rem;
+    text-decoration: none;
+    align-items: center;
+    padding-left: 1rem;
+    transition: color 0.5s, background-color 0.5s, border-left 0.5s;
+    height: 3.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigationGroup button:hover,
+.navigationGroup a:hover {
+    color: var(--navigationHover);
+    background-color: var(--vermelhoTransparente);
+    border-left: 2px solid var(--vermelho);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--escritaForte);
+    line-height: 1.2;
+}
+
+.title p {
+    font-size: 1rem;
+    color: var(--azulLabel);
+    font-weight: 500;
+}
+
+.container_display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.container_display > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 12rem;
+    padding: 1.8rem;
+    border-radius: 1rem;
+}
+
+.container_display .tipo_container img {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    opacity: 0.3;
+}
+
+.container_display .tipo_container {
+    gap: 0.8rem;
+    background: linear-gradient(-90deg, #FF1300 0%, #B41B0F 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container_display .tipo_container h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.container_display .tipo_container span {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--branco);
+    line-height: 1;
+}
+
+.container_display .proxima_doacao {
+    background: var(--branco);
+    border-bottom: 4px solid var(--vermelhoBotao);
+}
+
+.container_display .total_de_doacoes {
+    background: var(--branco);
+    border-bottom: 4px solid var(--verdeEtapa);
+}
+
+.container_display .proxima_doacao h2,
+.container_display .total_de_doacoes h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--escritaForte);
+}
+
+.container_display .proxima_doacao #data_agendamento {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--preto);
+}
+
+.container_display .total_de_doacoes #total_doacoes {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--verdeCheckmark);
+}
+
+.container_display .proxima_doacao p,
+.container_display .total_de_doacoes p {
+    color: var(--azulFonte);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.donateTableTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+    background-color: var(--branco);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tableTexts h1{
+    font-size: 1.4rem;
+}
+
+.tableTexts h2{
+    font-size: 1rem;
+    color: var(--cinzaAzulado);
+}
+
+.donateTable table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--branco);
+}
+
+.donateTable th{
+    color: var(--cinzaAzulado);
+    text-align: left;
+    background-color: var(--cinzaClaroBackground);
+    padding: 1.2rem;
+}
+
+.donateTable td{
+    color: var(--cinzaEscuro);
+    border-bottom: 1px solid var(--cinzaBorda);
+    padding: 1rem;
+}
+
+.donateTable th:last-child,
+.donateTable td:last-child{
+    text-align: center;
+}
+
+.donateTable .tableData{
+    font-weight: 600;
+}
+
+.donateTable .tableIcon{
+    color: var(--cinzaAzulado);
+}
+
+.donateTable .tableIcon i{
+    cursor: pointer;
+}
+
+.donateTableBottom{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: var(--cinzaClaroBackground);
+    padding: 1rem;
+    align-items: center;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.donateTableBottom .buttonContainer{
+    justify-self: center;
+    grid-column: 2;
+}
+
+.donateTableBottom .donationLoader{
+    display: flex;
+    gap: 0.5rem;
+    justify-self: end;
+    grid-column: 3;
+}
+
+.donateTableBottom .buttonContainer button{
+    color: var(--vermelhoClaro);
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.donateTableBottom .donationLoader button{
+    border: none;
+    background-color: transparent;
+    color: var(--cinzaAzulado);
+    cursor: pointer;
+    background-color: var(--branco);
+    padding: 0.4rem;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    font-size: 1rem;
+    border-radius: 4px;
+}

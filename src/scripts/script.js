@@ -14,7 +14,7 @@ formulario.addEventListener("submit", (event) => {
     const senha = document.getElementById("senha").value;
 
     if(email === login.email && senha === login.senha){
-        window.location.href = "index.html"
+        window.location.href = "donorDashboard.html"
     }else{
         alert("Email ou senha inválidos.")
     }
