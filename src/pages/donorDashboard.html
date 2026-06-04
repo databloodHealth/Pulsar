@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/donorDashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="../pages/donorDashboard.html"><img src="../assets/images/PulsarLogo 1.png" alt="Logo"></a>
+
+        <div class="boxUsuario">
+            <img src="../assets/images/Background.png" alt="userFoto" class="fotoUser">
+            <div class="infoUsuario">
+                <p id="statusUsuario">Doador Inapto</p>
+                <p id="nomeUsuario">João Silva</p>
+            </div>
+            <i class="fa-solid fa-arrow-right-from-bracket exitIcon "></i>
+        </div>
+    </header>
+
+    <aside class="navigationGroup">
+
+        <div class="roleGroup">
+            <div class="navigationIconContainer">
+                <i class="fa-solid fa-dice-d6"></i></i>
+            </div>
+            <div class="roleText">
+                <h3>Gestão central</h3>
+                <span>DOADOR</span>
+            </div>
+        </div>
+
+        <nav class="anchorContainer">
+            <a href="./donorDashboard.html"><i class="fa-solid fa-house"></i>Início</a></li>
+            <a href="./doacoes.html"><i class="fa-solid fa-droplet"></i>Minhas doações</a>
+            <a href="#"><i class="fa-solid fa-bell"></i>Notificações</a>
+            <a href="#"><i class="fa-solid fa-user"></i>Perfil</a>
+        </nav>
+
+        <div class="buttonContainer">
+            <button><i class="fa-solid fa-gear"></i>Configurações</button>
+            <a href="#"><i class="fa-solid fa-circle-info"></i>Central de ajuda</a>
+        </div>
+    </aside>
+
+    <main>
+
+        <div class="userDonateWrapper">
+
+            <div class="userInfoContainer">
+
+                <div class="greetings">
+                    <h1>Olá João!</h1>
+                    <h1>Você está apto para doar!</h1>
+                </div>
+
+                <div class="userInfo">
+                    <div class="info">
+                        <p>TIPO SANGUÍNEO</p>
+                        <span>O+ Positivo</span>
+                    </div>
+
+                    <div class="info">
+                        <p>ÚLTIMA DOAÇÃO</p>
+                        <span>15 de Julho, 2024</span>
+                    </div>
+                </div>
+
+                <a href="#"><i class="fa-regular fa-calendar"></i>Agendar doação</a>
+
+            </div>
+
+            <div class="tipsCardContainer">
+
+                <ul class="tipsCard">
+                    <li class="tipsCardTitle"><i class="fa-regular fa-lightbulb"></i>Dicas de Doador</li>
+                    <li><i class="fa-solid fa-droplet"></i>Beba pelo menos 500ml de água antes da sua doação agendada.
+                    </li>
+                    <li><i class="fa-solid fa-burger"></i>Evite alimentos gordurosos 3 horas antes da coleta.</li>
+                    <li><i class="fa-solid fa-moon"></i>Tenha uma boa noite de sono antes da doação para evitar tontura
+                        ou mal-estar.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="campaignSection">
+
+            <div class="campaignTexts">
+                <h1>Próximas Campanhas</h1>
+                <h2>Veja as próximas campanhas de doação que irão acontecer próximo de você.</h2>
+            </div>
+
+            <div class="campaignCardsContainer">
+                <div class="campaignCard">
+                    <span class="CampaignDate">12 de Junho | 08:00 - 17:00</span>
+                    <h1 class="campaignName">Unidade móvel Pulsar</h1>
+                    <div class="campaignLocal">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Lago Municipal - Jaboticabal, SP</span>
+                    </div>
+
+                    <button class="campaignDetails">Ver detalhes</button>
+
+                </div>
+
+                <div class="campaignCard">
+                    <span class="CampaignDate">18 de Junho | 09:00 - 15:00</span>
+                    <h1 class="campaignName">Campanha Saúde em Ação</h1>
+                    <div class="campaignLocal">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Praça Dom Assis - Jaboticabal, SP</span>
+                    </div>
+
+                    <button class="campaignDetails">Ver detalhes</button>
+                </div>
+
+                <div class="campaignCard">
+                    <span class="CampaignDate">25 de Junho | 07:30 - 16:30</span>
+                    <h1 class="campaignName">Atendimento itinerante Vida+</h1>
+                    <div class="campaignLocal">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Terminal Rodoviário - Jaboticabal, SP</span>
+                    </div>
+
+                    <button class="campaignDetails">Ver detalhes</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="donateTable">
+            <div class="donateTableTop">
+                <div class="tableTexts">
+                    <h1>Suas Doações</h1>
+                    <h2>Histórico completo das suas contribuições</h2>
+                </div>
+
+                <div class="tableTopButton">
+                    <a href="./doacoes.html">Ver tudo <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <table>
+                <tr class="columnName">
+                    <th>ID da coleta</th>
+                    <th>Data</th>
+                    <th>Local</th>
+                    <th>Volume</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+
+                <tr>
+                    <td>#BS-9921</td>
+                    <td class="tableData">12/03/2024</td>
+                    <td>Centro de Hemoterapia Matriz</td>
+                    <td>450ml</td>
+                    <td class="tableStatus">Utilizada</td>
+                    <td class="tableIcon"><i class="fa-regular fa-file"></i></td>
+                </tr>
+
+                <tr>
+                    <td>#BS-8412</td>
+                    <td class="tableData">10/11/2023</td>
+                    <td>Unidade Móvel Praça da Sé</td>
+                    <td>450ml</td>
+                    <td class="tableStatus tableStatusCollected">Coletada</td>
+                    <td class="tableIcon"><i class="fa-regular fa-file"></i></td>
+                </tr>
+
+                <tr>
+                    <td>#BS-7710</td>
+                    <td class="tableData">15/07/2023</td>
+                    <td>Centro de Hemoterapia Matriz</td>
+                    <td>450ml</td>
+                    <td class="tableStatus">Utilizada</td>
+                    <td class="tableIcon"><i class="fa-regular fa-file"></i></td>
+                </tr>
+
+                <tr>
+                    <td>#BS-6534</td>
+                    <td class="tableData">22/01/2023</td>
+                    <td>Hospital São Lucas</td>
+                    <td>450ml</td>
+                    <td class="tableStatus tableStatusCollected">Coletada</td>
+                    <td class="tableIcon"><i class="fa-regular fa-file"></i></td>
+                </tr>
+
+                <tr>
+                    <td>#BS-5982</td>
+                    <td class="tableData">09/09/2022</td>
+                    <td>Unidade Móvel Centro</td>
+                    <td>450ml</td>
+                    <td class="tableStatus">Utilizada</td>
+                    <td class="tableIcon"><i class="fa-regular fa-file"></i></td>
+                </tr>
+
+                <tr>
+                    <td>#BS-4821</td>
+                    <td class="tableData">17/04/2022</td>
+                    <td>Hemocentro Regional</td>
+                    <td>450ml</td>
+                    <td class="tableStatus tableStatusCollected">Coletada</td>
+                    <td class="tableIcon"><i class="fa-regular fa-file"></i></td>
+                </tr>
+
+            </table>
+
+            <div class="donateTableBottom">
+                <button>Baixar Histórico Completo (PDF) <i class="fa-solid fa-download"></i></button>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
