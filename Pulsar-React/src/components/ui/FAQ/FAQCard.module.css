@@ -1,0 +1,71 @@
+ .questionCard{
+    border-bottom: 3px solid var(--primary);
+    width: 50%;
+    padding: 0 .5rem;
+    border-radius: 2px;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease;
+    user-select: none;
+  }
+
+  .questionHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .questionHead h2{
+    font-size: 1.15rem;
+    color: var(--foreground);
+  }
+
+  .questionHead button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid var(--cinza-500);
+    font-size: 1rem;
+    transition: all .5s ease;
+  }
+
+  .questionCard .questionContent{
+    border-left: 3px solid var(--primary);
+    font-size: 1.05rem;
+    padding: 0 2%;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: grid-template-rows 0.35s ease, opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+  }
+
+  .questionCard .questionContent > div {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .questionCard.active{
+    padding-bottom: 1rem;
+    gap: 1rem
+  }
+
+ .questionCard.active .questionContent{
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1% 2%;
+  }
+
+  .questionCard.active .colapse{
+    background-color: var(--primary);
+    color: var(--branco);
+    transform: rotate(45deg);
+    border: none;
+  }

@@ -1,0 +1,161 @@
+
+
+:global(body) {
+  min-height: 100svh;
+  background-color: var(--cinzaBody);
+}
+
+.main {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+
+
+/* Container / Formulário */
+.container {
+  background-color: var(--branco);
+  max-width: 660px;
+  padding: 60px 50px 30px 50px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: 0px 20px 40px -15px #1b1c1c13;
+}
+
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.containerTitle h1 {
+  color: var(--containerTitulo);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.containerTitle h2 {
+  color: var(--escritaCinzaClara);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.containerForm label {
+  color: var(--escritaForte);
+  font-weight: 600;
+}
+
+.blocoForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.containerForm input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  background-color: var(--cinzaInput);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 14px;
+  color: var(--escritaCinzaClara);
+  font-weight: 500;
+}
+
+.botForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.botForm a {
+  text-decoration: none;
+  color: var(--azulLabel);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.botForm a:hover {
+  color: var(--aHoverAzul);
+}
+
+.botForm button {
+  background-color: var(--vermelhoBotao);
+  color: var(--branco);
+  border: none;
+  outline: none;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botForm button:hover {
+  background-color: var(--vermelhoHover);
+}
+
+/* Informações / Rodapé */
+.info {
+  display: flex;
+  color: var(--escritaInfo);
+  font-size: 14px;
+  width: 660px;
+  justify-content: space-between;
+}
+
+.termos {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+.lgpd {
+  font-weight: 500;
+}
+
+.termos a {
+  text-decoration: none;
+  color: var(--escritaInfo);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.termos a:hover {
+  color: var(--cinzaFonte);
+}

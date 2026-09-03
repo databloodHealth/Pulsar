@@ -1,0 +1,193 @@
+
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: calc(100vh - 6rem);
+}
+
+.loginGrupo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--branco);
+  gap: 2rem;
+  border-radius: 4px;
+  width: 30rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.tituloLoginGrupo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tituloLoginGrupo h1 {
+  font-size: 1.8rem;
+}
+
+.tituloLoginGrupo p {
+  font-weight: 500;
+  color: var(--cinzaFonte);
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.inputGrupo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.inputIcone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inputIcone svg {
+  position: absolute;
+  left: 10px;
+  color: var(--cinzaIcone);
+}
+
+.inputGrupo label {
+  font-weight: 600;
+  color: var(--cinzaFonte);
+}
+
+.senhaGrupo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.senhaGrupo a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+
+.senhaGrupo a:hover {
+  color: var(--vermelhoHover);
+}
+
+.inputGrupo input {
+  background-color: var(--cinzaInput);
+  border: none;
+  height: 2.9rem;
+  border-radius: 4px;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.inputGrupo:focus-within label{
+  color: var(--vermelhoBotao);
+}
+
+input:focus{
+  border: solid 1.9px var(--vermelhoBotao);
+}
+
+.entrarBotao {
+  background-color: var(--vermelhoBotao);
+  border: none;
+  border-radius: 4px;
+  color: var(--branco);
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.entrarBotao:hover {
+  background-color: var(--vermelhoHover);
+}
+
+.cadastroLinha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.cadastroLinha span {
+  color: var(--cinzaFonte);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cadastroLinha div {
+  background-color: var(--cinzaLinha);
+  height: 1px;
+  width: 100%;
+}
+
+.form p {
+  font-weight: 500;
+  color: var(--cinzaFonte);
+  align-self: center;
+}
+
+.form a {
+  color: var(--vermelhoCadastro);
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.form a:hover {
+  color: var(--vermelhoHover);
+}
+
+.direitosGrupo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30rem;
+  color: var(--cinzaFonte);
+  font-size: 0.8rem;
+}
+
+.dadosGrupo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dadosGrupo svg {
+  color: var(--cinzaIcone);
+}
+
+.termosGrupo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.termosGrupo p {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.termosGrupo p:hover {
+  color: var(--vermelhoCadastro);
+}

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Manrope", "Epilogue";
+}
+
+:root {
+  --bg: #ffffff;
+  --branco: #ffffff;
+  --branco-suave: #f5f5fe;
+  --branco-ev: #e3e3e3;
+  --preto: #000000;
+
+  --cinza-50: #f7f7f7;
+  --cinza-100: #f5f5fe;
+  --cinza-200: #f0f0f0;
+  --cinza-300: #efeded;
+  --cinza-400: #e4e2e2;
+  --cinza-500: #c9c9c9;
+  --cinza-600: #777777;
+  --cinza-700: #3f3f3f;
+  --cinza-800: #1b1c1c;
+  --cinza-900: #475569;
+  --cinza-1000: #59413d;
+  --cinza-borda: #e2e2e277;
+  --cinza-borda-escura: #dddddd;
+  --cinza-card: #ebebeb;
+  --cinza-tabela: #c7c7c7;
+  --cinza-footer: #d9d9d9;
+  --cinza-tabela-fundo: #f6f6ff;
+  --cinza-tabela-hover: #e6e6e6;
+  --cinza-tabela-texto: #1a1a1a;
+  --cinza-rosa: #f6f6ff;
+
+  --cinza-fundo: #fbf9f8;
+  --cinza-input: #efeded;
+  --cinza-linha: #c9c9c9;
+  --cinza-texto: #3f3f3f;
+  --cinza-claro: #59413d;
+  --cinza-icone: #777777;
+  --cinza-medio: #475569;
+
+  --sombra-suave: rgba(149, 157, 165, 0.2);
+  --sombra-card: rgba(0, 0, 0, 0.1);
+  --sombra-negra: rgba(0, 0, 0, 0.04);
+  --sombra-escura: rgba(0, 0, 0, 0.012);
+  --branco-50: rgba(255, 255, 255, 0.5);
+  --branco-0: rgba(255, 255, 255, 0);
+  --branco-10: rgba(255, 255, 255, 0.1);
+  --vermelho-borda: rgba(255, 0, 0, 0.2);
+
+  --azul-100: #d1e4ff;
+  --azul-200: #e1f3ff;
+  --azul-300: #41679c;
+  --azul-400: #416084;
+  --azul-500: #28496b;
+  --azul-600: #398ef0;
+  --azul-botao: #28496b;
+  --azul-label: #416084;
+  --azul-fonte: #28496b;
+  --azul-icone: #28496b;
+  --azul-icone-fundo: #d1e4ff;
+
+  --verde-100: #86f8c9;
+  --verde-500: #005331;
+  --verde-icone: #005331;
+  --verde-icone-fundo: #86f8c9;
+
+  --vermelho-100: #ffd7d3;
+  --vermelho-400: #9e2016;
+  --vermelho-500: #b41b0f;
+  --vermelho-600: #94140b;
+  --vermelho-hover: #ee0000;
+  --vermelho-botao: #b41b0f;
+  --vermelho-fonte: #b41b0f;
+  --vermelho-cadastro: #b41b0f;
+  --vermelho-link: #9e2016;
+  --vermelho-traco: #e1bfb9;
+  --vermelho-badge: #ffd7d3;
+
+  --card-red-bg: linear-gradient(135deg, #ff0000, #b41b0f);
+  --card-dark-bg: #0f172a;
+  --card-muted-bg: #f0f0f0;
+  --card-dark-subtitle: #e1f3ff;
+  --badge-red-bg: #ffd7d3;
+  --badge-red-foreground: #b41b0f;
+  --badge-dark-bg: #2a3b63;
+  --badge-dark-muted-bg: rgba(145, 145, 145, 0.15);
+  --light-blue: #41679c;
+  --linkVermelho: #9e2016;
+  --linkVermelhoUnderline: #9e2016;
+  --outlineVermelho: #b41b0f;
+  --botaoVermelho: #b41b0f;
+  --lgpdBackground: #d1e4ff;
+  --backgroundEtapa: #e4e2e2;
+
+  --cinzaBody: var(--cinza-fundo);
+  --cinzaFonte: var(--cinza-texto);
+  --cinzaInput: var(--cinza-input);
+  --cinzaLinha: var(--cinza-linha);
+  --cinzaIcone: var(--cinza-icone);
+  --vermelhoBotao: var(--vermelho-botao);
+  --vermelhoHover: var(--vermelho-hover);
+  --vermelhoCadastro: var(--vermelho-cadastro);
+  --vermelhoFonte: var(--vermelho-fonte);
+  --traco: var(--vermelho-traco);
+  --escritaCinzaClara: var(--cinza-claro);
+  --escritaCinzaClaraInput: rgba(89, 65, 61, 0.47);
+  --azulLabel: var(--azul-label);
+  --azulFonte: var(--azul-fonte);
+  --azulIcone: var(--azul-icone);
+  --azulIconeFundo: var(--azul-icone-fundo);
+  --verdeIcone: var(--verde-icone);
+  --verdeIconeFundo: var(--verde-icone-fundo);
+  --escritaInfo: rgba(89, 65, 61, 0.67);
+  --aHoverAzul: var(--azul-600);
+  --escritaForte: var(--cinza-800);
+  --containerTitulo: var(--cinza-800);
+  --white-e: var(--branco-ev);
+  --white-l: var(--branco-suave);
+  --foreground: var(--cinza-800);
+  --muted-foreground: var(--cinza-900);
+  --primary: var(--vermelho-500);
+  --primary-light: var(--vermelho-600);
+  --badge-red-bg: var(--vermelho-100);
+  --badge-red-foreground: var(--vermelho-500);
+  --icon-primary: var(--vermelho-500);
+  --bg-icon-greenL: var(--verde-100);
+  --icon-green: var(--verde-500);
+  --card-dark-subtitle: var(--azul-200);
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}

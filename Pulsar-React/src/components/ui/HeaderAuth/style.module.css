@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    align-items: left;
+    height: 5rem;
+    padding: 2% 5%;
+}
+
+.img img{
+    width: 7rem;
+}
