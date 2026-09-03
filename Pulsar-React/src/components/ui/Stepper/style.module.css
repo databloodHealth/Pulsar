@@ -1,0 +1,53 @@
+.etapas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 45px;
+}
+
+.etapas h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.etapas h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.etapa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.etapa h1 {
+  color: var(--escritaCinzaClara);
+  border-radius: 12px;
+  background-color: var(--backgroundEtapa);
+}
+
+.etapa h2 {
+  color: var(--escritaCinzaClara);
+}
+
+.active h1 {
+  background-color: var(--vermelhoFonte);
+  border-radius: 12px;
+  color: var(--branco);
+}
+
+.active h2 {
+  color: var(--vermelhoFonte);
+}
+
+.traco {
+  width: 64px;
+  height: 2px;
+  background-color: var(--traco);
+}

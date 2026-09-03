@@ -1,0 +1,732 @@
+
+
+
+.hero {
+  position: relative;
+  height: calc(100vh - 5rem);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.heroContent {
+  position: absolute;  
+  z-index: 1000;
+  max-width: 700px;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.heroContent h1 {
+  font-size: 5rem;
+  color: var(--foreground);
+}
+
+.heroContent .redTitle {
+  color: var(--primary);
+}
+
+.heroContent p {
+  color: var(--muted-foreground);
+  font-size: 1.3rem;
+}
+
+.heroContent .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .heroButton {
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+ a.primary {
+  background-color: var(--primary);
+  color: var(--branco);
+  transition: .5s ease;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--primary-light);
+  }
+}
+
+a.secondary {
+  background-color: var(--white-l);
+  color: var(--foreground);
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--white-e);
+  }
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--branco) 0%,
+    var(--branco-50) 50%,
+    var(--branco-0) 100%
+  );
+}
+
+.whyDonate{
+  padding: 3% 5%;
+}
+
+.underline{
+  width: 10%;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.sectionTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.sectionTitle h2{
+  font-size: 2.2rem;
+  color: var(--foreground);
+}
+
+.sectionTitle p{
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+  width: 50%;
+  text-align: center;
+}
+
+.reasons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2% 0;
+}
+
+.image img{
+   width: 80%;
+   height: 100%;
+}
+
+.listReasons{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 50%;
+}
+
+.listReasons ul{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.reason{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.reason .iconReason{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--badge-red-bg);
+  color: var(--primary);
+}
+
+
+.reasonContent{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.reasonContent p{
+  font-size: 1.1rem
+}
+
+.red{
+  color: var(--primary);
+}
+
+.donateButton{
+  padding: .8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+.process{
+  padding: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-l);
+}
+
+.steps{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 0;
+  gap: 1rem;
+}
+
+.step{
+  border: 1px solid var(--cinza-card);
+  width: 300px;
+  height: 250px;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  box-shadow: 0 0 20px 1px var(--sombra-card);
+  background-color: var(--bg);
+}
+
+.step h3 {
+  font-family: 'Epilogue';
+  font-size: 1.3rem;
+}
+
+.step p {
+  color: var(--foreground);
+}
+
+.line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 1.5px;
+  background-color: var(--cinza-tabela);
+}
+
+.stepNumber{
+  margin-top: -1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  font-weight: 600;
+  background-color: var(--primary);
+}
+
+.buttonCTA{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.processSection{
+  padding: 0.8rem;
+  width: 20%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+a.processSection:hover{
+  background-color: var(--primary-light);
+}
+
+.system{
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.colLeft img{
+  width: 700px;
+  height: 500px;
+  border-radius: 8px;
+}
+
+.colRight{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.colRight .title{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.colRight .title p{
+  color: var(--muted-foreground);
+}
+
+.colRight .title h2{
+  font-size: 2rem;
+  color: var(--foreground);
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.list .item{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item .icon{
+  background-color: var(--bg-icon-greenL);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemContent{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.itemContent h3{
+  font-size: 1.2rem;
+  color: var(--foreground);
+}
+
+.itemContent p{
+  color: var(--muted-foreground);
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button a {
+  padding: .8rem .6rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compatibility{
+  padding: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead tr {
+    background-color: var(--card-dark-bg);
+    color: var(--branco);
+  }
+
+  thead th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 11px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--cinza-borda-escura);
+    background-color: var(--cinza-tabela-fundo);
+    cursor: pointer;
+  }
+
+  tbody tr:hover{
+    background-color: var(--cinza-tabela-hover);
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  tbody td {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: var(--cinza-tabela-texto);
+    font-family: 'Arial', sans-serif;
+  }
+
+  tbody td:first-child {
+    color: var(--vermelho-500);
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .cardsInfos{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .card{
+    padding: 3rem 2rem;
+    width: 44%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+    .cardsInfos .cardHead{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cardsInfos .cardHead .badge{
+      padding: .3rem 1rem;
+      border-radius: 50px;
+      font-size: 12px;
+    }
+
+  .cardsInfos .cardType{
+    background: var(--card-red-bg);
+    color: var(--branco);
+  }
+
+  .cardType p, .cardType li{
+    color: var(--cinza-300);
+  }
+
+  .cardType .badgeCard{
+    background-color: var(--badge-red-bg);
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .cardsInfos ul{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  }
+
+  .cardCuriosity{
+    background-color: var(--card-muted-bg);
+  }
+
+  .cardCuriosity p {
+    color: var(--muted-foreground);
+  }
+
+  .cardCuriosity .badgeCard{
+    background-color: var(--light-blue);
+    color: var(--bg);
+    font-weight: 500;
+  }
+  
+    .donate{
+    display: flex;
+    gap: 18rem;
+    background-color: var(--card-dark-bg);
+    padding: 3rem 2rem;
+    height: 15rem;
+    border-radius: 8px;
+    color: var(--bg);
+  }
+
+  .check{
+    width: 25px;
+    height: 12px;
+    rotate: -45deg;
+    border-bottom: 4px solid var(--primary);
+    border-left: 4px solid var(--primary);
+  }
+
+
+
+  .donate .colLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .donate .colLeft a{
+    padding: .8rem 1.5rem;
+    background-color: var(--primary);
+    font-weight: 500;
+    color: var(--bg);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+  }
+
+  .donate .colLeft a:hover{
+    background-color: var(--primary-light);
+  }
+
+  .donate .colRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .donate .listCont{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .donate .colRight .listItem{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    align-items: center;
+  }
+
+  .donate .colRight .listItem .icon{
+    color: var(--primary);
+  }
+
+  .FAQ{
+    padding: 3% 5%;
+  }
+
+  .questionsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3% 0;
+    gap: 1.3rem;
+  }
+
+  .questionsContainer .questionCard{
+    background-color: var(--white-l);
+    border: .4px solid var(--vermelho-borda);
+    padding: .7rem 2rem;
+    width: 50%;
+    border-radius: 4px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease;
+    user-select: none;
+  }
+
+  .questionHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .questionHead h2{
+    font-size: 1.05rem;
+    color: var(--foreground);
+  }
+
+  .questionHead button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid var(--cinza-500);
+    font-size: 1rem;
+    transition: all .5s ease;
+  }
+
+  .questionCard .questionContent{
+    border-left: 2px solid var(--primary);
+    padding: 1% 2%;
+    animation: enterQuestion .8s ease;
+    display: none;
+  }
+
+  .questionCard.active{
+    height: 140px;
+  }
+
+ .questionCard.active .questionContent{
+    display: flex;
+  }
+
+  .questionCard.active .colapse{
+    background-color: var(--primary);
+    color: var(--branco);
+    transform: rotate(45deg);
+    border: none;
+  }
+
+ footer{
+    background-color: var(--foreground);
+    padding: 3% 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--cinza-footer);
+  }
+
+   .containerFooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pulsar{
+    max-width: 300px;
+    color: var(--cinza-footer);
+    font-size: 14px;
+  }
+
+
+  .links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5rem;
+  }
+
+  
+
+  .links .institutional,
+  .links .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+  }
+
+  .links h3{
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 16px;
+    color: var(--branco);
+  }
+
+  .links a{
+    text-decoration: none;
+    color: var(--cinza-footer);
+    font-size: 14px;
+  }
+
+  footer img{
+    max-width: 100px;
+  }
+
+  .footerBottom{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .5rem 0;
+  }
+
+  .divisor{
+    height: 1px;
+    width: 100%;
+    background: var(--branco-10);
+  }
+
+  .finalTexts{
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .finalList{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .finalList a{
+    color: var(--cinza-footer);
+    text-decoration: none;
+  }
+
+  footer a:hover{
+    text-decoration: underline;
+  }
+
+  @keyframes enterQuestion{
+
+    from{
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
