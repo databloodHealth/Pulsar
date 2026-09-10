@@ -30,7 +30,7 @@ export default function Home() {
             </p>
             <div className={style.buttons}>
               <a className={`${style.heroButton} ${style.primary}`} href="/login">Quero ser doador</a>
-              <a className={`${style.heroButton} ${style.secondary}`} href="#">Saiba Mais</a>
+              <a className={`${style.heroButton} ${style.secondary}`} href="/profile">Saiba Mais</a>
             </div>
           </div>
           <div className={style.heroImage}>
