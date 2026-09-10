@@ -16,6 +16,7 @@ export default function Home() {
       <Header />
 
       <main className={style.main}>
+        <Link to='/historico'>Historico</Link>
         {/* HERO SECTION */}
         <section className={style.hero}>
           <div className={style.heroContent}>

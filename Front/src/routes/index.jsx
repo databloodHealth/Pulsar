@@ -4,6 +4,7 @@ import Sobre from "@/pages/Landing/Sobre";
 import Cadastro from "@/pages/Auth/Cadastro";
 import Login from "@/pages/Auth/Login";
 import DonnorDashboard from "@/pages/System/Dashboard";
+import Historico from "@/pages/System/Historico";
 
 function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ function AppRoutes() {
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/login" element={<Login />} />
       <Route path="/donnorDashboard" element={<DonnorDashboard />} />
+      <Route path="/historico" element={<Historico />} />
     </Routes>
   );
 }
