@@ -1,0 +1,57 @@
+.content {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+
+.content>div {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileContainer {
+    flex: 1;
+    background: #fff;
+    padding: 3rem;
+    border: solid 1px rgba(179, 182, 194, 0.39);
+
+}
+
+.personalInfo {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+.options {
+    width: 26%;
+    background: #e8e8e8;
+}
+
+.doador {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.doador span {
+    color: #B41B0F;
+}
+
+.doador>div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.doador>div img{
+    width: 150px;
+    height: 150px;
+    background: #e8e8e8;
+    border-radius: 12px;
+}
+
+.doador>div>div{
+    display: flex;
+}

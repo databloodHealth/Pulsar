@@ -65,6 +65,10 @@
   gap: 12px;
 }
 
+.campoForm:focus-within label{
+  color: var(--vermelhoBotao);
+}
+
 .containerForm label {
   color: var(--escritaForte);
   font-weight: 600;

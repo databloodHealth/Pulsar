@@ -4,6 +4,8 @@ import Sobre from "@/pages/Landing/Sobre";
 import Cadastro from "@/pages/Auth/Cadastro";
 import Login from "@/pages/Auth/Login";
 import DonnorDashboard from "@/pages/System/Dashboard";
+import UserProfile from "@/pages/System/UserProfile";
+
 
 function AppRoutes() {
   return (
@@ -13,6 +15,7 @@ function AppRoutes() {
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/login" element={<Login />} />
       <Route path="/donnorDashboard" element={<DonnorDashboard />} />
+      <Route path="/profile" element={<UserProfile />}/>
     </Routes>
   );
 }

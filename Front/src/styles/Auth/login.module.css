@@ -69,6 +69,7 @@
 .inputGrupo label {
   font-weight: 600;
   color: var(--cinzaFonte);
+  transition: color 0.3s;
 }
 
 .senhaGrupo {
