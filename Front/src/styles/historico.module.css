@@ -1,0 +1,23 @@
+:root {
+    --cinza-fundo: #fbf9f8;
+}
+
+.containerHistorico {
+    background-color: var(--cinza-fundo);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.gridCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .card {
+        width: 100%;
+
+    }
+
+    .cardFirst {}
+}
