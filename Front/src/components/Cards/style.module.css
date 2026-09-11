@@ -1,0 +1,83 @@
+:root {
+    --vermelho-fonte: #b41b0f;
+    --vermelho-fundo: #FF1300;
+    --verde-icone-fundo: #86f8c9;
+    --branco: #ffffff;
+    --preto: #000000;
+    --cinza-900: #475569;
+    --verde-500: #005331;
+}
+
+.cardDois {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    gap: 3rem;
+    position: relative;
+
+    h4 {
+        font-size: 1.5rem;
+        color: var(--branco);
+    }
+
+    p {
+        font-size: 3.5rem;
+        color: var(--branco);
+        font-weight: 700;
+    }
+
+    .icone {
+        position: absolute;
+        top: 6rem;
+        right: -2rem;
+    }
+}
+
+.vermelhoBackground {
+    background: linear-gradient(90deg, var(--vermelho-fonte) 0%, var(--vermelho-fundo) 100%);
+}
+
+
+.cardTres {
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    gap: 2rem;
+
+    h4 {
+        font-size: 1.5rem;
+        color: var(--preto);
+    }
+
+    p {
+        font-size: 2.5rem;
+        color: var(--preto);
+        font-weight: 700;
+    }
+
+    span {
+        font-size: 1rem;
+        color: var(--cinza-900);
+        font-weight: 600;
+    }
+
+}
+
+.vermelho {
+    border-bottom: 4px solid var(--vermelho-fonte);
+}
+
+.verde {
+    border-bottom: 4px solid var(--verde-icone-fundo);
+}
+
+.fontVerde {
+    p {
+        color: var(--verde-500);
+    }
+}
