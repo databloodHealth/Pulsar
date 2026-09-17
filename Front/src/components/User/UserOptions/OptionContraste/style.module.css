@@ -1,0 +1,38 @@
+
+.settingBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    background: var(--cinza-footer);
+
+}
+
+.buttonContainer button {
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    cursor: pointer;
+    gap: 1rem;
+    flex: 1 0;
+    transition: background .3s ease;
+}
+
+.buttonContainer button.active {
+    background: #fff;
+}
+
+.buttonContainer button.inactive:hover {
+    background: var(--cinza-500)
+}
