@@ -3,8 +3,11 @@ import styles from "@/styles/Auth/login.module.css";
 import logoImg from "@/assets/images/BlackLogo.png";
 import HeaderAuth from "@/components/ui/HeaderAuth/index";
 import { Check, LockKeyhole, Mail, ShieldCheck } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: "",
     senha: "",
@@ -22,6 +25,17 @@ export default function Login() {
     e.preventDefault();
     console.log("Dados de login:", formData);
   };
+
+  const USER_MOCK = {
+    'email': 'pulsar@email.com',
+    'senha': 'pulsar1234'
+  }
+
+  function redirect(){
+    if(formData.email === USER_MOCK.email && formData.senha === USER_MOCK.senha){
+    navigate('/Donnordashboard')
+  }
+  }
 
   return (
     <>
@@ -70,7 +84,7 @@ export default function Login() {
               </div>
             </div>
 
-            <button className={styles.entrarBotao} type="submit">
+            <button className={styles.entrarBotao} type="submit" onClick={redirect}>
               Entrar
             </button>
 
