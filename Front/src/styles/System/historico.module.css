@@ -54,6 +54,76 @@
             color: var(--azul-fonte);
         }
     }
+}
+
+    .cardFirst {}
+
+
+.botoomTabela {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30%;
+    background-color: var(--cinza-fundo-claro);
+
+    #baixar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        gap: 6px;
+        color: var(--vermelho-link);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+    .selecaoNumeros {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+
+        .boxNumber {
+            border-radius: 6px;
+            padding: .8rem;
+            background-color: var(--branco);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        .boxNumberAction{
+                        background-color: var(--azul-fonte);
+                        color: var(--branco);}
+
+        }
+
+
+.gridTabela {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .categoriasTabela {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 3rem;
+        background-color: var(--fundo-bege);
+
+        #idColeta {
+            color: var(--azul-fonte);
+            width: 40%;
+            line-height: 1.1;
+            
+        }
+
+        p {
+            color: var(--azul-fonte);
+        }
+    }
 
     .campoDoacao {
         display: grid;
