@@ -5,15 +5,15 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 
-import style from '../../styles/historico.module.css'
+import style from '@/styles/System/historico.module.css'
 import { CardDoisVermelho, CardTres } from "@/components/Cards";
 
 export default function Historico() {
 
     return (
         <SystemLayout>
-            <div className={style.containerHistorico}>
-                <div className={style.tituloPage}>
+            <div className="container">
+                <div className="titlePage">
                     <h1>Histórico de Doações</h1>
                     <h4>Acompanhe seu histórico de soliedariedade e o impacto causado</h4>
                 </div>

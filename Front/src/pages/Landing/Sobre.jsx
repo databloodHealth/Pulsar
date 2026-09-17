@@ -5,7 +5,7 @@ import blackLogo from '@/assets/images/BlackLogo.png';
 import heroImage from '@/assets/images/heroImg.png';
 import Doacao from '@/assets/images/SVG_doacao.png'
 import Header from '@/components/ui/LandingPage/Header';
-import FooterLanding from '@/components/FooterLanding';
+import FooterLanding from '@/components/ui/LandingPage/FooterLanding';
 
 export default function Sobre() {
   return (

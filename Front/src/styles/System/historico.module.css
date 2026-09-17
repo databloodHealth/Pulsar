@@ -8,31 +8,6 @@
 
 }
 
-.containerHistorico {
-    background-color: var(--cinza-fundo);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-
-    .tituloPage {
-        display: flex;
-        gap: 1rem;
-        flex-direction: column;
-
-        h1 {
-            font-size: 3rem;
-            color: var(--preto);
-        }
-
-        h4 {
-            font-size: 1rem;
-            color: var(--azul-400);
-            font-weight: 500;
-        }
-    }
-}
-
 .gridCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

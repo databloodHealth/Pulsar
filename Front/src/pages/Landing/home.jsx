@@ -9,7 +9,7 @@ import doctorTech from '@/assets/images/DoctorTech.jpg';
 import whiteLogo from '@/assets/images/WhiteLogo.png';
 import { Faq } from '@/components/ui/FAQ';
 import Header from '@/components/ui/LandingPage/Header';
-import FooterLanding from '@/components/FooterLanding';
+import FooterLanding from '@/components/ui/LandingPage/FooterLanding';
 
 export default function Home() {
   return (

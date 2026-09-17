@@ -85,6 +85,7 @@ a{
   --vermelho-link: #9e2016;
   --vermelho-traco: #e1bfb9;
   --vermelho-badge: #ffd7d3;
+  --vermelho-gradient: linear-gradient(90deg, var(--vermelho-fonte) 0%, var(--vermelho-fundo) 100%);
 
   --card-red-bg: linear-gradient(135deg, #ff0000, #b41b0f);
   --card-dark-bg: #0f172a;
