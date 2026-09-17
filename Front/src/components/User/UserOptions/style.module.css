@@ -1,0 +1,49 @@
+.options {
+    width: 34%;
+    background: #e8e8e8;
+    padding: 3rem;
+    gap: 3.5rem;
+}
+
+.options>h1{
+    font-size: 1.5rem;
+}
+
+.options .settingsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.options .settingsContainer h2,
+label {
+    color: var(--azul-label);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-weight: 600;
+}
+
+
+
+.options .buttonContainer {
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    background: var(--cinza-footer);
+    
+}
+
+.options select,button {
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    padding: .8rem;
+}
+
+
+.options .buttonContainer button {
+    flex: 1 0;
+    display: flex;
+}
+

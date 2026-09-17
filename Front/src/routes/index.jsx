@@ -4,6 +4,8 @@ import Sobre from "@/pages/Landing/Sobre";
 import Cadastro from "@/pages/Auth/Cadastro";
 import Login from "@/pages/Auth/Login";
 import DonnorDashboard from "@/pages/System/Dashboard";
+import UserProfile from "@/pages/System/UserProfile";
+
 import Historico from "@/pages/System/Historico";
 import Notificacoes from "@/pages/System/Notificacoes";
 
@@ -15,6 +17,7 @@ function AppRoutes() {
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/login" element={<Login />} />
       <Route path="/donnorDashboard" element={<DonnorDashboard />} />
+      <Route path="/profile" element={<UserProfile />}/>
       <Route path="/historico" element={<Historico />} />
       <Route path="/notificacoes" element={<Notificacoes />} />
     </Routes>

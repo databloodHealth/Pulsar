@@ -1,0 +1,35 @@
+select,option{
+    appearance: none;
+}
+
+.settingBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settingBox .selectContainer {
+    flex: 1 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.settingBox .selectContainer span {
+    position: absolute;
+    right: 15px;
+    transition: transform .05s;
+}
+
+.settingBox .selectContainer:focus-within span {
+    transform: rotate(0.5turn);
+}
+
+.settingBox .selectContainer:focus-within select {
+    outline: 2px solid var(--cinza-500);
+}
+
+.settingBox select {
+    flex: 1 0;
+}

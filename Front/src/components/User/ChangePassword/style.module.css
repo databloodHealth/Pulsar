@@ -1,0 +1,68 @@
+.alterarSenha {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--cinza-50);
+    border-radius: 8px;
+    border: solid 1px var(--cinza-200);
+    gap: 2.5rem;
+    flex: 1 0;
+}
+
+.alterarSenha>h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 2rem;
+}
+
+.alterarSenha>h1 span {
+    border-radius: 8px;
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--vermelho-badge);
+}
+
+.alterarSenha form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.alterarSenha .inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.alterarSenha .inputContainer label {
+    font-size: 1rem;
+}
+
+.alterarSenha .inputContainer input {
+    border: none;
+    border-radius: 6px;
+    font-size: .9rem;
+    padding: .8rem 1rem;
+}
+
+.alterarSenha .inputContainer:focus-within input {
+    outline: 2px solid var(--cinza-500);
+}
+
+.alterarSenha form button {
+    color: var(--branco);
+    font-size: .9rem;
+    padding: .8rem 3rem;
+    background: var(--botaoVermelho);
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.alterarSenha form button:hover{
+    background: var(--vermelho-hover);
+}
