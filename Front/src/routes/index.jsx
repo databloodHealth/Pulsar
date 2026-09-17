@@ -5,6 +5,7 @@ import Cadastro from "@/pages/Auth/Cadastro";
 import Login from "@/pages/Auth/Login";
 import DonnorDashboard from "@/pages/System/Dashboard";
 import Historico from "@/pages/System/Historico";
+import Notificacoes from "@/pages/System/Notificacoes";
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/donnorDashboard" element={<DonnorDashboard />} />
       <Route path="/historico" element={<Historico />} />
+      <Route path="/notificacoes" element={<Notificacoes />} />
     </Routes>
   );
 }

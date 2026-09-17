@@ -1,0 +1,55 @@
+.notification{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 1rem 1.4rem;
+    background-color: white;
+    align-items: center;
+    /* border: 1px solid var(--cinza-400); */
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.icon{
+    background-color: var(--primary);
+    padding: .8rem;
+    color: white;
+    border-radius: 8px;
+}
+
+.textArea{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textArea h4{
+    font-size: 1.1rem;
+    color: var(--cinza-800);
+}
+
+.textArea p{
+    color: #494949;
+    font-size: 1rem;
+}
+
+.action{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+
+.date{
+    color: #494949;
+}
+
+.actionIcon{
+    color: var(--primary);
+    cursor: pointer;
+    position: relative;
+    right: 15px;
+}
