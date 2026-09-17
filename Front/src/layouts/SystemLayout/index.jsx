@@ -2,6 +2,7 @@ import styles from './style.module.css';
 import whiteLogo from '@/assets/images/WhiteLogo.png';
 import blackLogo from '@/assets/images/BlackLogo.png';
 import userAvatar from '@/assets/images/DoctorTech.jpg';
+import { NavLink } from 'react-router-dom';
 
 export default function SystemLayout({ children }) {
   return (
@@ -33,24 +34,21 @@ export default function SystemLayout({ children }) {
         </div>
 
         <nav className={styles.anchorContainer}>
-          <a href="#" className={`${styles.link} ${styles.activeLink}`}>
+          <NavLink to="/Donnordashboard" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
             <i className="fa-solid fa-house"></i>Início
-          </a>
-          <a href="#" className={styles.link}>
+          </NavLink>
+          <NavLink to="/historico" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <i className="fa-solid fa-droplet"></i>Minhas doações
-          </a>
-          <a href="#" className={styles.link}>
+          </NavLink>
+          <NavLink to="/notificacoes" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <i className="fa-solid fa-bell"></i>Notificações
-          </a>
-          <a href="#" className={styles.link}>
+          </NavLink>
+           <NavLink to="/perfil" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <i className="fa-solid fa-user"></i>Perfil
-          </a>
+          </NavLink>
         </nav>
 
         <div className={styles.buttonContainer}>
-          <button className={styles.navButton}>
-            <i className="fa-solid fa-gear"></i>Configurações
-          </button>
           <a href="#" className={styles.buttonLink}>
             <i className="fa-solid fa-circle-info"></i>Central de ajuda
           </a>
