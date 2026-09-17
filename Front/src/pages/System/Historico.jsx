@@ -73,18 +73,19 @@ export default function Historico() {
                                 <p>status</p>
                                 <IoDocumentTextOutline />
 
+                                </div>
                             </div>
-                        </div>
-                        <div className={sty.botoomTabela}>
-                            <div id={sty.baixar}><p>Baixar Histórico Completo (PDF)</p>
+                        {/* </div> */}
+                        <div className={style.botoomTabela}>
+                            <div id={style.baixar}><p>Baixar Histórico Completo (PDF)</p>
                                 <FiDownload />
                             </div>
                             <div className={sty.selecaoNumeros}>
                                 <IoIosArrowBack />
-                                <p className={sty.boxNumber}>1</p>
-                                <p className={sty.boxNumber}>2</p>
-                                <p className={sty.boxNumber}>3</p>
-                                <p className={sty.boxNumber}>4</p>
+                                <p className={style.boxNumber}>1</p>
+                                <p className={style.boxNumber}>2</p>
+                                <p className={style.boxNumber}>3</p>
+                                <p className={style.boxNumber}>4</p>
                                 <IoIosArrowForward />
 
                             </div>
