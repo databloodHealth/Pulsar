@@ -8,6 +8,10 @@
   font-family: "Inter", "Manrope", "Epilogue";
 }
 
+a{
+  text-decoration: none
+}
+
 :root {
   --bg: #ffffff;
   --branco: #ffffff;
@@ -36,6 +40,7 @@
   --cinza-tabela-texto: #1a1a1a;
   --cinza-rosa: #f6f6ff;
 
+  --cinza-fundo-claro:#f5f3f3;
   --cinza-fundo: #fbf9f8;
   --cinza-input: #efeded;
   --cinza-linha: #c9c9c9;
@@ -81,6 +86,7 @@
   --vermelho-link: #9e2016;
   --vermelho-traco: #e1bfb9;
   --vermelho-badge: #ffd7d3;
+  --vermelho-gradient: linear-gradient(90deg, var(--vermelho-fonte) 0%, var(--vermelho-fundo) 100%);
 
   --card-red-bg: linear-gradient(135deg, #ff0000, #b41b0f);
   --card-dark-bg: #0f172a;

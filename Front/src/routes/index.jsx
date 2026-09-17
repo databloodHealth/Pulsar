@@ -6,6 +6,7 @@ import Login from "@/pages/Auth/Login";
 import DonnorDashboard from "@/pages/System/Dashboard";
 import UserProfile from "@/pages/System/UserProfile";
 
+import Historico from "@/pages/System/Historico";
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/donnorDashboard" element={<DonnorDashboard />} />
       <Route path="/profile" element={<UserProfile />}/>
+      <Route path="/historico" element={<Historico />} />
     </Routes>
   );
 }

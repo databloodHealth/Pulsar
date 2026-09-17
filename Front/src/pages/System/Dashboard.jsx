@@ -1,5 +1,5 @@
 import SystemLayout from '@/layouts/SystemLayout';
-import style from '@/styles/dashboard.module.css';
+import style from '@/styles/System/dashboard.module.css';
 import { Calendar, Droplet, Lightbulb } from 'lucide-react';
 
 export default function DonnorDashboard() {
