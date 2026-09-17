@@ -8,6 +8,10 @@
   font-family: "Inter", "Manrope", "Epilogue";
 }
 
+a{
+  text-decoration: none
+}
+
 :root {
   --bg: #ffffff;
   --branco: #ffffff;

@@ -3,7 +3,9 @@ import style from '@/styles/about.module.css';
 
 import blackLogo from '@/assets/images/BlackLogo.png';
 import heroImage from '@/assets/images/heroImg.png';
+import Doacao from '@/assets/images/SVG_doacao.png'
 import Header from '@/components/ui/LandingPage/Header';
+import FooterLanding from '@/components/FooterLanding';
 
 export default function Sobre() {
   return (
@@ -43,7 +45,7 @@ export default function Sobre() {
           </div>
 
           <div className={style.heroVisual}>
-            
+              <img src={Doacao} alt="Ilustração de doação" />
           </div>
         </section>
 
@@ -158,6 +160,7 @@ export default function Sobre() {
           </div>
         </section>
       </main>
+      <FooterLanding />
     </>
   );
 }
