@@ -48,6 +48,10 @@
   }
 }
 
+a{
+  text-decoration: none;
+}
+
  a.primary {
   background-color: var(--primary);
   color: var(--branco);

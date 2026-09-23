@@ -1,0 +1,36 @@
+.settingBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settingBox .controleFonte {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background: var(--branco);
+    border-radius: 5px;
+    gap: .5rem;
+}
+
+.settingBox .controleFonte h3 {
+    font-size: 1.4rem;
+}
+
+.settingBox .controleFonte button {
+    width: 3.2rem;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    cursor: pointer;
+    transition: background .3s ease;
+    font-size: 1.2rem;
+}
+
+.settingBox .controleFonte button:hover{
+    background: var(--cinza-footer)
+}

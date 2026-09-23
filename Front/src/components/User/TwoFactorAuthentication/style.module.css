@@ -1,0 +1,57 @@
+.dfa{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--cinza-50);
+    border-radius: 8px;
+    gap: 2.5rem;
+}
+
+.dfa>h1{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 2rem;
+}
+
+.dfa>h1 span{
+    border-radius: 8px;
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--verde-100);
+}
+
+.dfa>p{
+    color: var(--azul-400);
+}
+
+.dfa .botoes{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    background: var(--cinza-footer);
+    border-radius: 8px;
+}
+
+.dfa .botoes button{
+    flex: 1;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background .2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dfa .botoes button.active{
+    background: var(--branco);
+}
+
+.dfa .botoes button.inactive:hover{
+    background: var(--cinza-500);
+}
