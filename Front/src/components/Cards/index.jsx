@@ -1,5 +1,5 @@
 import style from "./style.module.css";
-import iconePulsar from "../../assets/images/IconePulsar.webp";
+import iconePulsar from "@/assets/images/IconePulsar.webp";
 
 export function CardDoisVermelho({ title, description }) {
     return (
