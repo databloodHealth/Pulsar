@@ -43,7 +43,7 @@ export default function SystemLayout({ children }) {
           <NavLink to="/notificacoes" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <i className="fa-solid fa-bell"></i>Notificações
           </NavLink>
-           <NavLink to="/perfil" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
+           <NavLink to="/profile" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <i className="fa-solid fa-user"></i>Perfil
           </NavLink>
         </nav>

@@ -15,8 +15,7 @@
     gap: 2.5rem;
 }
 
-.options .settingsContainer h2,
-label {
+.options .settingsContainer h2, .options .settingsContainer label {
     color: var(--azul-label);
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -34,7 +33,7 @@ label {
     
 }
 
-.options select,button {
+.options select, .options button {
     border: none;
     border-radius: 6px;
     font-size: 1.2rem;
