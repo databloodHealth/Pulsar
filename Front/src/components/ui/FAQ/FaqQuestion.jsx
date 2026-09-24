@@ -11,10 +11,10 @@ export function FaqQuestion({ question, isActive = false, onToggle }) {
           transform: isActive ? "" : "rotate(-45deg)",
           backgroundColor: isActive ? "var(--primary)" : "transparent",
           color: isActive ?  "var(--branco)" : "var(--preto)",
-          border: isActive ? "none": "1px solid var(--cinza-500)",
+          border: isActive ? "none": "none",
         }}
       >
-        <X size={20}/>
+        <X size={16}/>
       </button>
     </div>
   );

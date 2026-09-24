@@ -1,14 +1,28 @@
  .questionCard{
-    border-bottom: 3px solid var(--primary);
+    border: 1px solid var(--cinza-borda);
     width: 50%;
-    padding: 0 .5rem;
-    border-radius: 2px;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
     gap: .5rem;
     display: flex;
     flex-direction: column;
     transition: all .5s ease;
     user-select: none;
+    position: relative;
+    overflow: hidden;
   }
+
+  .border
+  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--card-red-bg);
+    width: 4px;
+    height: 0;
+    transition: .5s ease;
+  }
+
 
   .questionHead{
     display: flex;
@@ -33,15 +47,14 @@
     width: 36px;
     height: 36px;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: .2rem;
     transition: all .5s ease;
     cursor: pointer;
   }
 
   .questionCard .questionContent{
-    border-left: 3px solid var(--primary);
     font-size: 1.05rem;
-    padding: 0 2%;
+    color: var(--cinza-texto);
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
@@ -57,12 +70,12 @@
 
   .questionCard.active{
     padding-bottom: 1rem;
-    gap: 1rem
+    gap: 1rem; 
+    border: 1px solid var(--cinza-borda);
   }
 
  .questionCard.active .questionContent{
     grid-template-rows: 1fr;
     opacity: 1;
     transform: translateY(0);
-    padding: 1% 2%;
   }

@@ -18,6 +18,8 @@ export function FaqRoot({ children }) {
           onToggle: toggle,
         });
       })}
+
+      <div className={style.border} style={{height: isOpen ? '100%' : '0'}}></div>
     </div>
   );
 }
