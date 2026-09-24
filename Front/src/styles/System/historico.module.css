@@ -3,16 +3,41 @@
     --azul-400: #416084;
     --borda: 1px solid #000;
     --branco: #ffffff;
-    --fundo-bege: #F5F3F3;
+    --fundo-bege: #f5f3f3;
     --azul-fonte: #28496b;
+    --vermelho-fonte: #b41b0f;
+    --cinza-borda: #e2e2e277;
+}
 
+.containerHistorico {
+    background-color: var(--cinza-fundo);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .tituloPage {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+
+        h1 {
+            font-size: 3rem;
+            color: var(--preto);
+        }
+
+        h4 {
+            font-size: 1rem;
+            color: var(--azul-400);
+            font-weight: 500;
+        }
+    }
 }
 
 .gridCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-
 }
 
 .dashboardHistorico {
@@ -25,42 +50,22 @@
         background-color: var(--branco);
         border-radius: 16px;
         padding: 1rem 2rem;
-
     }
 }
 
+.cardFirst {
+}
 
-.gridTabela {
+.actionBottomTable{
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    .categoriasTabela {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem 3rem;
-        background-color: var(--fundo-bege);
-
-        #idColeta {
-            color: var(--azul-fonte);
-            width: 40%;
-            line-height: 1.1;
-            
-        }
-
-        p {
-            color: var(--azul-fonte);
-        }
-    }
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 65%;
 }
-
-    .cardFirst {}
-
 
 .botoomTabela {
     display: flex;
+    border-radius: 0 0 8px 8px;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
@@ -77,33 +82,39 @@
         color: var(--vermelho-link);
         font-size: 1rem;
         font-weight: 600;
+        cursor: pointer;
     }
 }
 
-    .selecaoNumeros {
+.selecaoNumeros {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 1rem;
+
+    .boxNumber {
         display: flex;
-        justify-content: space-between;
-        gap: 1rem;
         align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        width: 42px;
+        height: 42px;
+        background-color: var(--branco);
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+    }
 
-        .boxNumber {
-            border-radius: 6px;
-            padding: .8rem;
-            background-color: var(--branco);
-            font-weight: 500;
-            font-size: 1rem;
-        }
-        .boxNumberAction{
-                        background-color: var(--azul-fonte);
-                        color: var(--branco);}
-
-        }
-
+    .boxNumberAction {
+        background-color: var(--azul-fonte);
+        color: var(--branco);
+    }
+}
 
 .gridTabela {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
     .categoriasTabela {
         display: grid;
@@ -117,11 +128,11 @@
             color: var(--azul-fonte);
             width: 40%;
             line-height: 1.1;
-            
         }
 
         p {
             color: var(--azul-fonte);
+            font-weight: 700;
         }
     }
 
@@ -129,17 +140,29 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         align-items: center;
+        padding: 1rem;
         gap: 1rem;
-        padding: .5rem 3rem;
+        border-bottom: 1px solid var(--cinza-borda);
+
+        &:hover {
+            background-color: var(--cinza-fundo);
+        }
+
+        .id {
+            font-weight: 700;
+            color: var(--vermelho-fonte);
+        }
 
         p {
             margin: 0;
         }
     }
+}
 
-    .categoriasTabela {
-        p {
-            font-weight: 700;
-        }
-    }
+.iconTabela {
+    cursor: pointer;
+}
+
+.iconSeta {
+    cursor: pointer;
 }
