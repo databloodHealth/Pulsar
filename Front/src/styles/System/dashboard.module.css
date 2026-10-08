@@ -226,7 +226,7 @@
 .donateTable th {
   color: var(--cinza-azulado, #416084);
   text-align: left;
-  background-color: var(--cinza-claro-background, #eeeeee);
+  background-color: var(--fundo-bege);
   padding: 1.2rem;
 }
 
