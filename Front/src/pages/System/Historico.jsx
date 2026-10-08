@@ -5,17 +5,15 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import style from "@/styles/System/historico.module.css";
 import { CardDoisVermelho, CardTres } from "@/components/Cards";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function Historico() {
     return (
         <SystemLayout>
             <div className={style.containerHistorico}>
-                <div className={style.tituloPage}>
-                    <h1>Histórico de Doações</h1>
-                    <h4>
-                        Acompanhe seu histórico de soliedariedade e o impacto causado
-                    </h4>
-                </div>
+                
+                <PageTitle title={'Histórico de doações'} subtitle={'Acompanhe seu histórico de soliedariedade e o impacto causado'} />
+
 
                 <div className={style.gridCards}>
                     <CardDoisVermelho
@@ -95,27 +93,27 @@ export default function Historico() {
 
                         <div className={style.botoomTabela}>
                             <div className={style.actionBottomTable}>
-                            <div id={style.baixar}>
-                                <p>Baixar Histórico Completo (PDF)</p>
-                                <FiDownload />
+                                <div id={style.baixar}>
+                                    <p>Baixar Histórico Completo (PDF)</p>
+                                    <FiDownload />
+                                </div>
+
+                                <div className={style.selecaoNumeros}>
+                                    <IoIosArrowBack className={style.iconSeta} />
+
+                                    <p
+                                        className={`${style.boxNumber} ${style.boxNumberAction}`}
+                                    >
+                                        1
+                                    </p>
+
+                                    <p className={style.boxNumber}>2</p>
+                                    <p className={style.boxNumber}>3</p>
+                                    <p className={style.boxNumber}>4</p>
+
+                                    <IoIosArrowForward className={style.iconSeta} />
+                                </div>
                             </div>
-
-                            <div className={style.selecaoNumeros}>
-                                <IoIosArrowBack className={style.iconSeta} />
-
-                                <p
-                                    className={`${style.boxNumber} ${style.boxNumberAction}`}
-                                >
-                                    1
-                                </p>
-
-                                <p className={style.boxNumber}>2</p>
-                                <p className={style.boxNumber}>3</p>
-                                <p className={style.boxNumber}>4</p>
-
-                                <IoIosArrowForward className={style.iconSeta} />
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>

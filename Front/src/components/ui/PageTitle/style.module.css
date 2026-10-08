@@ -1,0 +1,15 @@
+.pageTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pageTitle .title{
+    font-size: 2.5rem;
+}
+
+.pageTitle .subtitle{
+    color: var(--azul-label);
+    font-size: 1rem;
+    font-weight: 500;
+}
