@@ -1,0 +1,42 @@
+.meioContato{
+    width: 50%;
+    padding: 1rem 2rem;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 #0000003a;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.meioContato h1{
+    color: var(--azul-400);
+    font-size: 1.2rem;
+}
+
+.meioContato p{
+    color: var(--cinza-900);
+}
+
+.meioContato span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cinza-900);
+    background-color: var(--cinza-300);
+    border-radius: 4px;
+    padding: .25rem;
+}
+
+.meioContato > div{
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+}
+
+.meioContato .rightArrow{
+    right: 20px;
+    bottom: 33px;
+    position: absolute;
+}

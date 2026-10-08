@@ -1,0 +1,25 @@
+.contatoMain{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+}
+
+.meiosContatoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.meiosContatoContainer>h1{
+    color: var(--cinza-800);
+    font-size: 2.5rem;
+}
+
+.meiosContatoContainer>p{
+    color: var(--cinza-900);
+}
+
+.mensagemContainer{
+    width: 44rem;
+}
