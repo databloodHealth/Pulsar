@@ -2,15 +2,13 @@ import SystemLayout from "@/layouts/SystemLayout";
 import style from '@/styles/System/notificacoes.module.css'
 import Notification from "@/components/ui/System/Notification";
 import { Clock, Droplet } from "lucide-react";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function Notificacoes (){
     return(
         <SystemLayout>
             <div className="container">
-                <div className="titlePage">
-                <h1>Notificações</h1>
-                <h4>Gerencie as notificções enviadas pelo sistema</h4>
-                </div>
+                <PageTitle title={'Notificações'} subtitle={'Gerencie as notificções enviadas pelo sistema'}/>
             </div>
 
             <div className={style.containerNotificacoes}>

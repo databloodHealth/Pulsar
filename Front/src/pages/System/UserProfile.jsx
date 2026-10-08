@@ -5,14 +5,14 @@ import UserOptions from "@/components/User/UserOptions";
 import ChangePassword from "@/components/User/ChangePassword";
 import { Shield } from 'lucide-react'
 import TwoFactorAuthentication from "@/components/User/TwoFactorAuthentication";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function UserProfile() {
     return (
         <SystemLayout>
             <div className={style.content}>
 
-                <h1 className={style.title}>Perfil </h1>
-                <h2 className={style.subtitle}>Gerencie informações pessoais, segurança e preferências </h2>
+                <PageTitle title={'Perfil'} subtitle={'Gerencie informações pessoais, segurança e preferências'}/>
 
                 <section>
 
