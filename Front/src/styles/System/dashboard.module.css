@@ -207,13 +207,21 @@
 }
 
 .tableTopButton a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--cinza-azulado, #416084);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+}
+
+.lineTable{
+  background-color: #fff;
+}
+
+.lineTable:hover{
+  background-color: var(--cinza-fundo);
 }
 
 .donateTable table {
