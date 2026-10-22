@@ -9,6 +9,7 @@ import UserProfile from "@/pages/System/UserProfile";
 import Historico from "@/pages/System/Historico";
 import Notificacoes from "@/pages/System/Notificacoes";
 import AdminDashboard from "@/pages/System/Admin/AdminDashboard";
+import EstoqueAdmin from "@/pages/System/Admin/Estoque";
 
 function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ function AppRoutes() {
       <Route path="/historico" element={<Historico />} />
       <Route path="/notificacoes" element={<Notificacoes />} />
       <Route path="/admin/adminDashboard" element={<AdminDashboard />} />
+      <Route path="/admin/estoque" element={<EstoqueAdmin/>}/>
     </Routes>
   );
 }
