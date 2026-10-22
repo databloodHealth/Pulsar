@@ -119,7 +119,7 @@ export default function DonnorDashboard() {
           </thead>
 
           <tbody>
-            <tr>
+            <tr className={style.lineTable}>
               <td>#BS-9921</td>
               <td className={style.tableData}>12/03/2024</td>
               <td>Centro de Hemoterapia Matriz</td>
@@ -128,7 +128,7 @@ export default function DonnorDashboard() {
               <td className={style.tableIcon}><i className="fa-regular fa-file"></i></td>
             </tr>
 
-            <tr>
+            <tr className={style.lineTable}>
               <td>#BS-8412</td>
               <td className={style.tableData}>10/11/2023</td>
               <td>Unidade Móvel Praça da Sé</td>
@@ -137,7 +137,7 @@ export default function DonnorDashboard() {
               <td className={style.tableIcon}><i className="fa-regular fa-file"></i></td>
             </tr>
 
-            <tr>
+            <tr className={style.lineTable}>
               <td>#BS-7710</td>
               <td className={style.tableData}>15/07/2023</td>
               <td>Centro de Hemoterapia Matriz</td>
@@ -146,7 +146,7 @@ export default function DonnorDashboard() {
               <td className={style.tableIcon}><i className="fa-regular fa-file"></i></td>
             </tr>
 
-            <tr>
+            <tr className={style.lineTable}>
               <td>#BS-6534</td>
               <td className={style.tableData}>22/01/2023</td>
               <td>Hospital São Lucas</td>
@@ -155,7 +155,7 @@ export default function DonnorDashboard() {
               <td className={style.tableIcon}><i className="fa-regular fa-file"></i></td>
             </tr>
 
-            <tr>
+            <tr className={style.lineTable}>
               <td>#BS-5982</td>
               <td className={style.tableData}>09/09/2022</td>
               <td>Unidade Móvel Centro</td>
@@ -164,7 +164,7 @@ export default function DonnorDashboard() {
               <td className={style.tableIcon}><i className="fa-regular fa-file"></i></td>
             </tr>
 
-            <tr>
+            <tr className={style.lineTable}>
               <td>#BS-4821</td>
               <td className={style.tableData}>17/04/2022</td>
               <td>Hemocentro Regional</td>

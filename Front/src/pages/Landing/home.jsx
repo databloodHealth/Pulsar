@@ -145,14 +145,14 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              <tr><td>A+</td><td>A+ / AB+</td><td>A+ / A- / O+ / O-</td></tr>
-              <tr><td>A-</td><td>A+ / A- / AB+ / AB-</td><td>A- / O-</td></tr>
-              <tr><td>B+</td><td>B+ / AB+</td><td>B+ / B- / O+ / O-</td></tr>
-              <tr><td>B-</td><td>B+ / B- / AB+ / AB-</td><td>B- / O-</td></tr>
-              <tr><td>AB+</td><td>AB+</td><td>Todos os tipos</td></tr>
-              <tr><td>AB-</td><td>AB+ / AB-</td><td>A- / B- / AB- / O-</td></tr>
-              <tr><td>O+</td><td>A+ / B+ / AB+ / O+</td><td>O+ / O-</td></tr>
-              <tr><td>O-</td><td>Todos os tipos</td><td>O-</td></tr>
+              <tr className={style.lineTable}><td>A+</td><td>A+ / AB+</td><td>A+ / A- / O+ / O-</td></tr>
+              <tr className={style.lineTable}><td>A-</td><td>A+ / A- / AB+ / AB-</td><td>A- / O-</td></tr>
+              <tr className={style.lineTable}><td>B+</td><td>B+ / AB+</td><td>B+ / B- / O+ / O-</td></tr>
+              <tr className={style.lineTable}><td>B-</td><td>B+ / B- / AB+ / AB-</td><td>B- / O-</td></tr>
+              <tr className={style.lineTable}><td>AB+</td><td>AB+</td><td>Todos os tipos</td></tr>
+              <tr className={style.lineTable}><td>AB-</td><td>AB+ / AB-</td><td>A- / B- / AB- / O-</td></tr>
+              <tr className={style.lineTable}><td>O+</td><td>A+ / B+ / AB+ / O+</td><td>O+ / O-</td></tr>
+              <tr className={style.lineTable}><td>O-</td><td>Todos os tipos</td><td>O-</td></tr>
             </tbody>
           </table>
 
