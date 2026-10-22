@@ -1,22 +1,26 @@
 import style from '@/styles/contato.module.css'
 import FooterLanding from '@/components/ui/LandingPage/FooterLanding'
 import MeioDeContato from '@/components/MeiosDeContato'
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiPhone, FiMail } from "react-icons/fi";
+import Header from '@/components/ui/LandingPage/Header';
+import { IoIosArrowDown } from "react-icons/io";
 
 
 export default function Contato() {
     return (
         <>
+            <Header />
             <main className={style.contatoMain}>
 
                 <section className={style.meiosContatoContainer}>
 
-                    <div>
+                    <div className={style.title}>
                         <h1>Precisa de algo?</h1>
                         <h1>Envie-nos uma mensagem.</h1>
                     </div>
-                    
+
                     <p>
                         Se você tem alguma dúvida, proposta ou feedback, nos envie uma mensagem explicando
                         detalhadamente sua situação.
@@ -32,28 +36,64 @@ export default function Contato() {
                         <MeioDeContato
                             meio={"Telefone"}
                             icone={<FiPhone size={25} />}
-                            desc={"contato@pulsar.com"}
+                            desc={"+55 12 99999-0000"}
                         />
 
                         <MeioDeContato
                             meio={"Whatsapp"}
                             icone={<FaWhatsapp size={25} />}
-                            desc={"contato@pulsar.com"}
+                            desc={"19 11111-7777"}
                         />
                     </div>
 
-                    <div className="midiasSociais">
+                    <div className={style.midiasSociais}>
                         <h2>Nossas Mídias</h2>
                         <div>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span><FaInstagram size={26} /></span>
+                            <span><FaXTwitter size={26} /></span>
+                            <span><FaFacebookF size={26} /></span>
+                            <span><FaYoutube size={26} /></span>
                         </div>
                     </div>
                 </section>
 
-                <div className={style.mensagemContainer}></div>
+                <div className={style.mensagemContainer}>
+                    <h1>Envie sua mensagem</h1>
+
+                    <form action="">
+
+                        <div className={style.inputContainer}>
+                            <label htmlFor="nome">Nome</label>
+                            <input type="text" name='nome' id={style.nome}/>
+                        </div>
+
+                        <div className={style.inputContainer}>
+                            <label htmlFor="email">E-mail</label>
+                            <input type="email" name='email' id={style.email}/>
+                        </div>
+
+                        <div className={style.inputContainer}>
+                            <label htmlFor="assunto">Assunto</label>
+                            <select name="assunto" id={style.assunto}>
+                                <option value="outro">Outro...</option>
+                                <option value="">a</option>
+                                <option value="">b</option>
+                                <option value="">c</option>
+                            </select>
+                            <IoIosArrowDown className={style.selectArrow} size={20}/>
+                        </div>
+
+                        <div className={style.inputContainer}>
+                            <label htmlFor="mensagem">Conte-nos sobre o que você deseja</label>
+                            <textarea name='mensagem' id={style.mensagem} rows={5}/>
+                        </div>
+
+                        <button id={style.sendButton}>
+                            Enviar
+                        </button>
+                    </form>
+
+                </div>
             </main>
             <FooterLanding />
         </>

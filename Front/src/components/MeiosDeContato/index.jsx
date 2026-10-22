@@ -1,5 +1,5 @@
 import style from './style.module.css'
-import { ChevronRight } from 'lucide-react'
+import { IoIosArrowDown } from "react-icons/io";
 export default function MeioDeContato({meio, icone, desc}) {
     return(
     <>
@@ -9,7 +9,7 @@ export default function MeioDeContato({meio, icone, desc}) {
                 <span>{icone}</span>
                 <p>{desc}</p>
             </div>
-        <ChevronRight className={style.rightArrow} color='#8b8b8b' size={30}/>
+        <IoIosArrowDown className={style.rightArrow} color='#8b8b8b' size={25}/>
         </div>
     </>
     )
