@@ -6,6 +6,8 @@
     --preto: #000000;
     --cinza-900: #475569;
     --verde-500: #005331;
+    --azul-label: #416084;
+
 }
 
 .cardDois {
@@ -79,5 +81,53 @@
 .fontVerde {
     p {
         color: var(--verde-500);
+    }
+}
+
+.campanha {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+background-color: var(--branco);
+    .imagem {
+        width: 100%;
+    }
+
+    .containerConteudo {
+        padding: 1rem 2rem;
+display: flex;
+gap: .6rem;
+flex-direction: column;
+        .conteudoCampanha {
+            h4 {
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1rem;
+                color: var(--azul-label);
+            }
+
+        }
+
+        .containerInfo {
+display: flex;
+flex-direction: column;
+gap: .6rem;
+
+            .infoTop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .barra{
+                width: 100%;
+                height: 8px;
+                background-color: var(--cinza-900);
+                border-radius: 6px;
+            }
+        }
     }
 }
