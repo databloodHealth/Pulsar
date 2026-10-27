@@ -60,21 +60,21 @@ export default function Contato() {
                 <div className={style.mensagemContainer}>
                     <h1>Envie sua mensagem</h1>
 
-                    <form action="">
+                    <form action="" method='post'>
 
                         <div className={style.inputContainer}>
                             <label htmlFor="nome">Nome</label>
-                            <input type="text" name='nome' id={style.nome}/>
+                            <input type="text" name='nome' id='nome' required autoComplete='name'/>
                         </div>
 
                         <div className={style.inputContainer}>
                             <label htmlFor="email">E-mail</label>
-                            <input type="email" name='email' id={style.email}/>
+                            <input type="email" name="email" id="email" required autoComplete='email'/>
                         </div>
 
                         <div className={style.inputContainer}>
                             <label htmlFor="assunto">Assunto</label>
-                            <select name="assunto" id={style.assunto}>
+                            <select name="assunto" id='assunto' required>
                                 <option value="outro">Outro...</option>
                                 <option value="">a</option>
                                 <option value="">b</option>
@@ -85,7 +85,7 @@ export default function Contato() {
 
                         <div className={style.inputContainer}>
                             <label htmlFor="mensagem">Conte-nos sobre o que você deseja</label>
-                            <textarea name='mensagem' id={style.mensagem} rows={5}/>
+                            <textarea name='mensagem' id='mensagem' rows={5} required/>
                         </div>
 
                         <button id={style.sendButton}>
