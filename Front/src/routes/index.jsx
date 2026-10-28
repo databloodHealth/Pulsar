@@ -9,6 +9,7 @@ import UserProfile from "@/pages/System/UserProfile";
 import Historico from "@/pages/System/Historico";
 import Notificacoes from "@/pages/System/Notificacoes";
 import AdminDashboard from "@/pages/System/Admin/AdminDashboard";
+import Campanhas from "@/pages/System/Admin/Campanhas";
 import EstoqueAdmin from "@/pages/System/Admin/Estoque";
 import Contato from "@/pages/Landing/Contato";
 
@@ -24,6 +25,8 @@ function AppRoutes() {
       <Route path="/historico" element={<Historico />} />
       <Route path="/notificacoes" element={<Notificacoes />} />
       <Route path="/admin/adminDashboard" element={<AdminDashboard />} />
+      <Route path="/admin/campanhas" element={<Campanhas />}/>
+          </Routes>
       <Route path="/admin/estoque" element={<EstoqueAdmin/>}/>
       <Route path="/contato" element={<Contato/>}/>
     </Routes>

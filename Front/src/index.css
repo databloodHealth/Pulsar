@@ -8,7 +8,7 @@
   font-family: "Inter", "Manrope", "Epilogue";
 }
 
-a{
+a {
   text-decoration: none
 }
 
@@ -40,7 +40,7 @@ a{
   --cinza-tabela-texto: #1a1a1a;
   --cinza-rosa: #f6f6ff;
 
-  --cinza-fundo-claro:#f5f3f3;
+  --cinza-fundo-claro: #f5f3f3;
   --cinza-fundo: #fbf9f8;
   --cinza-input: #efeded;
   --cinza-linha: #c9c9c9;
@@ -69,6 +69,8 @@ a{
   --azul-fonte: #28496b;
   --azul-icone: #28496b;
   --azul-icone-fundo: #d1e4ff;
+  --azul-fundo: #28496b;
+
 
   --verde-100: #86f8c9;
   --verde-500: #005331;
