@@ -7,6 +7,10 @@
     --cinza-900: #475569;
     --verde-500: #005331;
     --azul-label: #416084;
+    --cinza-400: #e4e2e2;
+    --cinza-fundo-claro: #f5f3f3;
+    --verde-icone-fundo: #86f8c9;
+
 
 }
 
@@ -88,16 +92,34 @@
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
-background-color: var(--branco);
+    background-color: var(--branco);
+    position: relative;
+
     .imagem {
         width: 100%;
     }
 
+    .statusCampanha {
+        border-radius: 1rem;
+        background-color: var(--verde-icone-fundo);
+        position: absolute;
+        z-index: 100;
+        padding: 5px 6px;
+        right: 1rem;
+        top: 1rem;
+    }
+    .statusCampanha p{
+        color: var(--verde-500);
+        font-size: .9rem;
+        font-weight: 600;
+    }
+
     .containerConteudo {
         padding: 1rem 2rem;
-display: flex;
-gap: .6rem;
-flex-direction: column;
+        display: flex;
+        gap: .6rem;
+        flex-direction: column;
+
         .conteudoCampanha {
             h4 {
                 font-size: 1.3rem;
@@ -112,9 +134,9 @@ flex-direction: column;
         }
 
         .containerInfo {
-display: flex;
-flex-direction: column;
-gap: .6rem;
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
 
             .infoTop {
                 display: flex;
@@ -122,12 +144,59 @@ gap: .6rem;
                 justify-content: space-between;
                 align-items: center;
             }
-            .barra{
+
+            .barra {
                 width: 100%;
                 height: 8px;
-                background-color: var(--cinza-900);
+                background-color: var(--cinza-400);
                 border-radius: 6px;
             }
+        }
+
+        .caixaInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .prazo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .5rem;
+
+            }
+
+            .infoComplementar {
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .5rem;
+
+            }
+        }
+
+    }
+
+    .configCampanha {
+        background-color: var(--cinza-fundo-claro);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 2rem;
+
+        .nameConfig {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--vermelho-fonte);
+            font-size: .9rem;
+            font-weight: 600;
+        } 
+
+        .iconeConfig {
+            cursor: pointer;
         }
     }
 }

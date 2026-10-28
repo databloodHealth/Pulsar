@@ -8,6 +8,8 @@ import style from "@/styles/campanhas.module.css"
 import { Link } from "react-router-dom";
 import { CardCampanha } from "@/components/Cards";
 import { IoLocationOutline } from "react-icons/io5";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+
 
 export default function Campanhas() {
     return (
@@ -34,21 +36,31 @@ export default function Campanhas() {
                     </div>
                 </div>
                 <div className={style.gridCampanhas}>
-                    <CardCampanha imagem={imagemCard} titulo={"Junho Vermelho 2024"}
+                    <CardCampanha status={"ATIVA"} imagem={imagemCard} titulo={"Junho Vermelho 2024"}
                         descricao={"Foco em conscientização nacional para o período de inverno."} meta={"500"}
                         numeroColeta={330} prazoTitle={"TÉRMINO"} dataPrazo={"30 jun"} iconeComplementar={IoLocationOutline}
-                        titleComplementar={"LOCAL"} descricaoComplementar={"Hemocentro Sul"} />
-                    <CardCampanha imagem={imagemCard} titulo={"Junho Vermelho 2024"}
+                        titleComplementar={"LOCAL"} descricaoComplementar={"Hemocentro Sul"} funcaoConfig={"Editar Campanha"} />
+                    <CardCampanha status={"ATIVA"} imagem={imagemCard} titulo={"Junho Vermelho 2024"}
                         descricao={"Foco em conscientização nacional para o período de inverno."} meta={"500"}
                         numeroColeta={330} prazoTitle={"TÉRMINO"} dataPrazo={"30 jun"} iconeComplementar={IoLocationOutline}
-                        titleComplementar={"LOCAL"} descricaoComplementar={"Hemocentro Sul"} />
-                    <CardCampanha imagem={imagemCard} titulo={"Junho Vermelho 2024"}
+                        titleComplementar={"LOCAL"} descricaoComplementar={"Hemocentro Sul"} funcaoConfig={"Impulsionar Campanha"} />
+                    <CardCampanha status={"ATIVA"} imagem={imagemCard} titulo={"Junho Vermelho 2024"}
                         descricao={"Foco em conscientização nacional para o período de inverno."} meta={"500"}
                         numeroColeta={330} prazoTitle={"TÉRMINO"} dataPrazo={"30 jun"} iconeComplementar={IoLocationOutline}
-                        titleComplementar={"LOCAL"} descricaoComplementar={"Hemocentro Sul"} />
+                        titleComplementar={"LOCAL"} descricaoComplementar={"Hemocentro Sul"} funcaoConfig={"Ver relatório final"} />
+                    <div className={style.cardCriar}>
+                        <button className={style.buttonCriar}>
+                            <div className={style.conteudoCard}>
+
+                                <AiOutlinePlusCircle size={55} className={style.iconeCriar}/>
+                                <h3 id={style.titleCriar}>Criar Nova Campanha</h3>
+                                <p id={style.subtitleCriar}>Configure metas, datas e unidades de coleta.</p>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </SystemLayout>
+        </SystemLayout >
 
     )
 }

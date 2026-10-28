@@ -1,6 +1,8 @@
 import style from "./style.module.css";
 import iconePulsar from "../../assets/images/IconePulsar.webp";
 import { IoCalendarClearOutline } from "react-icons/io5";
+import { SlOptionsVertical } from "react-icons/sl";
+
 
 export function CardDoisVermelho({ title, description }) {
     return (
@@ -29,11 +31,14 @@ export function CardTres({ title, dado, description, cor, fontCor }) {
         </div>
     )
 }
-export function CardCampanha({imagem, titulo, descricao,meta, numeroColeta,prazoTitle, dataPrazo,
-     iconeComplementar: IconeComplementar,titleComplementar, descricaoComplementar}) {
+export function CardCampanha({status,imagem, titulo, descricao,meta, numeroColeta,prazoTitle, dataPrazo,
+     iconeComplementar: IconeComplementar,titleComplementar, descricaoComplementar, funcaoConfig}) {
     return (
         <section className={style.campanha}>
             <img className={style.imagem} src={imagem} alt="Imagem Campanha" />
+            <div className={style.statusCampanha}>
+                <p>{status}</p>
+            </div>
             <div className={style.containerConteudo}>
                 <div className={style.conteudoCampanha}>
                     <h4>{titulo}</h4>
@@ -42,7 +47,7 @@ export function CardCampanha({imagem, titulo, descricao,meta, numeroColeta,prazo
                 <div className={style.containerInfo}>
                     <div className={style.infoTop}>
                         <p id={style.meta}>Meta: {meta}</p>
-                        <span id={style.numeroColeta}>{numeroColeta} 76%</span>
+                        <span id={style.numeroColeta}>{numeroColeta} Coletadas 76%</span>
                     </div>
                     <div className={style.barra}>
 
@@ -51,20 +56,24 @@ export function CardCampanha({imagem, titulo, descricao,meta, numeroColeta,prazo
                 </div>
                 <div className={style.caixaInfo}>
                     <div className={style.prazo}>
-                        <IoCalendarClearOutline />
+                        <IoCalendarClearOutline  color={"#416084"}size={20}/>
                         <div className={style.box}>
                             <h6>{prazoTitle}</h6>
                             <p>{dataPrazo}</p>
                         </div>
                     </div>
-                    <div className={styl.infoComplementar}>
-                            <IconeComplementar />
+                    <div className={style.infoComplementar}>
+                            <IconeComplementar color={"#416084"}size={20}/>
                         <div className={style.box}>
                             <h6>{titleComplementar}</h6>
                             <p>{descricaoComplementar}</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={style.configCampanha}>
+                <button className={style.nameConfig}>{funcaoConfig}</button>
+                <SlOptionsVertical size={20} className={style.iconeConfig}/>
             </div>
         </section>
     )
