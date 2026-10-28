@@ -1,4 +1,5 @@
-select,option{
+.settingBox select,
+option {
     appearance: none;
 }
 
@@ -7,6 +8,15 @@ select,option{
     width: 100%;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.settingBox .idioma {
+    background: white;
+    cursor: pointer;
+}
+
+.settingBox .idioma:hover {
+    background: var(--cinza-200);
 }
 
 .settingBox .selectContainer {
@@ -27,7 +37,7 @@ select,option{
 }
 
 .settingBox .selectContainer:focus-within select {
-    outline: 2px solid var(--cinza-500);
+    background: var(--cinza-200);
 }
 
 .settingBox select {

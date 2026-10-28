@@ -30,7 +30,7 @@ export default function UserProfile() {
                                 <div className={style.doador}>
 
                                     <div>
-                                        <img src="" alt="Foto de perfil do usuário" />
+                                        <img src="https://i0.wp.com/espaferro.com.br/wp-content/uploads/2024/06/placeholder-2.png?ssl=1" alt="Foto de perfil do usuário"/>
                                         <div>
                                             <h1 className={style.username}>Otávio Palese</h1>
 

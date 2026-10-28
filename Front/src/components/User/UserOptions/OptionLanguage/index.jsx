@@ -5,10 +5,10 @@ export default function OptionLanguage() {
 
     return (
         <div className={style.settingBox}>
-            <label for="idioma">idioma</label>
+            <label htmlFor="idioma">idioma</label>
 
             <div className={style.selectContainer}>
-                <select name="idioma" id={style.idioma}>
+                <select name="idioma" id='idioma' className={style.idioma}>
                     <option value="">Português BR</option>
                     <option value="">English US</option>
                 </select>
