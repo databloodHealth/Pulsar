@@ -394,6 +394,12 @@ table {
     color: var(--branco);
   }
 
+  .lineTable{
+    background-color: #fff;
+  }
+
+  
+
   thead th {
     text-align: left;
     padding: 14px 20px;
@@ -410,8 +416,8 @@ table {
     cursor: pointer;
   }
 
-  tbody tr:hover{
-    background-color: var(--cinza-tabela-hover);
+  .lineTable:hover{
+    background-color: var(--cinza-fundo);
   }
 
   tbody tr:last-child {

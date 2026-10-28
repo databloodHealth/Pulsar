@@ -55,6 +55,8 @@
 }
 
 .alterarSenha form button {
+    border: none;
+    border-radius: 4px;
     color: var(--branco);
     font-size: .9rem;
     padding: .8rem 3rem;

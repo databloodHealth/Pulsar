@@ -1,0 +1,15 @@
+
+
+.headerButtons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 40px;
+}
+
+.gridTypes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
