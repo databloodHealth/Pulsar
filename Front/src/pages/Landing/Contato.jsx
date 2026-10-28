@@ -64,28 +64,28 @@ export default function Contato() {
 
                         <div className={style.inputContainer}>
                             <label htmlFor="nome">Nome</label>
-                            <input type="text" name='nome' id='nome' required autoComplete='name'/>
+                            <input type="text" name='nome' id='nome' required autoComplete='name' />
                         </div>
 
                         <div className={style.inputContainer}>
                             <label htmlFor="email">E-mail</label>
-                            <input type="email" name="email" id="email" required autoComplete='email'/>
+                            <input type="email" name="email" id="email" required autoComplete='email' />
                         </div>
 
                         <div className={style.inputContainer}>
                             <label htmlFor="assunto">Assunto</label>
-                            <select name="assunto" id='assunto' required>
+                            <select name="assunto" id='assunto' require>
                                 <option value="outro">Outro...</option>
-                                <option value="">a</option>
-                                <option value="">b</option>
-                                <option value="">c</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
                             </select>
-                            <IoIosArrowDown className={style.selectArrow} size={20}/>
+                            <IoIosArrowDown className={style.selectArrow} size={20} />
                         </div>
 
                         <div className={style.inputContainer}>
                             <label htmlFor="mensagem">Conte-nos sobre o que você deseja</label>
-                            <textarea name='mensagem' id='mensagem' rows={5} required/>
+                            <textarea name='mensagem' id='mensagem' rows={5} required />
                         </div>
 
                         <button id={style.sendButton}>

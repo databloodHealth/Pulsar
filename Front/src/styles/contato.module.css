@@ -72,6 +72,7 @@
     display: flex;
     flex-direction: column;
     gap: 3.1rem;
+    flex-shrink: 0;
 }
 
 .mensagemContainer>h1 {
@@ -131,8 +132,16 @@ textarea:hover {
     cursor: pointer;
 }
 
+.mensagemContainer>form .inputContainer option {
+    background: var(--cinza-300);
+}
+
+.mensagemContainer>form .inputContainer:focus-within select {
+    background-color: var(--cinza-400);
+}
+
 .mensagemContainer>form .inputContainer:focus-within .selectArrow {
-    transform: rotate(180deg);
+    rotate: 180deg;
 }
 
 .mensagemContainer>form .inputContainer textarea {
@@ -150,6 +159,141 @@ textarea:hover {
     border-radius: 4px;
 }
 
-.mensagemContainer>form #sendButton:hover{
+.mensagemContainer>form #sendButton:hover {
     background-color: var(--vermelho-hover);
+}
+
+@media screen and (max-width: 1500px) {
+    .mensagemContainer {
+        width: 42rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .mensagemContainer {
+        width: 38rem;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .meioWrapper {
+        padding: 0;
+    }
+
+    .contatoMain {
+        padding: 6% 5%;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .contatoMain {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5rem;
+    }
+
+    .mensagemContainer {
+        width: 100%;
+    }
+
+    .contatoMain {
+        padding: 5% 7%;
+    }
+
+    .meioWrapper {
+        flex-direction: row;
+    }
+
+    .meiosContatoContainer .title>h1 {
+        font-size: 1.5rem;
+    }
+
+    .meiosContatoContainer>p {
+        font-size: .9rem;
+    }
+
+    .meiosContatoContainer {
+        gap: 1.2rem;
+    }
+
+    .midiasSociais {
+        margin-top: .6rem;
+        gap: 1.6rem;
+    }
+
+    .midiasSociais>h2 {
+        font-size: 1.1rem;
+    }
+
+    .mensagemContainer {
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+        flex-shrink: 1;
+    }
+
+    .mensagemContainer>h1 {
+        font-size: 1.7rem;
+    }
+
+    .mensagemContainer>form {
+        gap: 1.1rem;
+    }
+
+    .mensagemContainer>form .inputContainer {
+        gap: 0.5rem;
+    }
+
+    .mensagemContainer>form .inputContainer label {
+        font-size: 1rem;
+    }
+
+    .mensagemContainer>form .inputContainer input,
+    .mensagemContainer>form .inputContainer select,
+    .mensagemContainer>form .inputContainer textarea {
+        font-size: 1rem;
+        padding: 0.7rem 0.9rem;
+    }
+
+    .mensagemContainer>form .inputContainer .selectArrow {
+        right: 15px;
+        bottom: 11px;
+    }
+
+    .mensagemContainer>form #sendButton {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .meioWrapper {
+        flex-direction: column;
+    }
+
+    .mensagemContainer {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .mensagemContainer>h1 {
+        font-size: 1.4rem;
+    }
+
+    .mensagemContainer>form {
+        gap: 1rem;
+    }
+
+    .mensagemContainer>form .inputContainer label {
+        font-size: 0.95rem;
+    }
+
+    .mensagemContainer>form .inputContainer input,
+    .mensagemContainer>form .inputContainer select,
+    .mensagemContainer>form .inputContainer textarea {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
 }

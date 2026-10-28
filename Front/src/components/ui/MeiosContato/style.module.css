@@ -42,6 +42,7 @@
     display: flex;
     gap: .6rem;
     align-items: center;
+    overflow: hidden;
 }
 
 .meioContato .rightArrow {
@@ -50,4 +51,41 @@
     position: absolute;
     transition: transform .1s;
     rotate: -90deg;
-} 
+}
+
+@media screen and (max-width: 1115px) {
+    .meioContato .rightArrow {
+        display: none;
+    }
+
+    .meioContato {
+        width: auto;
+        flex: 1 0;
+    }
+
+    
+}
+
+@media screen and (max-width: 990px) {
+    .meioContato span{
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 890px) {
+    .meioContato h1{
+        font-size: 1rem;
+    }
+    .meioContato p{
+        font-size: .85rem;
+    }
+    .meioContato{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .meioContato{
+        width: 100%;
+    }
+}
