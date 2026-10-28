@@ -4,7 +4,7 @@ import imagemCard from "@/assets/images/DoctorTech.jpg"
 import LogoPulsar from "@/assets/images/Iconepulsar.webp"
 import PageTitle from "@/components/ui/PageTitle"
 import SystemLayout from "@/layouts/SystemLayout"
-import style from "@/styles/campanhas.module.css"
+import style from "@/styles/System/campanhas.module.css"
 import { Link } from "react-router-dom";
 import { CardCampanha } from "@/components/Cards";
 import { IoLocationOutline } from "react-icons/io5";

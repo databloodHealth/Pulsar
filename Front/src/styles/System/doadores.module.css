@@ -1,0 +1,22 @@
+.containerCampanha{
+    background: linear-gradient(to right, var(--azul-400), rgba(180,212,254,0.8));
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
+.containerCampanha #title{
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.containerCampanha #descCampanha{
+color: var(--azul-100);
+    font-size: .8rem;
+    font-weight: 500;
+    width: 60%;
+}
+.boxLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
