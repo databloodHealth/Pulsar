@@ -1,7 +1,5 @@
 import style from '@/styles/home.module.css';
 import { Link } from 'react-router-dom'
-
-
 import blackLogo from '@/assets/images/BlackLogo.png';
 import heroImg from '@/assets/images/heroImg.png';
 import sectionImage from '@/assets/images/SectionImage.png';
@@ -16,29 +14,31 @@ export default function Home() {
     <>
       <Header />
 
+      <article className={style.hero}>
+        <div className={style.heroContent}>
+          <div className={style.title}>
+            <h1 className={`${style.title} ${style.heroTitle}`}>Doe sangue.</h1>
+            <h1 className={`${style.redTitle} ${style.heroTitle}`}>Salve vidas.</h1>
+          </div>
+          <p>
+            Seu gesto pode ser a esperança de alguém. Gerencie suas doações e
+            ajude a manter os estoques vitais da nossa região sempre
+            abastecidos.
+          </p>
+          <div className={style.buttons}>
+            <a className={`${style.heroButton} ${style.primary}`} href="/login">Quero ser doador</a>
+            <a className={`${style.heroButton} ${style.secondary}`} href="/profile">Saiba Mais</a>
+          </div>
+        </div>
+        <div className={style.heroImage}>
+          <img src={heroImg} alt="Hero Image" />
+        </div>
+        <div className={style.shape}></div>
+      </article>
+
       <main className={style.main}>
         {/* HERO SECTION */}
-        <section className={style.hero}>
-          <div className={style.heroContent}>
-            <div className={style.title}>
-              <h1 className={`${style.title} ${style.heroTitle}`}>Doe sangue.</h1>
-              <h1 className={`${style.redTitle} ${style.heroTitle}`}>Salve vidas.</h1>
-            </div>
-            <p>
-              Seu gesto pode ser a esperança de alguém. Gerencie suas doações e
-              ajude a manter os estoques vitais da nossa região sempre
-              abastecidos.
-            </p>
-            <div className={style.buttons}>
-              <a className={`${style.heroButton} ${style.primary}`} href="/login">Quero ser doador</a>
-              <a className={`${style.heroButton} ${style.secondary}`} href="/profile">Saiba Mais</a>
-            </div>
-          </div>
-          <div className={style.heroImage}>
-            <img src={heroImg} alt="Hero Image" />
-          </div>
-          <div className={style.shape}></div>
-        </section>
+
 
         {/* WHY DONATE SECTION */}
         <section className={style.whyDonate}>

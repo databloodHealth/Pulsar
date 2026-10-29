@@ -1,6 +1,3 @@
-
-
-
 .hero {
   position: relative;
   height: calc(100vh - 5rem);
@@ -10,7 +7,7 @@
 }
 
 .heroContent {
-  position: absolute;  
+  position: absolute;
   z-index: 1000;
   max-width: 700px;
   padding: 0 5%;
@@ -48,11 +45,11 @@
   }
 }
 
-a{
+a {
   text-decoration: none;
 }
 
- a.primary {
+a.primary {
   background-color: var(--primary);
   color: var(--branco);
   transition: .5s ease;
@@ -77,8 +74,7 @@ a.secondary {
 
 .heroImage {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -100;
   width: 100%;
 
@@ -91,29 +87,26 @@ a.secondary {
 
 .shape {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--branco) 0%,
-    var(--branco-50) 50%,
-    var(--branco-0) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--branco) 0%,
+      var(--branco-50) 50%,
+      var(--branco-0) 100%);
 }
 
-.whyDonate{
+.whyDonate {
   padding: 3% 5%;
 }
 
-.underline{
+.underline {
   width: 10%;
   height: 3px;
   background-color: var(--primary);
 }
 
-.sectionTitle{
+.sectionTitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,19 +114,19 @@ a.secondary {
   gap: .5em;
 }
 
-.sectionTitle h2{
+.sectionTitle h2 {
   font-size: 2.2rem;
   color: var(--foreground);
 }
 
-.sectionTitle p{
+.sectionTitle p {
   color: var(--muted-foreground);
   font-size: 1.1rem;
   width: 50%;
   text-align: center;
 }
 
-.reasons{
+.reasons {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,20 +134,25 @@ a.secondary {
   padding: 2% 0;
 }
 
-.image img{
-   width: 80%;
-   height: 100%;
+.reasons .image {
+  display: flex;
+  justify-content: center;
 }
 
-.listReasons{
+.reasons .image img {
+  width: 80%;
+}
+
+.listReasons {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 3rem;
   width: 50%;
+  flex-shrink: 0;
 }
 
-.listReasons ul{
+.listReasons ul {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -162,16 +160,18 @@ a.secondary {
   gap: 3rem;
 }
 
-.reason{
+.reason {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   font-size: 1.1rem;
+  height: 50px;
+  flex-shrink: 0;
 }
 
-.reason .iconReason{
+.reason .iconReason {
   width: 50px;
   height: 50px;
   display: flex;
@@ -180,24 +180,26 @@ a.secondary {
   border-radius: 4px;
   background-color: var(--badge-red-bg);
   color: var(--primary);
+  flex-shrink: 0;
 }
 
 
-.reasonContent{
+.reasonContent {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.reasonContent p{
+.reasonContent p {
   font-size: 1.1rem
 }
 
-.red{
+.red {
   color: var(--primary);
 }
 
-.donateButton{
+.donateButton {
   padding: .8rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -205,14 +207,14 @@ a.secondary {
 }
 
 
-.process{
+.process {
   padding: 3% 5%;
   display: flex;
   flex-direction: column;
   background-color: var(--white-l);
 }
 
-.steps{
+.steps {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -220,7 +222,7 @@ a.secondary {
   gap: 1rem;
 }
 
-.step{
+.step {
   border: 1px solid var(--cinza-card);
   width: 300px;
   height: 250px;
@@ -243,7 +245,7 @@ a.secondary {
   color: var(--foreground);
 }
 
-.line{
+.line {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,7 +254,7 @@ a.secondary {
   background-color: var(--cinza-tabela);
 }
 
-.stepNumber{
+.stepNumber {
   margin-top: -1rem;
   width: 50px;
   height: 50px;
@@ -263,15 +265,16 @@ a.secondary {
   color: var(--branco);
   font-weight: 600;
   background-color: var(--primary);
+  flex-shrink: 0;
 }
 
-.buttonCTA{
+.buttonCTA {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-a.processSection{
+a.processSection {
   padding: 0.8rem;
   width: 20%;
   font-size: 1rem;
@@ -282,59 +285,59 @@ a.processSection{
   transition: background-color 0.3s ease;
 }
 
-a.processSection:hover{
+a.processSection:hover {
   background-color: var(--primary-light);
 }
 
-.system{
+.system {
   padding: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
 
-.colLeft img{
+.colLeft img {
   width: 700px;
   height: 500px;
   border-radius: 8px;
 }
 
-.colRight{
+.colRight {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: space-between;
 }
 
-.colRight .title{
+.colRight .title {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.colRight .title p{
+.colRight .title p {
   color: var(--muted-foreground);
 }
 
-.colRight .title h2{
+.colRight .title h2 {
   font-size: 2rem;
   color: var(--foreground);
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.list .item{
+.list .item {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.item .icon{
+.item .icon {
   background-color: var(--bg-icon-greenL);
   width: 40px;
   height: 40px;
@@ -342,24 +345,25 @@ a.processSection:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.itemContent{
+.itemContent {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.itemContent h3{
+.itemContent h3 {
   font-size: 1.2rem;
   color: var(--foreground);
 }
 
-.itemContent p{
+.itemContent p {
   color: var(--muted-foreground);
 }
 
-.button{
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,7 +380,7 @@ a.processSection:hover{
   justify-content: center;
 }
 
-.compatibility{
+.compatibility {
   padding: 3% 5%;
   display: flex;
   flex-direction: column;
@@ -419,6 +423,9 @@ a.processSection:hover{
 .lineTable:hover {
   background-color: var(--cinza-fundo);
 }
+.lineTable:hover {
+  background-color: var(--cinza-fundo);
+}
 
 .lineTable:last-child {
   border-bottom: none;
@@ -437,306 +444,439 @@ a.processSection:hover{
   font-size: 15px;
 }
 
-  .cardsInfos{
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+.cardsInfos {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.card {
+  padding: 3rem 2rem;
+  width: 44%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardsInfos .cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardsInfos .cardHead .badge {
+  padding: .3rem 1rem;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.cardsInfos .cardType {
+  background: var(--card-red-bg);
+  color: var(--branco);
+}
+
+.cardType p,
+.cardType li {
+  color: var(--cinza-300);
+}
+
+.cardType .badgeCard {
+  background-color: var(--badge-red-bg);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.cardsInfos ul {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.cardCuriosity {
+  background-color: var(--card-muted-bg);
+}
+
+.cardCuriosity p {
+  color: var(--muted-foreground);
+}
+
+.cardCuriosity .badgeCard {
+  background-color: var(--light-blue);
+  color: var(--bg);
+  font-weight: 500;
+}
+
+.donate {
+  display: flex;
+  gap: 18rem;
+  background-color: var(--card-dark-bg);
+  padding: 3rem 2rem;
+  height: 15rem;
+  border-radius: 8px;
+  color: var(--bg);
+}
+
+.check {
+  width: 25px;
+  height: 12px;
+  rotate: -45deg;
+  border-bottom: 4px solid var(--primary);
+  border-left: 4px solid var(--primary);
+}
+
+
+
+.donate .colLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donate .colLeft a {
+  padding: .8rem 1.5rem;
+  background-color: var(--primary);
+  font-weight: 500;
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.donate .colLeft a:hover {
+  background-color: var(--primary-light);
+}
+
+.donate .colRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate .listCont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.donate .colRight .listItem {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.donate .colRight .listItem .icon {
+  color: var(--primary);
+}
+
+.FAQ {
+  padding: 3% 5%;
+}
+
+.questionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3% 0;
+  gap: 1.3rem;
+}
+
+.questionsContainer .questionCard {
+  background-color: var(--white-l);
+  border: .4px solid var(--vermelho-borda);
+  padding: .7rem 2rem;
+  width: 50%;
+  border-radius: 4px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all .5s ease;
+  user-select: none;
+}
+
+.questionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.questionHead h2 {
+  font-size: 1.05rem;
+  color: var(--foreground);
+}
+
+.questionHead button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid var(--cinza-500);
+  font-size: 1rem;
+  transition: all .5s ease;
+}
+
+.questionCard .questionContent {
+  border-left: 2px solid var(--primary);
+  padding: 1% 2%;
+  animation: enterQuestion .8s ease;
+  display: none;
+}
+
+.questionCard.active {
+  height: 140px;
+}
+
+.questionCard.active .questionContent {
+  display: flex;
+}
+
+.questionCard.active .colapse {
+  background-color: var(--primary);
+  color: var(--branco);
+  transform: rotate(45deg);
+  border: none;
+}
+
+footer {
+  background-color: var(--foreground);
+  padding: 3% 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--cinza-footer);
+}
+
+.containerFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pulsar {
+  max-width: 300px;
+  color: var(--cinza-footer);
+  font-size: 14px;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5rem;
+}
+
+
+
+.links .institutional,
+.links .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: .5rem;
+}
+
+.links h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 16px;
+  color: var(--branco);
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--cinza-footer);
+  font-size: 14px;
+}
+
+footer img {
+  max-width: 100px;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem 0;
+}
+
+.divisor {
+  height: 1px;
+  width: 100%;
+  background: var(--branco-10);
+}
+
+.finalTexts {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.finalList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.finalList a {
+  color: var(--cinza-footer);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes enterQuestion {
+
+  from {
+    opacity: 0;
+    transform: translateX(-5%);
   }
 
-  .card{
-    padding: 3rem 2rem;
-    width: 44%;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-    .cardsInfos .cardHead{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+}
 
-    .cardsInfos .cardHead .badge{
-      padding: .3rem 1rem;
-      border-radius: 50px;
-      font-size: 12px;
-    }
 
-  .cardsInfos .cardType{
-    background: var(--card-red-bg);
-    color: var(--branco);
+@media screen and (max-width: 1300px) {
+
+  .heroContent .redTitle,
+  .heroContent .title {
+    font-size: 3.8rem;
   }
-
-  .cardType p, .cardType li{
-    color: var(--cinza-300);
-  }
-
-  .cardType .badgeCard{
-    background-color: var(--badge-red-bg);
-    color: var(--primary);
-    font-weight: 600;
-  }
-
-  .cardsInfos ul{
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-  }
-
-  .cardCuriosity{
-    background-color: var(--card-muted-bg);
-  }
-
-  .cardCuriosity p {
-    color: var(--muted-foreground);
-  }
-
-  .cardCuriosity .badgeCard{
-    background-color: var(--light-blue);
-    color: var(--bg);
-    font-weight: 500;
-  }
-  
-    .donate{
-    display: flex;
-    gap: 18rem;
-    background-color: var(--card-dark-bg);
-    padding: 3rem 2rem;
-    height: 15rem;
-    border-radius: 8px;
-    color: var(--bg);
-  }
-
-  .check{
-    width: 25px;
-    height: 12px;
-    rotate: -45deg;
-    border-bottom: 4px solid var(--primary);
-    border-left: 4px solid var(--primary);
-  }
+}
 
 
-
-  .donate .colLeft{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .donate .colLeft a{
-    padding: .8rem 1.5rem;
-    background-color: var(--primary);
-    font-weight: 500;
-    color: var(--bg);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color .5s ease;
-  }
-
-  .donate .colLeft a:hover{
-    background-color: var(--primary-light);
-  }
-
-  .donate .colRight{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .donate .listCont{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .donate .colRight .listItem{
-    display: flex;
-    gap: 1.5rem;
-    font-size: 1.2rem;
-    align-items: center;
-  }
-
-  .donate .colRight .listItem .icon{
-    color: var(--primary);
-  }
-
-  .FAQ{
-    padding: 3% 5%;
-  }
-
-  .questionsContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3% 0;
-    gap: 1.3rem;
-  }
-
-  .questionsContainer .questionCard{
-    background-color: var(--white-l);
-    border: .4px solid var(--vermelho-borda);
-    padding: .7rem 2rem;
+@media screen and (max-width: 1250px) {
+  .listReasons {
+    gap: 2rem;
     width: 50%;
-    border-radius: 4px;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    transition: all .5s ease;
-    user-select: none;
   }
 
-  .questionHead{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .questionHead h2{
-    font-size: 1.05rem;
-    color: var(--foreground);
-  }
-
-  .questionHead button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: transparent;
-    border: 1px solid var(--cinza-500);
-    font-size: 1rem;
-    transition: all .5s ease;
-  }
-
-  .questionCard .questionContent{
-    border-left: 2px solid var(--primary);
-    padding: 1% 2%;
-    animation: enterQuestion .8s ease;
-    display: none;
-  }
-
-  .questionCard.active{
-    height: 140px;
-  }
-
- .questionCard.active .questionContent{
-    display: flex;
-  }
-
-  .questionCard.active .colapse{
-    background-color: var(--primary);
-    color: var(--branco);
-    transform: rotate(45deg);
-    border: none;
-  }
-
- footer{
-    background-color: var(--foreground);
-    padding: 3% 5% 0 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: var(--cinza-footer);
-  }
-
-   .containerFooter{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .pulsar{
-    max-width: 300px;
-    color: var(--cinza-footer);
-    font-size: 14px;
-  }
-
-
-  .links{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 5rem;
-  }
-
-  
-
-  .links .institutional,
-  .links .contact{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: .5rem;
-  }
-
-  .links h3{
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 16px;
-    color: var(--branco);
-  }
-
-  .links a{
-    text-decoration: none;
-    color: var(--cinza-footer);
-    font-size: 14px;
-  }
-
-  footer img{
-    max-width: 100px;
-  }
-
-  .footerBottom{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    padding: .5rem 0;
-  }
-
-  .divisor{
-    height: 1px;
-    width: 100%;
-    background: var(--branco-10);
-  }
-
-  .finalTexts{
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-  }
-  
-  .finalList{
-    display: flex;
-    align-items: center;
+  .listReasons ul {
     gap: 2rem;
   }
 
-  .finalList a{
-    color: var(--cinza-footer);
-    text-decoration: none;
+  .reason {
+    font-size: 1rem;
   }
 
-  footer a:hover{
-    text-decoration: underline;
+  .reason .iconReason {
+    width: 42px;
+    height: 42px;
   }
 
-  @keyframes enterQuestion{
-
-    from{
-      opacity: 0;
-      transform: translateX(-5%);
-    }
-
-    to{
-      opacity: 1;
-      transform: translateX(0);
-    }
+  .reasonContent p {
+    font-size: 0.95rem;
   }
-  
+
+  .donateButton {
+    font-size: .8rem;
+  }
+  .whyDonate .underline{
+    width: 15%;
+  }
+}
+
+
+
+@media screen and (max-width: 1150px) {
+  .listReasons {
+    gap: 1.5rem;
+    width: 50%;
+  }
+
+  .listReasons ul {
+    gap: 2rem;
+  }
+
+  .reason {
+    height: 40px;
+    font-size: .8rem;
+  }
+
+  .reason .iconReason {
+    width: 42px;
+    height: 42px;
+  }
+
+  .reasonContent p {
+    font-size: 0.95rem;
+  }
+
+  .donateButton {
+    font-size: .8rem;
+    padding: .6rem;
+  }
+  .whyDonate .underline{
+    width: 20%;
+  }
+  .whyDonate .sectionTitle h2{
+    font-size: 1.6rem;
+  }
+}
+
+
+
+@media screen and (max-width: 950px) {
+
+  .heroContent .redTitle,
+  .heroContent .title {
+    font-size: 3.2rem;
+  }
+
+  .heroContent>p {
+    font-size: 1.1rem;
+  }
+
+  .heroContent .buttons {
+    font-size: .9rem;
+  }
+
+  .reasons {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .reasonContent>h3 {
+    font-size: .8rem;
+  }
+
+  .reasonContent p {
+    font-size: 0.8rem;
+  }
+
+  .reasonContent {
+    justify-content: space-between;
+  }
+  .reason{
+    gap: 1rem;
+  }
+  .whyDonate .sectionTitle h2{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .reasons .image {
+    display: none;
+  }
+  .reasons .listReasons{
+    flex: 1;
+  }
+  .whyDonate .underline{
+    width: 25%;
+  }
+}
