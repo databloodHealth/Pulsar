@@ -1,11 +1,16 @@
 
+.mainIndex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 
 .headerButtons{
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
-    margin-bottom: 40px;
 }
 
 .gridTypes{
@@ -13,3 +18,127 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
+
+.tableArea{
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableHeader{
+    background-color: var(--cinza-input);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.tableHeader h2{
+    color: var(--azul-fonte);
+}
+
+.tableHeader a{
+    color: var(--vermelho-fonte);
+    font-size: 1rem;
+}
+
+.transactionsTable {
+  width: 100%;
+  /* table-layout: fixed; */
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+
+.transactionsTable th:nth-child(1),
+.transactionsTable td:nth-child(1) { width: 30%; padding: 0 0rem 0 15rem;}
+
+.transactionsTable th:nth-child(2),
+.transactionsTable td:nth-child(2) { width: 13%; }
+
+.transactionsTable th:nth-child(3),
+.transactionsTable td:nth-child(3) { width: 18%; }
+
+.transactionsTable th:nth-child(4),
+.transactionsTable td:nth-child(4) { width: 12%; }
+
+.transactionsTable th:nth-child(5),
+.transactionsTable td:nth-child(5) { width: 39%;  padding: 0 3rem; }
+
+/* Cabeçalho das colunas */
+
+.tableHead {
+  background-color: #faf9f9;
+}
+
+.tableHead th {
+  padding: 1rem 0;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+.tableHead th:nth-child(1),
+.tableHead th:nth-child(2),
+.tableHead th:nth-child(3),
+.tableHead th:nth-child(4) {
+  text-align: left;
+}
+
+
+.tableRow {
+  height: 50px;
+  border-bottom: 1px solid #f3f3f3;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableRow:hover {
+  background-color: #fcfbfb;
+}
+
+.tableRow td {
+  padding: 0;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Informações */
+
+.date {
+  color: #171717;
+}
+
+.bloodType {
+  color: #c51d16;
+  font-weight: 700;
+}
+
+.action {
+  font-weight: 600;
+}
+
+.emergency,
+.scheduled {
+  color: #d10e0e;
+}
+
+.entry {
+  color: #087653;
+}
+
+.units {
+  color: #171717;
+  font-weight: 600;
+}
+
+
+

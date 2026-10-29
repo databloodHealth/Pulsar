@@ -186,7 +186,7 @@
   grid-area: main;
   display: flex;
   flex-direction: column;
-  padding: 1.75rem;
+  padding: 3rem;
   gap: 1rem;
 }
 

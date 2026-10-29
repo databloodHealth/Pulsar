@@ -106,6 +106,9 @@ a {
   --lgpdBackground: #d1e4ff;
   --backgroundEtapa: #e4e2e2;
 
+  --laranja-100: #ffdfbd91;
+  --laranja-bg: #ff9b30;
+
   --cinzaBody: var(--cinza-fundo);
   --cinzaFonte: var(--cinza-texto);
   --cinzaInput: var(--cinza-input);

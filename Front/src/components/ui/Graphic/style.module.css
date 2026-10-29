@@ -1,0 +1,154 @@
+.card {
+  background-color: #fcfcfc;
+  border-radius: 20px;
+  padding: 32px 36px 28px 36px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--cinza-100);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dotEntradas {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a31d16;
+}
+
+.dotSaidas {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e5c8c5;
+}
+
+.textEntradas {
+  color: #4b6287;
+}
+
+.textSaidas {
+  color: #a0acbf;
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 250px;
+  padding-top: 10px;
+}
+
+.barColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.barArea{
+    position: relative;
+}
+
+.barWrapper {
+  width: 120px;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column-reverse; /* Empilha: Entradas em baixo, Saídas em cima */
+}
+
+
+.segmentEntradas {
+  background-color: #a31d16;
+  width: 100%;
+}
+
+.segmentSaidas {
+  background-color: #e5c8c5;
+  width: 100%;
+}
+
+.dayLabel {
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4b6287;
+  letter-spacing: 0.5px;
+}
+
+.valueBadge{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 120px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.valueBadge::after {
+  content: '';
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1a1a1a transparent transparent transparent;
+}
+
+.barColumn:hover .valueBadge {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0); /* Sobe suavemente para a posição final */
+}
+
+/* Estilo opcional para destacar a coluna ao passar o mouse */
+.columnWrapper:hover .bar {
+  filter: brightness(1.1);
+  transition: filter 0.2s ease;
+}
