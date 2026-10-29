@@ -5,10 +5,10 @@ import userAvatar from '@/assets/images/DoctorTech.jpg';
 import userAdminAvatar from '@/assets/images/AdminImage.png';
 import { MdOutlineDashboard } from "react-icons/md";
 import { FaUserGroup } from "react-icons/fa6";
-import { TbDropletHalfFilled } from "react-icons/tb";
+import { TbDropletHalfFilled, TbLogout } from "react-icons/tb";
 import { IoMdMegaphone } from "react-icons/io";
 import { LuUserCog } from "react-icons/lu";
-import { NavLink, useSearchParams } from 'react-router-dom';
+import { Link, NavLink, useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function SystemLayout({ children }) {
@@ -32,7 +32,7 @@ export default function SystemLayout({ children }) {
             <p id={styles.statusUsuario}>Administrador</p>
             <p id={styles.nomeUsuario}>João Silva</p>
           </div>
-          <i className={`fa-solid fa-arrow-right-from-bracket ${styles.exitIcon}`}></i>
+          <Link to='/'><TbLogout /></Link>
         </div>
        ) : (
          <div className={styles.boxUsuario}>
@@ -41,7 +41,7 @@ export default function SystemLayout({ children }) {
             <p id={styles.statusUsuario}>Doador Inapto</p>
             <p id={styles.nomeUsuario}>João Silva</p>
           </div>
-          <i className={`fa-solid fa-arrow-right-from-bracket ${styles.exitIcon}`}></i>
+          <Link to='/'><TbLogout size={30} /></Link>
         </div>
        )}
       </header>

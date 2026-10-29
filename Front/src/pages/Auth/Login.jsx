@@ -9,8 +9,8 @@ export default function Login() {
 
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
-    email: "",
-    senha: "",
+    email: "pulsar@email.com",
+    senha: "pulsar1234",
   });
 
   const handleChange = (e) => {
