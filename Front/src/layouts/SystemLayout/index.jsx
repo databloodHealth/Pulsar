@@ -59,19 +59,19 @@ export default function SystemLayout({ children }) {
         </div>
 
         <nav className={styles.anchorContainer}>
-          <NavLink to="/admin/adminDashboard" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
+          <NavLink to="/admin/Dashboard?mode=admin" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
             <MdOutlineDashboard size={20} /> Dashboard
           </NavLink>
-          <NavLink to="/admin/doadores" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
+          <NavLink to="/admin/doadores?mode=admin" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <FaUserGroup size={20} /> Doadores
           </NavLink>
-          <NavLink to="/admin/estoque" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
+          <NavLink to="/admin/estoque?mode=admin" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <TbDropletHalfFilled size={20}/> Estoque
           </NavLink>
-           <NavLink to="/admin/campanhas" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
+           <NavLink to="/admin/campanhas?mode=admin" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <IoMdMegaphone size={20}/> Campanhas
           </NavLink>
-           <NavLink to="/admin/campanhas" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
+           <NavLink to="/admin/usuarios" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <LuUserCog size={20}/> Usuarios
           </NavLink>
         </nav>

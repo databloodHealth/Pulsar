@@ -24,7 +24,7 @@ function AppRoutes() {
       <Route path="/profile" element={<UserProfile />}/>
       <Route path="/historico" element={<Historico />} />
       <Route path="/notificacoes" element={<Notificacoes />} />
-      <Route path="/admin/adminDashboard" element={<AdminDashboard />} />
+      <Route path="/admin/Dashboard" element={<AdminDashboard />} />
       <Route path="/admin/campanhas" element={<Campanhas />}/>
       <Route path="/admin/estoque" element={<EstoqueAdmin/>}/>
       <Route path="/contato" element={<Contato/>}/>

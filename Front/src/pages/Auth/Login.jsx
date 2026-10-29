@@ -3,7 +3,7 @@ import styles from "@/styles/Auth/login.module.css";
 import logoImg from "@/assets/images/BlackLogo.png";
 import HeaderAuth from "@/components/ui/HeaderAuth/index";
 import { Check, LockKeyhole, Mail, ShieldCheck } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
 
@@ -95,8 +95,11 @@ export default function Login() {
             </div>
 
             <p>
-              Novo por aqui? <a href="/cadastro">Cadastre-se</a>
+              Novo por aqui? <Link to="/cadastro">Cadastre-se</Link>
             </p>
+            <div  className={styles.adminRedirect}>
+            <Link to="/admin/Dashboard?mode=admin">Painel Administrativo</Link>
+            </div>
           </form>
         </div>
 
