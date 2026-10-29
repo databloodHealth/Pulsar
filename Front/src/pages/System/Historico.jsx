@@ -24,7 +24,7 @@ export default function Historico() {
                     <CardTres
                         cor="vermelho"
                         title="Próxima doação"
-                        dado="69 OUT, 2026"
+                        dado="12 / 09 / 2026"
                         description="Agendado para 08:30 AM"
                     />
 

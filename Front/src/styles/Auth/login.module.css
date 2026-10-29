@@ -119,7 +119,7 @@ input:focus{
 }
 
 .entrarBotao:hover {
-  background-color: var(--vermelhoHover);
+  background-color: var(--vermelho-600);
 }
 
 .cadastroLinha {
@@ -155,7 +155,7 @@ input:focus{
 }
 
 .form a:hover {
-  color: var(--vermelhoHover);
+  color: var(--vermelho-600);
 }
 
 .direitosGrupo {

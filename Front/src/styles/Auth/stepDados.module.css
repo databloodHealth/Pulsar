@@ -131,7 +131,7 @@
 }
 
 .botForm button:hover {
-  background-color: var(--vermelhoHover);
+  background-color: var(--vermelho-600);
 }
 
 /* Informações / Rodapé */

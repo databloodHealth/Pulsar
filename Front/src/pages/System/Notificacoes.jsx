@@ -7,9 +7,9 @@ import PageTitle from "@/components/ui/PageTitle";
 export default function Notificacoes (){
     return(
         <SystemLayout>
-            <div className="container">
+            {/* <div className="container"> */}
                 <PageTitle title={'Notificações'} subtitle={'Gerencie as notificções enviadas pelo sistema'}/>
-            </div>
+            {/* </div> */}
 
             <div className={style.containerNotificacoes}>
                 <div className={style.group}>

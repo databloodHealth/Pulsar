@@ -11,7 +11,7 @@
 
 .containerHistorico {
     background-color: var(--cinza-fundo);
-    padding: 1rem;
+    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
     gap: 3rem;
