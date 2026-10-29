@@ -49,7 +49,6 @@
     width: 70%;
     height: 8px;
     border-radius: 20px;
-    background-color: var(--verde-icone);
 }
 
 .foot{
@@ -58,11 +57,10 @@
 
 .badge{
     font-size: 14px;
-    color: var(--verde-icon);
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: var(--verde-100);
     padding: .4rem 1rem;
     border-radius: 50px;
+    font-weight: bold;
 }
