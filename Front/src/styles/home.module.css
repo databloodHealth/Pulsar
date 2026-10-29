@@ -384,58 +384,58 @@ a.processSection:hover{
 }
 
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--bg);
+}
 
-  thead tr {
-    background-color: var(--card-dark-bg);
-    color: var(--branco);
-  }
+.tableHead {
+  background-color: var(--card-dark-bg);
+  color: var(--branco);
+}
 
-  .lineTable{
-    background-color: #fff;
-  }
+.tableHeader {
+  text-align: left;
+  padding: 16px 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-  
+.tableBody {
+  background-color: var(--cinza-tabela-fundo);
+}
 
-  thead th {
-    text-align: left;
-    padding: 14px 20px;
-    font-size: 11px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+.lineTable {
+  background-color: #fff;
+  border-bottom: 1px solid var(--cinza-borda-escura);
+}
 
-  tbody tr {
-    border-bottom: 1px solid var(--cinza-borda-escura);
-    background-color: var(--cinza-tabela-fundo);
-    cursor: pointer;
-  }
+.lineTable:hover {
+  background-color: var(--cinza-fundo);
+}
 
-  .lineTable:hover{
-    background-color: var(--cinza-fundo);
-  }
+.lineTable:last-child {
+  border-bottom: none;
+}
 
-  tbody tr:last-child {
-    border-bottom: none;
-  }
+.tableCell {
+  padding: 14px 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: var(--cinza-tabela-texto);
+}
 
-  tbody td {
-    padding: 14px 20px;
-    font-size: 14px;
-    color: var(--cinza-tabela-texto);
-    font-family: 'Arial', sans-serif;
-  }
-
-  tbody td:first-child {
-    color: var(--vermelho-500);
-    font-weight: bold;
-    font-size: 15px;
-  }
+.tableCell:first-child {
+  color: var(--vermelho-500);
+  font-weight: 700;
+  font-size: 15px;
+}
 
   .cardsInfos{
     display: flex;
