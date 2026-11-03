@@ -423,6 +423,7 @@ a.processSection:hover {
 .lineTable:hover {
   background-color: var(--cinza-fundo);
 }
+
 .lineTable:hover {
   background-color: var(--cinza-fundo);
 }
@@ -748,6 +749,20 @@ footer a:hover {
   }
 }
 
+@media screen and (max-width: 1500px) {
+
+  .step {
+    height: 250px;
+  }
+
+  .stepNumber {
+    margin-top: 0;
+  }
+
+  .step {
+    justify-content: space-around;
+  }
+}
 
 @media screen and (max-width: 1300px) {
 
@@ -784,8 +799,13 @@ footer a:hover {
   .donateButton {
     font-size: .8rem;
   }
-  .whyDonate .underline{
+
+  .whyDonate .underline {
     width: 15%;
+  }
+
+  .step {
+    height: 280px;
   }
 }
 
@@ -819,10 +839,12 @@ footer a:hover {
     font-size: .8rem;
     padding: .6rem;
   }
-  .whyDonate .underline{
+
+  .whyDonate .underline {
     width: 20%;
   }
-  .whyDonate .sectionTitle h2{
+
+  .whyDonate .sectionTitle h2 {
     font-size: 1.6rem;
   }
 }
@@ -847,6 +869,22 @@ footer a:hover {
   .reasons {
     margin-top: 1rem;
   }
+
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .step {
+    margin: 0 auto;
+    width: 360px;
+    height: 220px;
+  }
+
+  .steps .line {
+    display: none;
+
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -861,22 +899,31 @@ footer a:hover {
   .reasonContent {
     justify-content: space-between;
   }
-  .reason{
+
+  .reason {
     gap: 1rem;
   }
-  .whyDonate .sectionTitle h2{
+
+  .whyDonate .sectionTitle h2 {
     font-size: 1.3rem;
   }
+
+  .step {
+    width: 300px;
+  }
+
 }
 
 @media screen and (max-width: 750px) {
   .reasons .image {
     display: none;
   }
-  .reasons .listReasons{
+
+  .reasons .listReasons {
     flex: 1;
   }
-  .whyDonate .underline{
+
+  .whyDonate .underline {
     width: 25%;
   }
 }
