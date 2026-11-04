@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import style from '@/styles/about.module.css';
 
 import blackLogo from '@/assets/images/BlackLogo.png';
-import heroImage from '@/assets/images/heroImg.png';
+import heroImage from '@/assets/images/HeroImg.png';
 import Doacao from '@/assets/images/SVG_doacao.png'
 import Header from '@/components/ui/LandingPage/Header';
 import FooterLanding from '@/components/ui/LandingPage/FooterLanding';

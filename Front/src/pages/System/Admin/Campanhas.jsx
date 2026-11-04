@@ -1,7 +1,7 @@
 import { IoMdArrowUp } from "react-icons/io";
 
 import imagemCard from "@/assets/images/DoctorTech.jpg"
-import LogoPulsar from "@/assets/images/Iconepulsar.webp"
+import LogoPulsar from "@/assets/images/IconePulsar.webp"
 import PageTitle from "@/components/ui/PageTitle"
 import SystemLayout from "@/layouts/SystemLayout"
 import style from "@/styles/campanhas.module.css"
