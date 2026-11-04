@@ -7,7 +7,7 @@ header {
   height: 5rem;
 }
 
-.navLink{
+.navLink {
   text-decoration: none;
 }
 
@@ -22,13 +22,13 @@ nav {
   gap: 1rem;
 }
 
-  .navLink {
-    color: var(--muted-foreground);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: .9rem;
-    position: relative;
-  }
+.navLink {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .9rem;
+  position: relative;
+}
 
 .navLink::after {
   content: "";
@@ -97,5 +97,170 @@ a.secondary {
 
   &:hover {
     background-color: var(--white-e);
+  }
+}
+
+header .buttonMenu {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: .6rem;
+  cursor: pointer;
+  color: var(--cinza-500);
+  transition: color 350ms;
+}
+
+header .buttonMenu:hover {
+  color: var(--cinza-icone);
+}
+
+.sideBarContainer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 1001;
+
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 0.8s;
+}
+
+.sideBarTransparent {
+  flex: 1;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.4s ease;
+}
+
+.headerSideBar {
+  width: 50%;
+  height: 100%;
+  background: var(--cinza-fundo);
+  transform: translateX(100%);
+  transition: transform 0.4s ease 0.4s;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.open {
+  visibility: visible;
+  pointer-events: auto;
+  transition: visibility 0s;
+}
+
+.open .sideBarTransparent {
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background 0.4s ease 0.4s;
+}
+
+.open .headerSideBar {
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.navSideBar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mainSideBarContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSideBarContent .topSideBar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1rem;
+}
+
+.mainSideBarContent .topSideBar>button {
+  border: 0;
+  background: 0;
+}
+
+.navSideBar .navLink {
+  position: relative;
+  display: flex;
+  width: 90%;
+  min-height: 3rem;
+  align-items: center;
+  gap: 14px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: right;
+  justify-content: center;
+  transition: color 180ms ease, background 180ms
+}
+
+.navSideBar .navLink:hover::after {
+  width: 0;
+}
+
+.navSideBar .active {
+  color: var(--primary);
+  font-weight: 600;
+  background: var(--vermelho-100);
+}
+
+.navSideBar .active::after {
+  width: 0;
+}
+
+.actionsSideBar {
+  display: flex;
+  gap: 1rem;
+}
+
+.actionsSideBar a {
+  padding: 0.8rem 1rem;
+  border: none;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.actionsSideBar a.primary {
+  background-color: var(--primary);
+  color: var(--branco);
+}
+
+.actionsSideBar a.primary:hover {
+  background-color: var(--primary-light);
+}
+
+.actionsSideBar a.secondary {
+  background-color: var(--white-l);
+  color: var(--foreground);
+}
+
+.actionsSideBar a.secondary:hover {
+  background-color: var(--white-e);
+}
+
+@media screen and (max-width: 950px) {
+
+  header>nav {
+    display: none;
+  }
+
+  header>.actions {
+    display: none;
+  }
+
+  header .buttonMenu {
+    display: block;
   }
 }

@@ -313,10 +313,12 @@ export default function Home() {
               <Faq.Question question={"Quem pode doar Sangue?"} />
               <Faq.Answer answer={"Pessoas entre 16 e 69 anos, com peso acima de 50kg e boas condições de saúde. Menores de 18 anos precisam de autorização dos pais ou responsáveis."} />
             </Faq.Root>
+
             <Faq.Root>
               <Faq.Question question={"Com qual frequência posso doar?"} />
               <Faq.Answer answer={"Homens podem doar a cada 60 dias, com no máximo 4 doações por ano. Mulheres a cada 90 dias, com no máximo 3 doações por ano."} />
             </Faq.Root>
+            
             <Faq.Root>
               <Faq.Question question={"O que não devo fazer na semana da doação?"} />
               <Faq.Answer answer={"Evite bebidas alcoólicas nas 12 horas anteriores, alimentos gordurosos nas 4 horas antes da doação e atividades físicas intensas no dia. Durma bem na noite anterior e chegue bem hidratado."} />

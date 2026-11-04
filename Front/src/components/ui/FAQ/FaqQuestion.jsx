@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { Shrink, X } from "lucide-react";
 import style from "@/components/ui/FAQ/FAQCard.module.css";
 
 export function FaqQuestion({ question, isActive = false, onToggle }) {
@@ -12,6 +12,7 @@ export function FaqQuestion({ question, isActive = false, onToggle }) {
           backgroundColor: isActive ? "var(--primary)" : "transparent",
           color: isActive ?  "var(--branco)" : "var(--preto)",
           border: isActive ? "none": "none",
+          flexShrink: "0"
         }}
       >
         <X size={16}/>
