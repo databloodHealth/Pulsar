@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 import blackLogo from '@/assets/images/BlackLogo.png';
-import heroImg from '@/assets/images/heroImg.png';
+import heroImg from '@/assets/images/HeroImg.png';
 import sectionImage from '@/assets/images/SectionImage.png';
 import doctorTech from '@/assets/images/DoctorTech.jpg';
 import whiteLogo from '@/assets/images/WhiteLogo.png';
