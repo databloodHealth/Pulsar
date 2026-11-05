@@ -136,65 +136,68 @@ export default function Home() {
             <h2>Matriz de Compatibilidade</h2>
             <p>Descubra quem você pode ajudar e quem pode te ajudar</p>
           </div>
-          <table className={style.table}>
-            <thead className={style.tableHead}>
-              <tr>
-                <th className={style.tableHeader}>Tipo Sanguíneo</th>
-                <th className={style.tableHeader}>Pode Doar Para</th>
-                <th className={style.tableHeader}>Pode Receber De</th>
-              </tr>
-            </thead>
 
-            <tbody className={style.tableBody}>
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>A+</td>
-                <td className={style.tableCell}>A+ / AB+</td>
-                <td className={style.tableCell}>A+ / A- / O+ / O-</td>
-              </tr>
+          <div className={style.tableContainer}>
+            <table className={style.table}>
+              <thead className={style.tableHead}>
+                <tr>
+                  <th className={style.tableHeader}>Tipo Sanguíneo</th>
+                  <th className={style.tableHeader}>Pode Doar Para</th>
+                  <th className={style.tableHeader}>Pode Receber De</th>
+                </tr>
+              </thead>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>A-</td>
-                <td className={style.tableCell}>A+ / A- / AB+ / AB-</td>
-                <td className={style.tableCell}>A- / O-</td>
-              </tr>
+              <tbody className={style.tableBody}>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>A+</td>
+                  <td className={style.tableCell}>A+ / AB+</td>
+                  <td className={style.tableCell}>A+ / A- / O+ / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>B+</td>
-                <td className={style.tableCell}>B+ / AB+</td>
-                <td className={style.tableCell}>B+ / B- / O+ / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>A-</td>
+                  <td className={style.tableCell}>A+ / A- / AB+ / AB-</td>
+                  <td className={style.tableCell}>A- / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>B-</td>
-                <td className={style.tableCell}>B+ / B- / AB+ / AB-</td>
-                <td className={style.tableCell}>B- / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>B+</td>
+                  <td className={style.tableCell}>B+ / AB+</td>
+                  <td className={style.tableCell}>B+ / B- / O+ / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>AB+</td>
-                <td className={style.tableCell}>AB+</td>
-                <td className={style.tableCell}>Todos os tipos</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>B-</td>
+                  <td className={style.tableCell}>B+ / B- / AB+ / AB-</td>
+                  <td className={style.tableCell}>B- / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>AB-</td>
-                <td className={style.tableCell}>AB+ / AB-</td>
-                <td className={style.tableCell}>A- / B- / AB- / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>AB+</td>
+                  <td className={style.tableCell}>AB+</td>
+                  <td className={style.tableCell}>Todos os tipos</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>O+</td>
-                <td className={style.tableCell}>A+ / B+ / AB+ / O+</td>
-                <td className={style.tableCell}>O+ / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>AB-</td>
+                  <td className={style.tableCell}>AB+ / AB-</td>
+                  <td className={style.tableCell}>A- / B- / AB- / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>O-</td>
-                <td className={style.tableCell}>Todos os tipos</td>
-                <td className={style.tableCell}>O-</td>
-              </tr>
-            </tbody>
-          </table>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>O+</td>
+                  <td className={style.tableCell}>A+ / B+ / AB+ / O+</td>
+                  <td className={style.tableCell}>O+ / O-</td>
+                </tr>
+
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>O-</td>
+                  <td className={style.tableCell}>Todos os tipos</td>
+                  <td className={style.tableCell}>O-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <div className={style.cardsInfos}>
             <div className={`${style.cardType} ${style.card}`}>
@@ -318,7 +321,7 @@ export default function Home() {
               <Faq.Question question={"Com qual frequência posso doar?"} />
               <Faq.Answer answer={"Homens podem doar a cada 60 dias, com no máximo 4 doações por ano. Mulheres a cada 90 dias, com no máximo 3 doações por ano."} />
             </Faq.Root>
-            
+
             <Faq.Root>
               <Faq.Question question={"O que não devo fazer na semana da doação?"} />
               <Faq.Answer answer={"Evite bebidas alcoólicas nas 12 horas anteriores, alimentos gordurosos nas 4 horas antes da doação e atividades físicas intensas no dia. Durma bem na noite anterior e chegue bem hidratado."} />

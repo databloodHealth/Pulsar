@@ -112,6 +112,7 @@
 .mensagemContainer>form .inputContainer input,
 select,
 textarea {
+    appearance: none;
     font-size: 1.1rem;
     border: 0;
     outline: 0;

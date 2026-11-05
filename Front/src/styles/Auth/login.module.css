@@ -192,3 +192,172 @@ input:focus{
 .termosGrupo p:hover {
   color: var(--vermelhoCadastro);
 }
+
+/* Tablets e telas menores */
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: calc(100vh - 6rem);
+        height: auto;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .loginGrupo {
+        width: 100%;
+        max-width: 28rem;
+        padding: 2.5rem;
+        gap: 1.5rem;
+    }
+
+    .tituloLoginGrupo h1 {
+        font-size: 1.6rem;
+    }
+
+    .tituloLoginGrupo p {
+        font-size: 0.9rem;
+    }
+
+    .form {
+        gap: 1.2rem;
+    }
+
+    .inputGrupo input {
+        height: 2.7rem;
+    }
+
+    .entrarBotao {
+        height: 2.8rem;
+        font-size: 0.95rem;
+    }
+
+    .direitosGrupo {
+        width: 100%;
+        max-width: 28rem;
+        font-size: 0.75rem;
+        gap: 1rem;
+    }
+
+    .termosGrupo {
+        gap: 0.4rem;
+    }
+}
+
+/* Celulares */
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+    }
+
+    .loginGrupo {
+        width: 100%;
+        padding: 1.5rem 1.2rem;
+        gap: 1.3rem;
+    }
+
+    .tituloLoginGrupo {
+        gap: 0.4rem;
+    }
+
+    .tituloLoginGrupo h1 {
+        font-size: 1.4rem;
+    }
+
+    .tituloLoginGrupo p {
+        font-size: 0.8rem;
+    }
+
+    .form {
+        gap: 1rem;
+    }
+
+    .inputGrupo {
+        gap: 0.4rem;
+    }
+
+    .inputGrupo label {
+        font-size: 0.85rem;
+    }
+
+    .inputGrupo input {
+        height: 2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .inputIcone svg {
+        left: 8px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .senhaGrupo a {
+        font-size: 0.7rem;
+    }
+
+    .entrarBotao {
+        height: 2.6rem;
+        font-size: 0.9rem;
+    }
+
+    .cadastroLinha {
+        gap: 0.4rem;
+    }
+
+    .cadastroLinha span,
+    .form p {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .direitosGrupo {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .dadosGrupo {
+        justify-content: center;
+    }
+
+    .termosGrupo {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+    }
+}
+
+/* Celulares muito estreitos */
+@media screen and (max-width: 320px) {
+    .main {
+        padding: 1rem 0.6rem;
+    }
+
+    .loginGrupo {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .tituloLoginGrupo h1 {
+        font-size: 1.2rem;
+    }
+
+    .tituloLoginGrupo p {
+        font-size: 0.75rem;
+    }
+
+    .inputGrupo input {
+        height: 2.3rem;
+        padding-left: 2.2rem;
+    }
+
+    .entrarBotao {
+        height: 2.4rem;
+    }
+
+    .direitosGrupo {
+        font-size: 0.65rem;
+    }
+}

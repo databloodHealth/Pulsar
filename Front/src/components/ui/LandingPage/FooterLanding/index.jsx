@@ -1,12 +1,15 @@
 import style from './style.module.css'
 import whiteLogo from '@/assets/images/WhiteLogo.png'
+import { NavLink } from "react-router-dom";
 
 export default function FooterLanding (){
     return (
         <footer className={style.footer}>
         <div className={style.containerFooter}>
           <div className={style.pulsar}>
+            <NavLink to={'/'} end>
             <img src={whiteLogo} alt="Logo Pulsar" />
+            </NavLink>
             <p>
               Comprometidos com a excelência clínica e a preservação da vida
               através da tecnologia e do humanismo.
