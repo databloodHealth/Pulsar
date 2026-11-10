@@ -11,12 +11,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/health", (req, res) => {
+    return res.status(200).json({ status: "ok" });
+});
+
 app.use("/api/auth", AuthRoutes);
 app.use("/api/admin", AdminRoutes);
 app.use("/", UserRoutes);
 
+const port = Number(process.env.PORT || 3333);
 
-    
-app.listen(process.env.PORT || 3333, () => {
-    console.log(`Servidor rodando na porta ${process.env.PORT || 3333}`);
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Servidor rodando na porta ${port}`);
 });

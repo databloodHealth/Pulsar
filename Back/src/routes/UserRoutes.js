@@ -11,4 +11,10 @@ router.get(
   (req, res) => UserController.listarTodos(req, res)
 );
 
+router.patch(
+  "/edit/:id",
+  AuthMiddleware.authenticate,
+  (req, res) => UserController.atualizar(req, res)
+);
+
 export default router;
