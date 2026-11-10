@@ -5,9 +5,11 @@ WORKDIR /app
 COPY Back/package.json Back/package-lock.json ./
 RUN npm ci --omit=dev
 
-COPY Back/ .
+COPY --chown=node:node Back/ .
 
-ENV NODE_ENV=production
+ENV NODE_ENV=production PORT=3333
 EXPOSE 3333
 
-CMD ["node", "app.js"]
+USER node
+
+CMD ["npm", "start"]
