@@ -1,0 +1,89 @@
+.containerConteudo {
+    display: flex;
+    width: 100%;
+}
+
+.containerConteudo ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem .3rem 1rem;
+    border-bottom: 1px solid var(--cinza-400);
+}
+
+.containerConteudo ul li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 5rem;
+    padding: .5rem 0;
+    width: 100%;
+}
+
+.containerConteudo ul .campoInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.infoUser {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    width: 250px;
+}
+
+.infoUser .nome {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--azul-label);
+}
+
+.infoUser .email {
+    font-weight: 400;
+    color: var(--cinza-600);
+}
+
+.documento {
+    color: var(--azul-label);
+    font-weight: 00;
+    font-size: 1.1rem;
+}
+
+.tipo {
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 12px;
+    margin: 0 auto;
+    background-color: var(--vermelhocc);
+    color: var(--vermelho-400);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.data {
+    font-weight: 500;
+    color: var(--cinza-600);
+    font-size: 1rem;
+}
+
+.statusBox {
+    width: fit-content;
+    margin: 0 auto;
+    gap: .5rem;
+    border-radius: 12px;
+    background-color: var(--verde-100);
+    padding: 3px .5rem;
+}
+
+.statusBox .bolinha {
+    font-size: 1.5rem;
+
+}

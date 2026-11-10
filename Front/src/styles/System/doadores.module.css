@@ -1,22 +1,321 @@
-.containerCampanha{
-    background: linear-gradient(to right, var(--azul-400), rgba(180,212,254,0.8));
-    padding: 1rem 2rem;
-    border-radius: 12px;
+.containerDoadores {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
-.containerCampanha #title{
+
+.containerTitulos {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerTitulos .titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titulos h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+
+}
+
+.titulos p {
+    font-size: 1rem;
+    color: var(--azul-label);
+    font-weight: 500;
+
+}
+
+.botoesTitulo {
+    display: flex;
+    gap: 4rem;
+    height: 100%;
+    align-items: center;
+}
+
+.botoesTitulo #botaoNovo {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--vermelho-botao);
+    border: none;
+    border-radius: 6px;
+    padding: .6rem 1rem;
+    font-weight: 600;
+    font-size: .9rem;
     color: var(--branco);
-    font-size: 1.5rem;
-    font-weight: 500;
+    cursor: pointer;
 }
-.containerCampanha #descCampanha{
-color: var(--azul-100);
-    font-size: .8rem;
-    font-weight: 500;
-    width: 60%;
+
+.botoesTitulo #botaoExportar {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--cinza-400);
+    border: none;
+    border-radius: 6px;
+    padding: .6rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--azul-label);
+    cursor: pointer;
 }
-.boxLinks{
+
+
+.containerPesquisas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.containerPesquisas .inputPesquisa {
+    padding: .8rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--cinza-400);
+    width: 65%;
+    height: 100%;
+}
+
+.containerPesquisas .inputPesquisa::placeholder {
+    font-size: 1rem;
+    color: var(--vermelho-traco);
+    font-weight: 400;
+}
+
+.tipoSanguineoCaixa {
+    border-radius: 6px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--cinza-400);
+    height: 100%;
+    width: 20%;
+}
+
+.tipoSanguineoCaixa #labelSelect {
+    color: var(--azul-label);
+    font-weight: 600;
+    width: 100%;
+}
+
+.tipoSanguineoCaixa #tpSanguineo {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.filtroContainer {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    border: 1px solid var(--cinza-400);
+    border-radius: 8px;
+    height: 100%;
+    width: 10%;
+    padding: .5rem;
+}
+
+.filtroContainer select {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.containerTabela {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+
+.tabelaDoadores {
+    width: 100%;
+    min-width: 850px;
+}
+
+.tabelaDoadores thead tr {
+    background-color: #f5f4f4;
+    padding: .4rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5rem;
+
+}
+
+.tabelaDoadores thead tr th {
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tabelaDoadores thead tr #thDoador {
+    width: 350px;
+}
+
+
+.tabelaDoadores th {
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #6480a3;
+    white-space: nowrap;
+}
+
+/* RODAPÉ */
+.rodapeTabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    border-top: 1px solid #eee;
+    font-size: 11px;
+    color: #35577e;
+}
+
+/* PAGINAÇÃO */
+.paginacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.paginacao button {
+    border: none;
+    background: transparent;
+    color: #35577e;
+    cursor: pointer;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.paginacao button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.paginacao .paginaAtiva {
+    background-color: #a91e16;
+    color: white;
+}
+
+.containerCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 4rem;
+}
+
+.containerCampanha {
+    background: linear-gradient(to right,
+            var(--azul-400),
+            rgba(180, 212, 254, 0.8));
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.containerCampanha .conteudoCampanha {
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 80%;
+}
+
+.containerCampanha .conteudoCampanha #title {
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.containerCampanha .conteudoCampanha #descCampanha {
+    color: var(--azul-100);
+    font-size: .8rem;
+    font-weight: 500;
+    width: 60%;
+}
+
+.boxLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.boxLinks .buttonNotificação {
+    border-radius: 6px;
+    padding: .8rem 2rem;
+    text-align: center;
+    border: none;
+    color: var(--azul-label);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boxLinks .linkAnalise {
+    color: var(--branco);
+    border-bottom: 1px var(--branco) solid;
+}
+
+.cardInfo {
+    display: flex;
+    border-radius: 12px;
+    flex-direction: column;
+    border-left: 3px var(--vermelho-600) solid;
+    background-color: var(--cinza-fundo-claro);
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.cardInfo .topInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.porcentagem {
+    background-color: var(--verde-icone-fundo);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--verde-500);
+}
+
+.cardInfo #titleCardDoador {
+    color: var(--azul-label);
+}
+
+.cardInfo span {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cardInfo .descDoador {
+    color: var(--marrom);
+    font-size: 14px;
+    width: 60%;
 }
