@@ -1,0 +1,169 @@
+:root {
+    --bordaPadrao: 1px solid;
+    --azul-fundo: #416084;
+    --cinza-fundo: #fbf9f8;
+    --branco: #ffffff;
+    --azul-label: #416084;
+    --azul-100: #d1e4ff;
+    --vermelho-fonte: #b41b0f;
+    --preto: #000000;
+    --verde-500: #005331;
+    --vermelhoccc: #F1DDDC;
+    --vermelho-hover: #ee0000;
+    --vermelho-traco: #e1bfb9;
+
+
+
+}
+
+.containerCampanha {
+    background-color: var(--cinza-fundo);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* border: green var(--bordaPadrao); */
+}
+
+.cardsInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .card {
+
+        padding: 1.3rem 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+
+
+        .titleCard {
+            color: var(--azul-label);
+            font-size: 1rem;
+        }
+
+        #quantDoacoes {
+            color: var(--vermelho-fonte);
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        #porcentagemDoacoes {
+            color: var(--verde-500);
+        }
+
+        #quantCampanhas {
+            color: var(--preto);
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        #textoCampnha {
+            color: var(--azul-label);
+        }
+
+        #tipoUrgencia {
+            color: var(--branco);
+            font-size: 1.3rem;
+            font-weight: 600;
+
+        }
+
+        .linkDetalhes {
+            color: var(--branco);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+    }
+
+    .cardBranco {
+
+        background-color: var(--branco);
+    }
+
+    .cardAzul {
+        position: relative;
+        background-color: var(--azul-fundo);
+
+        .titleCard {
+            color: var(--azul-100);
+
+        }
+    }
+
+    .vermelhoBorda {
+        border-bottom: 2px solid var(--vermelhoccc);
+    }
+
+
+    .logo {
+        width: 15%;
+        position: absolute;
+        right: -1.5rem;
+        bottom: -1.8rem;
+    }
+}
+
+.gridCampanhas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.cardCriar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px var(--vermelho-traco);
+    border-style: dashed;
+    border-radius: 1rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.iconeCriar {
+    color: var(--vermelho-traco);
+    transition: color .5s;
+}
+
+.cardCriar:hover {
+    border: solid 3px var(--vermelho-hover);
+    border-style: dashed;
+
+}
+
+.cardCriar:hover .iconeCriar {
+    color: var(--vermelho-hover);
+}
+
+.cardCriar .buttonCriar {
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.conteudoCard {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoCard #titleCriar {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.conteudoCard #subtitleCriar {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--azul-fundo);
+    width: 50%;
+    text-align: center;
+
+}

@@ -12,6 +12,7 @@ import AdminDashboard from "@/pages/System/Admin/AdminDashboard";
 import Campanhas from "@/pages/System/Admin/Campanhas";
 import EstoqueAdmin from "@/pages/System/Admin/Estoque";
 import Contato from "@/pages/Landing/Contato";
+import Doadores from "@/pages/System/Admin/Doadores";
 
 function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ function AppRoutes() {
       <Route path="/admin/campanhas" element={<Campanhas />}/>
       <Route path="/admin/estoque" element={<EstoqueAdmin/>}/>
       <Route path="/contato" element={<Contato/>}/>
+      <Route path="/admin/doadores" element={<Doadores/>}></Route>
     </Routes>
   );
 }
