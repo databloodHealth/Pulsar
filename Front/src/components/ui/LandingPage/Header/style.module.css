@@ -316,19 +316,19 @@ header .buttonMenu:hover {
 
 @media screen and (max-width: 750px) {
   .headerSideBar{
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .headerSideBar{
     width: 50%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
   .headerSideBar{
     width: 60%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .headerSideBar{
-    width: 70%;
   }
 }
 

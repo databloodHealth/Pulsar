@@ -79,18 +79,18 @@
    transform: translateY(0);
  }
 
-@media screen and (max-width: 1450px) {
+ @media screen and (max-width: 1450px) {
    .questionCard {
      width: 70%;
    }
-}
+ }
 
 
-@media screen and (max-width: 1150px) {
+ @media screen and (max-width: 1150px) {
    .questionCard {
      width: 80%;
    }
-}
+ }
 
  @media screen and (max-width: 950px) {
    .FAQ {
@@ -118,6 +118,42 @@
    .questionHead {
      gap: 0.8rem;
    }
+
+   .questionHead h2 {
+     font-size: 1.05rem;
+   }
+
+   .questionCard .questionContent {
+     font-size: 0.98rem;
+   }
  }
 
+ @media screen and (max-width: 600px) {
+   .questionHead h2 {
+     font-size: 0.95rem;
+   }
 
+   .questionCard .questionContent {
+     font-size: 0.9rem;
+   }
+
+   .questionHead button {
+     width: 32px;
+     height: 32px;
+   }
+ }
+
+ @media screen and (max-width: 400px) {
+   .questionHead h2 {
+     font-size: 0.875rem;
+   }
+
+   .questionCard .questionContent {
+     font-size: 0.85rem;
+   }
+
+   .questionHead button {
+     width: 28px;
+     height: 28px;
+   }
+ }
