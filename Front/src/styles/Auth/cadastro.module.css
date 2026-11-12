@@ -1,5 +1,3 @@
-
-
 :global(body) {
   min-height: 100svh;
   background-color: var(--cinzaBody);
@@ -97,6 +95,102 @@
   font-weight: 500;
 }
 
+/* Senha com botão de mostrar/ocultar */
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inputWrapper input {
+  padding-right: 3rem;
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cinzaIcone);
+  padding: 0;
+}
+
+/* Mensagem de erro */
+.errorMessage {
+  color: var(--vermelhoFonte);
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+/* Checkbox de termos */
+.termosCheckbox {
+  padding: 20px 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
+  background: var(--cinzaInput);
+  border-radius: 4px;
+}
+
+.termosCheckbox p {
+  flex: 1;
+  font-size: 14px;
+  color: var(--escritaCinzaClara);
+  font-weight: 500;
+  word-spacing: 4px;
+}
+
+.termosLink {
+  color: var(--linkVermelho);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-color: var(--linkVermelhoUnderline);
+  text-underline-offset: 2px;
+}
+
+.termosCheckbox .checkbox {
+  width: 20px;
+  height: 20px;
+  background: var(--branco);
+  outline: 1px solid var(--outlineVermelho);
+  border-radius: 2px;
+  border: 0;
+  transition: 0.3s;
+}
+
+.termosCheckbox .checked {
+  background: var(--vermelhoFonte);
+  outline: 1px solid var(--vermelhoFonte);
+  position: relative;
+}
+
+.termosCheckbox .checkmark {
+  height: 10px;
+  width: 5px;
+  border-right: solid 2px var(--branco);
+  border-bottom: solid 2px var(--branco);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 4px;
+  left: 7px;
+}
+
+.termosCheckbox .checkbox:hover {
+  cursor: pointer;
+}
+
 .botForm {
   display: flex;
   flex-direction: row;
@@ -132,6 +226,11 @@
 
 .botForm button:hover {
   background-color: var(--vermelho-600);
+}
+
+.botForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 /* Informações / Rodapé */

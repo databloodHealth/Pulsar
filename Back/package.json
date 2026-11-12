@@ -16,7 +16,7 @@
   
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/app.js",
+    "start": "node app.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate"
   }

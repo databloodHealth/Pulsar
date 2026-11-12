@@ -30,8 +30,8 @@ export const doador = mysqlTable("doador", {
 	telefone: varchar({ length: 20 }).notNull(),
 	dataNascimento: date("data_nascimento").notNull(),
     cidade: varchar({ length: 100 }).notNull(),
-	tipoSanguineo: mysqlEnum("tipo_sanguineo", ["A+","A-","B+","B-","AB+","AB-","O+","O-"]).notNull(),
-	peso: decimal({ precision: 5, scale: 2 }).notNull(),
+	tipoSanguineo: mysqlEnum("tipo_sanguineo", ["A+","A-","B+","B-","AB+","AB-","O+","O-"]),
+	peso: decimal({ precision: 5, scale: 2 }),
 	sexo: mysqlEnum(["masculino","feminino"]),
 },
 (table) => [

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import styles from "@/styles/Auth/login.module.css";
-import logoImg from "@/assets/images/BlackLogo.png";
 import HeaderAuth from "@/components/ui/HeaderAuth/index";
-import { Check, LockKeyhole, Mail, ShieldCheck } from "lucide-react";
+import { LockKeyhole, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "@/stores/auth.js";
 
 export default function Login() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const login = useAuthStore((state) => state.login);
+  const [err, setErr] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     senha: "",
@@ -21,21 +23,15 @@ export default function Login() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Dados de login:", formData);
+    try {
+      const usuario = await login(formData.email, formData.senha);
+      navigate(usuario.tipoUsuario === "admin" ? "/admin/adminDashboard" : "/donnorDashboard");
+    } catch (error) {
+      setErr(error.response?.data?.message || "Erro ao realizar login.");
+    }
   };
-
-  const USER_MOCK = {
-    'email': 'pulsar@email.com',
-    'senha': 'pulsar1234'
-  }
-
-  function redirect(){
-    if(formData.email === USER_MOCK.email && formData.senha === USER_MOCK.senha){
-    navigate('/Donnordashboard')
-  }
-  }
 
   return (
     <>
@@ -84,7 +80,9 @@ export default function Login() {
               </div>
             </div>
 
-            <button className={styles.entrarBotao} type="submit" onClick={redirect}>
+            {err && <p className={styles.errorMessage}>{err}</p>}
+
+            <button className={styles.entrarBotao} type="submit">
               Entrar
             </button>
 

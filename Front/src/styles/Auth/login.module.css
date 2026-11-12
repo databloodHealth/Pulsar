@@ -193,6 +193,14 @@ input:focus{
   color: var(--vermelhoCadastro);
 }
 
+.errorMessage {
+  color: var(--vermelhoFonte);
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
 /* Tablets e telas menores */
 @media screen and (max-width: 768px) {
     .main {
