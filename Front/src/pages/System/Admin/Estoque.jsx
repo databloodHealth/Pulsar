@@ -2,12 +2,14 @@ import style from '@/styles/System/estoque.module.css'
 import ButtonSystem from "@/components/ui/Button";
 import PageTitle from "@/components/ui/PageTitle";
 import SystemLayout from "@/layouts/SystemLayout";
-import { FiFilter } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import { RiExportLine } from "react-icons/ri";
 import StockCard from '@/components/ui/StorageCard';
 import Graphic from '@/components/ui/Graphic';
 import { Link } from 'react-router-dom';
-
+import { useState } from 'react';
+import ModalEntradaEstoque from '@/components/Admin/EntradaEstoque';
+import ModalSaidaEstoque from '@/components/Admin/SaidaEstoque';
 
 const transactions = [
   {
@@ -41,76 +43,93 @@ const transactions = [
 
 
 
-export default function EstoqueAdmin (){
-    return (
-        <SystemLayout>
-            <PageTitle title={'Estoque de Hemocomponentes'} subtitle={'Monitoramento em tempo real dos níveis de suprimento sanguíneo.'}/>
-            <main className={style.mainIndex}>
-            <div className={style.headerButtons}>
-                <ButtonSystem type={'secondary'} icon={FiFilter} value={'Filtrar Unidade'} />
-                <ButtonSystem type={'primary'} icon={RiExportLine} value={'Registrar Saiída'} />
-            </div>
+export default function EstoqueAdmin() {
 
-            <div className={style.gridTypes}>
-                <StockCard type={'A+'} quantity={'42'} badge={'Normal'} min={12} variant={'normal'}/>
-                <StockCard type={'A-'} quantity={'13'} badge={'Normal'} min={10} variant={'warning'}/>
-                <StockCard type={'B+'} quantity={'31'} badge={'Normal'} min={10} variant={'normal'}/>
-                <StockCard type={'B-'} quantity={'3'} badge={'Normal'} min={10} variant={'critical'}/>
-                <StockCard type={'AB+'} quantity={'13'} badge={'Normal'} min={10} variant={'warning'}/>
-                <StockCard type={'AB-'} quantity={'4'} badge={'Normal'} min={10} variant={'critical'}/>
-                <StockCard type={'O+'} quantity={'88'} badge={'Normal'} min={10} variant={'normal'}/>
-                <StockCard type={'O-'} quantity={'14'} badge={'Normal'} min={10} variant={'warning'}/>
-            </div>
+  const [modalEntrada, setModalEntrada] = useState(false);
+  const [modalSaida, setModalSaida] = useState(false);
 
-            <div className={style.dataArea}>
-                <Graphic/>
-            </div>
+  return (
+    <SystemLayout>
+      <PageTitle title={'Estoque de Hemocomponentes'} subtitle={'Monitoramento em tempo real dos níveis de suprimento sanguíneo.'} />
+      <main className={style.mainIndex}>
+        <div className={style.headerButtons}>
+          <ButtonSystem type={'secondary'} icon={FiDownload} value={'Registrar Entrada'} action={() => setModalEntrada(true)} />
+          <ButtonSystem type={'primary'} icon={RiExportLine} value={'Registrar Saiída'} action={() => setModalSaida(true)} />
 
-            <div className={style.tableArea}>
-                <div className={style.tableHeader}>
-                    <h2>Últimas movimentações</h2>
+          {modalEntrada && (
+            <ModalEntradaEstoque
+              onClose={() => setModalEntrada(false)}
+            />
+          )}
 
-                    <Link>Ver Tudo</Link>
-                </div>
-                <div className={style.tableContent}>
-               <table className={style.transactionsTable}>
-        <thead className={style.tableHead}>
-          <tr>
-            <th>Data/Hora</th>
-            <th>Tipo</th>
-            <th>Ação</th>
-            <th>Unidades</th>
-            <th>Destino</th>
-          </tr>
-        </thead>
+          {modalSaida && (
+            <ModalSaidaEstoque
+              onClose={() => setModalSaida(false)}
+            />
+          )}
 
-        <tbody>
-          {transactions.map((item) => (
-            <tr key={item.id} className={style.tableRow}>
-              <td className={style.date}>{item.date}</td>
+        </div>
 
-              <td className={style.bloodType}>{item.type}</td>
+        <div className={style.gridTypes}>
+          <StockCard type={'A+'} quantity={'42'} badge={'Normal'} min={12} variant={'normal'} />
+          <StockCard type={'A-'} quantity={'13'} badge={'Normal'} min={10} variant={'warning'} />
+          <StockCard type={'B+'} quantity={'31'} badge={'Normal'} min={10} variant={'normal'} />
+          <StockCard type={'B-'} quantity={'3'} badge={'Normal'} min={10} variant={'critical'} />
+          <StockCard type={'AB+'} quantity={'13'} badge={'Normal'} min={10} variant={'warning'} />
+          <StockCard type={'AB-'} quantity={'4'} badge={'Normal'} min={10} variant={'critical'} />
+          <StockCard type={'O+'} quantity={'88'} badge={'Normal'} min={10} variant={'normal'} />
+          <StockCard type={'O-'} quantity={'14'} badge={'Normal'} min={10} variant={'warning'} />
+        </div>
 
-              <td>
-                <span
-                  className={`${style.action} ${style[item.actionType]}`}
-                >
-                  {item.action}
-                </span>
-              </td>
+        <div className={style.dataArea}>
+          <Graphic />
+        </div>
 
-              <td className={style.units}>{item.units}</td>
+        <div className={style.tableArea}>
+          <div className={style.tableHeader}>
+            <h2>Últimas movimentações</h2>
 
-              <td className={style.destination}>
-                {item.destination}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      </div>
-            </div>
-            </main>
-        </SystemLayout>
-    )
+            <Link>Ver Tudo</Link>
+          </div>
+          <div className={style.tableContent}>
+            <table className={style.transactionsTable}>
+              <thead className={style.tableHead}>
+                <tr>
+                  <th>Data/Hora</th>
+                  <th>Tipo</th>
+                  <th>Ação</th>
+                  <th>Unidades</th>
+                  <th>Destino</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {transactions.map((item) => (
+                  <tr key={item.id} className={style.tableRow}>
+                    <td className={style.date}>{item.date}</td>
+
+                    <td className={style.bloodType}>{item.type}</td>
+
+                    <td>
+                      <span
+                        className={`${style.action} ${style[item.actionType]}`}
+                      >
+                        {item.action}
+                      </span>
+                    </td>
+
+                    <td className={style.units}>{item.units}</td>
+
+                    <td className={style.destination}>
+                      {item.destination}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </SystemLayout>
+  )
 }

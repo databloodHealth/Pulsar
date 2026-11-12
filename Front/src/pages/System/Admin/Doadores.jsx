@@ -1,4 +1,3 @@
-
 import SystemLayout from "@/layouts/SystemLayout";
 import style from "@/styles/System/doadores.module.css";
 import { FaUserCheck } from "react-icons/fa6";
@@ -6,9 +5,10 @@ import { IoPersonAdd } from "react-icons/io5";
 import { GoDownload } from "react-icons/go";
 import { MdFilterList } from "react-icons/md";
 import Doador from "@/components/Tabelas";
-
+import doadoresLista from '@/Data/Doadores';
 
 export default function Doadores() {
+
     return (
         <SystemLayout>
             <div className={style.containerDoadores}>
@@ -80,41 +80,17 @@ export default function Doadores() {
                         </thead>
 
                         <tbody>
-                            <Doador
-                                nome="Ricardo Cavalcanti"
-                                email="ricardo.c@email.com"
-                                documento="054.***.***-89"
-                                tipo="O-"
-                                data="12 Mar 2024"
-                                status="Ativo"
-                            />
-
-                            <Doador
-                                nome="Ana Martins"
-                                email="ana.m@email.com"
-                                documento="412.***.***-45"
-                                tipo="A+"
-                                data="05 Jan 2024"
-                                status="Ativo"
-                            />
-
-                            <Doador
-                                nome="Gabriel Santos"
-                                email="g.santos@email.com"
-                                documento="112.***.***-23"
-                                tipo="B+"
-                                data="--"
-                                status="Inapto"
-                            />
-
-                            <Doador
-                                nome="Lúcia Oliveira"
-                                email="lucia.o@email.com"
-                                documento="789.***.***-12"
-                                tipo="AB-"
-                                data="18 Abr 2024"
-                                status="Ativo"
-                            />
+                            {doadoresLista.map((doador) => (
+                                <Doador
+                                    key={doador.value}
+                                    nome={doador.nome}
+                                    email={doador.email}
+                                    documento={doador.documento}
+                                    tipo={doador.tipo}
+                                    data={doador.data}
+                                    status={doador.status}
+                                />
+                            ))}
                         </tbody>
 
                     </table>

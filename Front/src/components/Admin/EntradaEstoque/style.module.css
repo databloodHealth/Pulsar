@@ -1,0 +1,314 @@
+.fundoModalEstoque {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(20, 29, 43, 0.62);
+    animation: animAbrirFundo 0.3s ease both;
+}
+
+.modalEstoqueContainer {
+    position: relative;
+    width: 100%;
+    max-width: 35rem;
+    max-height: 95%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.55rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    animation: animAbrirModal 0.3s ease both;
+}
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.title h1 {
+    margin: 0;
+    color: #303030;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.title h2 {
+    margin-top: .3rem;
+    color: #647b92;
+    font-size: .95rem;
+    font-weight: 400;
+}
+
+.fecharBotao {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #a9c9f5;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.fecharBotao:hover {
+    color: #547eaf;
+}
+
+.doador {
+    width: 100%;
+    margin-top: 0.1rem;
+}
+
+.doadorOption {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.doadorOption:nth-child(1) span{
+    display: none;
+}
+
+.avatarDoador {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.doadorTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.doadorTexto span {
+    color: #647b92;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.doadorTexto strong {
+    overflow: hidden;
+    color: #303030;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.data,
+.unidade {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 100%;
+}
+
+.data label,
+.unidade label {
+    color: #647b92;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.inputDataDoacao {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    background: #efeded;
+    color: #3f3f3f;
+    font-family: inherit;
+    font-size: .9rem;
+    transition: border-color 0.2s ease;
+}
+
+.inputDataDoacao:focus {
+    border-color: #8ba6c3;
+}
+
+
+.confirmacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.9rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #f0f7f4;
+    color: #408b79;
+}
+
+.confirmacao svg {
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+    font-size: 1.4rem;
+}
+
+.confirmacao p {
+    margin: 0;
+    color: #4c887b;
+    font-size: 0.85rem;
+    line-height: 1.55;
+}
+
+.botoes {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+.cancelarBotao,
+.confirmarBotao {
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.cancelarBotao {
+    flex: 0.8;
+
+    background: #eeebeb;
+    color: #647b92;
+}
+
+.cancelarBotao:hover {
+    background: #e3dfdf;
+}
+
+.confirmarBotao {
+    flex: 1.4;
+    background: #b72b20;
+    color: #ffffff;
+    box-shadow: 0 3px 7px rgba(183, 43, 32, 0.2);
+}
+
+.confirmarBotao:hover {
+    background: #9e2118;
+}
+
+.confirmarBotao svg {
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.cancelarBotao:disabled,
+.confirmarBotao:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Animações */
+
+@keyframes animAbrirFundo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animAbrirModal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.closing {
+    pointer-events: none;
+    animation: animFecharFundo 0.3s ease both;
+}
+
+.closing .modalEstoqueContainer {
+    animation: animFecharModal 0.3s ease both;
+}
+
+@keyframes animFecharFundo {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes animFecharModal {
+    to {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+    .fundoModalEstoque {
+        padding: 0.8rem;
+    }
+
+    .modalEstoqueContainer {
+        max-width: 100%;
+        max-height: calc(100dvh - 1.6rem);
+        padding: 1.2rem;
+        gap: 1.25rem;
+    }
+
+    .title h1 {
+        font-size: 1.05rem;
+    }
+
+    .confirmacao {
+        padding: 0.75rem;
+    }
+
+    .botoes {
+        gap: 0.55rem;
+    }
+
+    .cancelarBotao,
+    .confirmarBotao {
+        padding: 0.65rem 0.45rem;
+        font-size: 0.72rem;
+    }
+}
