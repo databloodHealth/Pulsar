@@ -1,7 +1,5 @@
 import style from '@/styles/home.module.css';
 import { Link } from 'react-router-dom'
-
-
 import blackLogo from '@/assets/images/BlackLogo.png';
 import heroImg from '@/assets/images/HeroImg.png';
 import sectionImage from '@/assets/images/SectionImage.png';
@@ -16,29 +14,31 @@ export default function Home() {
     <>
       <Header />
 
+      <article className={style.hero}>
+        <div className={style.heroContent}>
+          <div className={style.title}>
+            <h1 className={`${style.title} ${style.heroTitle}`}>Doe sangue.</h1>
+            <h1 className={`${style.redTitle} ${style.heroTitle}`}>Salve vidas.</h1>
+          </div>
+          <p>
+            Seu gesto pode ser a esperança de alguém. Gerencie suas doações e
+            ajude a manter os estoques vitais da nossa região sempre
+            abastecidos.
+          </p>
+          <div className={style.buttons}>
+            <a className={`${style.heroButton} ${style.primary}`} href="/login">Quero ser doador</a>
+            <a className={`${style.heroButton} ${style.secondary}`} href="/profile">Saiba Mais</a>
+          </div>
+        </div>
+        <div className={style.heroImage}>
+          <img src={heroImg} alt="Hero Image" />
+        </div>
+        <div className={style.shape}></div>
+      </article>
+
       <main className={style.main}>
         {/* HERO SECTION */}
-        <section className={style.hero}>
-          <div className={style.heroContent}>
-            <div className={style.title}>
-              <h1 className={`${style.title} ${style.heroTitle}`}>Doe sangue.</h1>
-              <h1 className={`${style.redTitle} ${style.heroTitle}`}>Salve vidas.</h1>
-            </div>
-            <p>
-              Seu gesto pode ser a esperança de alguém. Gerencie suas doações e
-              ajude a manter os estoques vitais da nossa região sempre
-              abastecidos.
-            </p>
-            <div className={style.buttons}>
-              <a className={`${style.heroButton} ${style.primary}`} href="/login">Quero ser doador</a>
-              <a className={`${style.heroButton} ${style.secondary}`} href="/profile">Saiba Mais</a>
-            </div>
-          </div>
-          <div className={style.heroImage}>
-            <img src={heroImg} alt="Hero Image" />
-          </div>
-          <div className={style.shape}></div>
-        </section>
+
 
         {/* WHY DONATE SECTION */}
         <section className={style.whyDonate}>
@@ -136,65 +136,68 @@ export default function Home() {
             <h2>Matriz de Compatibilidade</h2>
             <p>Descubra quem você pode ajudar e quem pode te ajudar</p>
           </div>
-          <table className={style.table}>
-            <thead className={style.tableHead}>
-              <tr>
-                <th className={style.tableHeader}>Tipo Sanguíneo</th>
-                <th className={style.tableHeader}>Pode Doar Para</th>
-                <th className={style.tableHeader}>Pode Receber De</th>
-              </tr>
-            </thead>
 
-            <tbody className={style.tableBody}>
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>A+</td>
-                <td className={style.tableCell}>A+ / AB+</td>
-                <td className={style.tableCell}>A+ / A- / O+ / O-</td>
-              </tr>
+          <div className={style.tableContainer}>
+            <table className={style.table}>
+              <thead className={style.tableHead}>
+                <tr>
+                  <th className={style.tableHeader}>Tipo Sanguíneo</th>
+                  <th className={style.tableHeader}>Pode Doar Para</th>
+                  <th className={style.tableHeader}>Pode Receber De</th>
+                </tr>
+              </thead>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>A-</td>
-                <td className={style.tableCell}>A+ / A- / AB+ / AB-</td>
-                <td className={style.tableCell}>A- / O-</td>
-              </tr>
+              <tbody className={style.tableBody}>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>A+</td>
+                  <td className={style.tableCell}>A+ / AB+</td>
+                  <td className={style.tableCell}>A+ / A- / O+ / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>B+</td>
-                <td className={style.tableCell}>B+ / AB+</td>
-                <td className={style.tableCell}>B+ / B- / O+ / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>A-</td>
+                  <td className={style.tableCell}>A+ / A- / AB+ / AB-</td>
+                  <td className={style.tableCell}>A- / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>B-</td>
-                <td className={style.tableCell}>B+ / B- / AB+ / AB-</td>
-                <td className={style.tableCell}>B- / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>B+</td>
+                  <td className={style.tableCell}>B+ / AB+</td>
+                  <td className={style.tableCell}>B+ / B- / O+ / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>AB+</td>
-                <td className={style.tableCell}>AB+</td>
-                <td className={style.tableCell}>Todos os tipos</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>B-</td>
+                  <td className={style.tableCell}>B+ / B- / AB+ / AB-</td>
+                  <td className={style.tableCell}>B- / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>AB-</td>
-                <td className={style.tableCell}>AB+ / AB-</td>
-                <td className={style.tableCell}>A- / B- / AB- / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>AB+</td>
+                  <td className={style.tableCell}>AB+</td>
+                  <td className={style.tableCell}>Todos os tipos</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>O+</td>
-                <td className={style.tableCell}>A+ / B+ / AB+ / O+</td>
-                <td className={style.tableCell}>O+ / O-</td>
-              </tr>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>AB-</td>
+                  <td className={style.tableCell}>AB+ / AB-</td>
+                  <td className={style.tableCell}>A- / B- / AB- / O-</td>
+                </tr>
 
-              <tr className={style.lineTable}>
-                <td className={style.tableCell}>O-</td>
-                <td className={style.tableCell}>Todos os tipos</td>
-                <td className={style.tableCell}>O-</td>
-              </tr>
-            </tbody>
-          </table>
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>O+</td>
+                  <td className={style.tableCell}>A+ / B+ / AB+ / O+</td>
+                  <td className={style.tableCell}>O+ / O-</td>
+                </tr>
+
+                <tr className={style.lineTable}>
+                  <td className={style.tableCell}>O-</td>
+                  <td className={style.tableCell}>Todos os tipos</td>
+                  <td className={style.tableCell}>O-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <div className={style.cardsInfos}>
             <div className={`${style.cardType} ${style.card}`}>
@@ -313,10 +316,12 @@ export default function Home() {
               <Faq.Question question={"Quem pode doar Sangue?"} />
               <Faq.Answer answer={"Pessoas entre 16 e 69 anos, com peso acima de 50kg e boas condições de saúde. Menores de 18 anos precisam de autorização dos pais ou responsáveis."} />
             </Faq.Root>
+
             <Faq.Root>
               <Faq.Question question={"Com qual frequência posso doar?"} />
               <Faq.Answer answer={"Homens podem doar a cada 60 dias, com no máximo 4 doações por ano. Mulheres a cada 90 dias, com no máximo 3 doações por ano."} />
             </Faq.Root>
+
             <Faq.Root>
               <Faq.Question question={"O que não devo fazer na semana da doação?"} />
               <Faq.Answer answer={"Evite bebidas alcoólicas nas 12 horas anteriores, alimentos gordurosos nas 4 horas antes da doação e atividades físicas intensas no dia. Durma bem na noite anterior e chegue bem hidratado."} />

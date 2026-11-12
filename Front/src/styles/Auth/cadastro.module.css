@@ -262,3 +262,205 @@
 .termos a:hover {
   color: var(--cinzaFonte);
 }
+
+
+/* Tablets e telas menores */
+@media screen and (max-width: 768px) {
+    .content {
+        gap: 35px;
+        margin-top: 25px;
+        margin-bottom: 45px;
+        padding: 0 24px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 600px;
+        padding: 45px 35px 25px;
+        gap: 30px;
+    }
+
+    .containerTitle {
+        gap: 8px;
+    }
+
+    .containerTitle h1 {
+        font-size: 26px;
+    }
+
+    .containerTitle h2 {
+        font-size: 14px;
+    }
+
+    .containerForm {
+        gap: 16px;
+    }
+
+    .campoForm {
+        gap: 9px;
+    }
+
+    .containerForm label {
+        font-size: 14px;
+    }
+
+    .containerForm input {
+        height: 44px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .botForm {
+        margin-top: 12px;
+        gap: 16px;
+    }
+
+    .botForm a {
+        font-size: 14px;
+    }
+
+    .botForm button {
+        padding: 14px 30px;
+        font-size: 14px;
+    }
+
+    .info {
+        width: 100%;
+        max-width: 600px;
+        font-size: 12px;
+        gap: 16px;
+    }
+
+    .termos {
+        gap: 12px;
+    }
+}
+
+/* Celulares */
+@media screen and (max-width: 480px) {
+    .content {
+        gap: 25px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 0 16px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 30px 20px 22px;
+        gap: 24px;
+        border-radius: 6px;
+    }
+
+    .containerTitle {
+        gap: 7px;
+    }
+
+    .containerTitle h1 {
+        font-size: 22px;
+    }
+
+    .containerTitle h2 {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .containerForm {
+        gap: 14px;
+    }
+
+    .campoForm {
+        gap: 7px;
+    }
+
+    .containerForm label {
+        font-size: 13px;
+    }
+
+    .blocoForm {
+        gap: 8px;
+    }
+
+    .containerForm input {
+        height: 40px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .botForm {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 14px;
+        margin-top: 8px;
+    }
+
+    .botForm a {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .botForm button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        font-size: 11px;
+    }
+
+    .termos {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+}
+
+/* Celulares muito estreitos */
+@media screen and (max-width: 320px) {
+    .content {
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .container {
+        padding: 24px 14px 18px;
+        gap: 20px;
+    }
+
+    .containerTitle h1 {
+        font-size: 19px;
+    }
+
+    .containerTitle h2 {
+        font-size: 12px;
+    }
+
+    .containerForm label {
+        font-size: 12px;
+    }
+
+    .blocoForm {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .containerForm input {
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .botForm button {
+        padding: 11px 16px;
+        font-size: 13px;
+    }
+
+    .info {
+        font-size: 10px;
+    }
+}

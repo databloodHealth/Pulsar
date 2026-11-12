@@ -1,6 +1,3 @@
-
-
-
 .hero {
   position: relative;
   height: calc(100vh - 5rem);
@@ -10,7 +7,7 @@
 }
 
 .heroContent {
-  position: absolute;  
+  position: absolute;
   z-index: 1000;
   max-width: 700px;
   padding: 0 5%;
@@ -48,11 +45,11 @@
   }
 }
 
-a{
+a {
   text-decoration: none;
 }
 
- a.primary {
+a.primary {
   background-color: var(--primary);
   color: var(--branco);
   transition: .5s ease;
@@ -77,8 +74,7 @@ a.secondary {
 
 .heroImage {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -100;
   width: 100%;
 
@@ -91,29 +87,26 @@ a.secondary {
 
 .shape {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--branco) 0%,
-    var(--branco-50) 50%,
-    var(--branco-0) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--branco) 0%,
+      var(--branco-50) 50%,
+      var(--branco-0) 100%);
 }
 
-.whyDonate{
+.whyDonate {
   padding: 3% 5%;
 }
 
-.underline{
+.underline {
   width: 10%;
   height: 3px;
   background-color: var(--primary);
 }
 
-.sectionTitle{
+.sectionTitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,19 +114,18 @@ a.secondary {
   gap: .5em;
 }
 
-.sectionTitle h2{
+.sectionTitle h2 {
   font-size: 2.2rem;
   color: var(--foreground);
 }
 
-.sectionTitle p{
+.sectionTitle p {
   color: var(--muted-foreground);
   font-size: 1.1rem;
-  width: 50%;
   text-align: center;
 }
 
-.reasons{
+.reasons {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,20 +133,25 @@ a.secondary {
   padding: 2% 0;
 }
 
-.image img{
-   width: 80%;
-   height: 100%;
+.reasons .image {
+  display: flex;
+  justify-content: center;
 }
 
-.listReasons{
+.reasons .image img {
+  width: 80%;
+}
+
+.listReasons {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 3rem;
   width: 50%;
+  flex-shrink: 0;
 }
 
-.listReasons ul{
+.listReasons ul {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -162,16 +159,18 @@ a.secondary {
   gap: 3rem;
 }
 
-.reason{
+.reason {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   font-size: 1.1rem;
+  height: 50px;
+  flex-shrink: 0;
 }
 
-.reason .iconReason{
+.reason .iconReason {
   width: 50px;
   height: 50px;
   display: flex;
@@ -180,24 +179,26 @@ a.secondary {
   border-radius: 4px;
   background-color: var(--badge-red-bg);
   color: var(--primary);
+  flex-shrink: 0;
 }
 
 
-.reasonContent{
+.reasonContent {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.reasonContent p{
+.reasonContent p {
   font-size: 1.1rem
 }
 
-.red{
+.red {
   color: var(--primary);
 }
 
-.donateButton{
+.donateButton {
   padding: .8rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -205,14 +206,14 @@ a.secondary {
 }
 
 
-.process{
+.process {
   padding: 3% 5%;
   display: flex;
   flex-direction: column;
   background-color: var(--white-l);
 }
 
-.steps{
+.steps {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -220,7 +221,7 @@ a.secondary {
   gap: 1rem;
 }
 
-.step{
+.step {
   border: 1px solid var(--cinza-card);
   width: 300px;
   height: 250px;
@@ -243,7 +244,7 @@ a.secondary {
   color: var(--foreground);
 }
 
-.line{
+.line {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,7 +253,7 @@ a.secondary {
   background-color: var(--cinza-tabela);
 }
 
-.stepNumber{
+.stepNumber {
   margin-top: -1rem;
   width: 50px;
   height: 50px;
@@ -263,15 +264,16 @@ a.secondary {
   color: var(--branco);
   font-weight: 600;
   background-color: var(--primary);
+  flex-shrink: 0;
 }
 
-.buttonCTA{
+.buttonCTA {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-a.processSection{
+a.processSection {
   padding: 0.8rem;
   width: 20%;
   font-size: 1rem;
@@ -282,59 +284,59 @@ a.processSection{
   transition: background-color 0.3s ease;
 }
 
-a.processSection:hover{
+a.processSection:hover {
   background-color: var(--primary-light);
 }
 
-.system{
+.system {
   padding: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
 
-.colLeft img{
+.colLeft img {
   width: 700px;
   height: 500px;
   border-radius: 8px;
 }
 
-.colRight{
+.colRight {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: space-between;
 }
 
-.colRight .title{
+.colRight .title {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.colRight .title p{
+.colRight .title p {
   color: var(--muted-foreground);
 }
 
-.colRight .title h2{
+.colRight .title h2 {
   font-size: 2rem;
   color: var(--foreground);
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.list .item{
+.list .item {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.item .icon{
+.item .icon {
   background-color: var(--bg-icon-greenL);
   width: 40px;
   height: 40px;
@@ -342,24 +344,25 @@ a.processSection:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.itemContent{
+.itemContent {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.itemContent h3{
+.itemContent h3 {
   font-size: 1.2rem;
   color: var(--foreground);
 }
 
-.itemContent p{
+.itemContent p {
   color: var(--muted-foreground);
 }
 
-.button{
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,11 +379,19 @@ a.processSection:hover{
   justify-content: center;
 }
 
-.compatibility{
+.compatibility {
   padding: 3% 5%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+.tableContainer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
 }
 
 
@@ -388,7 +399,6 @@ a.processSection:hover{
   width: 100%;
   border-collapse: collapse;
   border-radius: 8px;
-  overflow: hidden;
   background-color: var(--bg);
 }
 
@@ -420,6 +430,10 @@ a.processSection:hover{
   background-color: var(--cinza-fundo);
 }
 
+.lineTable:hover {
+  background-color: var(--cinza-fundo);
+}
+
 .lineTable:last-child {
   border-bottom: none;
 }
@@ -437,306 +451,1205 @@ a.processSection:hover{
   font-size: 15px;
 }
 
-  .cardsInfos{
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+.cardsInfos {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.card {
+  padding: 3rem 2rem;
+  width: 44%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardsInfos .cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardsInfos .cardHead .badge {
+  padding: .3rem 1rem;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.cardsInfos .cardType {
+  background: var(--card-red-bg);
+  color: var(--branco);
+}
+
+.cardType p,
+.cardType li {
+  color: var(--cinza-300);
+}
+
+.cardType .badgeCard {
+  background-color: var(--badge-red-bg);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.cardsInfos ul {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.cardCuriosity {
+  background-color: var(--card-muted-bg);
+}
+
+.cardCuriosity p {
+  color: var(--muted-foreground);
+}
+
+.cardCuriosity .badgeCard {
+  background-color: var(--light-blue);
+  color: var(--bg);
+  font-weight: 500;
+}
+
+.donate {
+  display: flex;
+  gap: 18rem;
+  background-color: var(--card-dark-bg);
+  padding: 3rem 2rem;
+  height: 15rem;
+  border-radius: 8px;
+  color: var(--bg);
+}
+
+.check {
+  width: 25px;
+  height: 12px;
+  rotate: -45deg;
+  border-bottom: 4px solid var(--primary);
+  border-left: 4px solid var(--primary);
+}
+
+
+
+.donate .colLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donate .colLeft a {
+  padding: .8rem 1.5rem;
+  background-color: var(--primary);
+  font-weight: 500;
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.donate .colLeft a:hover {
+  background-color: var(--primary-light);
+}
+
+.donate .colRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate .listCont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.donate .colRight .listItem {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.donate .colRight .listItem .icon {
+  color: var(--primary);
+}
+
+.FAQ {
+  padding: 3% 5%;
+}
+
+.questionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3% 0;
+  gap: 1.3rem;
+}
+
+.questionsContainer .questionCard {
+  background-color: var(--white-l);
+  border: .4px solid var(--vermelho-borda);
+  padding: .7rem 2rem;
+  width: 50%;
+  border-radius: 4px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all .5s ease;
+  user-select: none;
+}
+
+.questionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.questionHead h2 {
+  font-size: 1.05rem;
+  color: var(--foreground);
+}
+
+.questionHead button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid var(--cinza-500);
+  font-size: 1rem;
+  transition: all .5s ease;
+}
+
+.questionCard .questionContent {
+  border-left: 2px solid var(--primary);
+  padding: 1% 2%;
+  animation: enterQuestion .8s ease;
+  display: none;
+}
+
+.questionCard.active {
+  height: 140px;
+}
+
+.questionCard.active .questionContent {
+  display: flex;
+}
+
+.questionCard.active .colapse {
+  background-color: var(--primary);
+  color: var(--branco);
+  transform: rotate(45deg);
+  border: none;
+}
+
+footer {
+  background-color: var(--foreground);
+  padding: 3% 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--cinza-footer);
+}
+
+.containerFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pulsar {
+  max-width: 300px;
+  color: var(--cinza-footer);
+  font-size: 14px;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5rem;
+}
+
+
+
+.links .institutional,
+.links .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: .5rem;
+}
+
+.links h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 16px;
+  color: var(--branco);
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--cinza-footer);
+  font-size: 14px;
+}
+
+footer img {
+  max-width: 100px;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem 0;
+}
+
+.divisor {
+  height: 1px;
+  width: 100%;
+  background: var(--branco-10);
+}
+
+.finalTexts {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.finalList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.finalList a {
+  color: var(--cinza-footer);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes enterQuestion {
+
+  from {
+    opacity: 0;
+    transform: translateX(-5%);
   }
 
-  .card{
-    padding: 3rem 2rem;
-    width: 44%;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-    .cardsInfos .cardHead{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+}
 
-    .cardsInfos .cardHead .badge{
-      padding: .3rem 1rem;
-      border-radius: 50px;
-      font-size: 12px;
-    }
+@media screen and (max-width: 1500px) {
 
-  .cardsInfos .cardType{
-    background: var(--card-red-bg);
-    color: var(--branco);
+  .step {
+    height: 250px;
   }
 
-  .cardType p, .cardType li{
-    color: var(--cinza-300);
+  .stepNumber {
+    margin-top: 0;
   }
 
-  .cardType .badgeCard{
-    background-color: var(--badge-red-bg);
-    color: var(--primary);
-    font-weight: 600;
+  .step {
+    justify-content: space-around;
   }
+}
 
-  .cardsInfos ul{
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
+@media screen and (max-width: 1300px) {
+
+  .heroContent .redTitle,
+  .heroContent .title {
+    font-size: 3.8rem;
   }
-
-  .cardCuriosity{
-    background-color: var(--card-muted-bg);
-  }
-
-  .cardCuriosity p {
-    color: var(--muted-foreground);
-  }
-
-  .cardCuriosity .badgeCard{
-    background-color: var(--light-blue);
-    color: var(--bg);
-    font-weight: 500;
-  }
-  
-    .donate{
-    display: flex;
-    gap: 18rem;
-    background-color: var(--card-dark-bg);
-    padding: 3rem 2rem;
-    height: 15rem;
-    border-radius: 8px;
-    color: var(--bg);
-  }
-
-  .check{
-    width: 25px;
-    height: 12px;
-    rotate: -45deg;
-    border-bottom: 4px solid var(--primary);
-    border-left: 4px solid var(--primary);
-  }
+}
 
 
-
-  .donate .colLeft{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .donate .colLeft a{
-    padding: .8rem 1.5rem;
-    background-color: var(--primary);
-    font-weight: 500;
-    color: var(--bg);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color .5s ease;
-  }
-
-  .donate .colLeft a:hover{
-    background-color: var(--primary-light);
-  }
-
-  .donate .colRight{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .donate .listCont{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .donate .colRight .listItem{
-    display: flex;
-    gap: 1.5rem;
-    font-size: 1.2rem;
-    align-items: center;
-  }
-
-  .donate .colRight .listItem .icon{
-    color: var(--primary);
-  }
-
-  .FAQ{
-    padding: 3% 5%;
-  }
-
-  .questionsContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3% 0;
-    gap: 1.3rem;
-  }
-
-  .questionsContainer .questionCard{
-    background-color: var(--white-l);
-    border: .4px solid var(--vermelho-borda);
-    padding: .7rem 2rem;
+@media screen and (max-width: 1250px) {
+  .listReasons {
+    gap: 2rem;
     width: 50%;
-    border-radius: 4px;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    transition: all .5s ease;
-    user-select: none;
   }
 
-  .questionHead{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .questionHead h2{
-    font-size: 1.05rem;
-    color: var(--foreground);
-  }
-
-  .questionHead button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: transparent;
-    border: 1px solid var(--cinza-500);
-    font-size: 1rem;
-    transition: all .5s ease;
-  }
-
-  .questionCard .questionContent{
-    border-left: 2px solid var(--primary);
-    padding: 1% 2%;
-    animation: enterQuestion .8s ease;
-    display: none;
-  }
-
-  .questionCard.active{
-    height: 140px;
-  }
-
- .questionCard.active .questionContent{
-    display: flex;
-  }
-
-  .questionCard.active .colapse{
-    background-color: var(--primary);
-    color: var(--branco);
-    transform: rotate(45deg);
-    border: none;
-  }
-
- footer{
-    background-color: var(--foreground);
-    padding: 3% 5% 0 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: var(--cinza-footer);
-  }
-
-   .containerFooter{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .pulsar{
-    max-width: 300px;
-    color: var(--cinza-footer);
-    font-size: 14px;
-  }
-
-
-  .links{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 5rem;
-  }
-
-  
-
-  .links .institutional,
-  .links .contact{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: .5rem;
-  }
-
-  .links h3{
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 16px;
-    color: var(--branco);
-  }
-
-  .links a{
-    text-decoration: none;
-    color: var(--cinza-footer);
-    font-size: 14px;
-  }
-
-  footer img{
-    max-width: 100px;
-  }
-
-  .footerBottom{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    padding: .5rem 0;
-  }
-
-  .divisor{
-    height: 1px;
-    width: 100%;
-    background: var(--branco-10);
-  }
-
-  .finalTexts{
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-  }
-  
-  .finalList{
-    display: flex;
-    align-items: center;
+  .listReasons ul {
     gap: 2rem;
   }
 
-  .finalList a{
-    color: var(--cinza-footer);
-    text-decoration: none;
+  .reason {
+    font-size: 1rem;
   }
 
-  footer a:hover{
-    text-decoration: underline;
+  .reason .iconReason {
+    width: 42px;
+    height: 42px;
   }
 
-  @keyframes enterQuestion{
-
-    from{
-      opacity: 0;
-      transform: translateX(-5%);
-    }
-
-    to{
-      opacity: 1;
-      transform: translateX(0);
-    }
+  .reasonContent p {
+    font-size: 0.95rem;
   }
-  
+
+  .donateButton {
+    font-size: .8rem;
+  }
+
+  .whyDonate .underline {
+    width: 15%;
+  }
+
+  .step {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+
+  /* HERO */
+  .heroContent {
+    max-width: 600px;
+    gap: 2rem;
+  }
+
+  .heroContent h1 {
+    font-size: 3.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1.05rem;
+  }
+
+  /* POR QUE DOAR */
+  .whyDonate {
+    padding: 4% 5%;
+  }
+
+  .listReasons {
+    width: 55%;
+    gap: 2rem;
+  }
+
+  .listReasons ul {
+    gap: 2rem;
+  }
+
+  .reason {
+    height: auto;
+    min-height: 42px;
+    gap: 1rem;
+  }
+
+  .reasonContent {
+    height: auto;
+    gap: 0.4rem;
+  }
+
+  .reasonContent p {
+    line-height: 1.4;
+  }
+
+  /* PROCESSO */
+  .step {
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  a.processSection {
+    width: 30%;
+  }
+
+  /* SISTEMA */
+  .system {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .colLeft img {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+  }
+
+  .colRight .title h2 {
+    font-size: 1.7rem;
+  }
+
+  .list {
+    gap: 1.5rem;
+  }
+
+  /* CARDS DE COMPATIBILIDADE */
+  .card {
+    padding: 2rem 1.5rem;
+    min-width: 0;
+  }
+
+  .cardsInfos .cardHead {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  /* CHAMADA PARA TRIAGEM */
+  .donate {
+    gap: 3rem;
+    height: auto;
+    min-height: 15rem;
+  }
+
+  .donate .colLeft {
+    gap: 1.5rem;
+  }
+
+  .donate .colRight .listItem {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+@media screen and (max-width: 950px) {
+
+  /* HERO */
+  .hero {
+    min-height: 550px;
+    height: calc(100vh - 5rem);
+  }
+
+  .heroContent {
+    max-width: 550px;
+    gap: 1.8rem;
+  }
+
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+
+  .heroContent .buttons {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .heroContent .heroButton {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* POR QUE DOAR */
+  .reasons {
+    gap: 1.5rem;
+  }
+
+  .reasons .image {
+    width: 40%;
+    min-width: 0;
+  }
+
+  .reasons .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .listReasons {
+    width: 60%;
+    min-width: 0;
+  }
+
+  .listReasons ul {
+    padding-left: 0;
+    gap: 1.5rem;
+  }
+
+  .reason {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .reason .iconReason {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reason .iconReason svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .reasonContent h3 {
+    font-size: 0.95rem;
+  }
+
+  .reasonContent p {
+    font-size: 0.85rem;
+  }
+
+  .donateButton {
+    align-self: flex-start;
+    padding: 0.7rem 1rem;
+  }
+
+  /* PROCESSO */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .step {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .steps .line {
+    display: none;
+  }
+
+  a.processSection {
+    width: auto;
+    min-width: 10rem;
+    max-width: 100%;
+  }
+
+  /* MATRIZ DE COMPATIBILIDADE */
+  .compatibility {
+    gap: 2rem;
+  }
+
+  .tableHeader {
+    padding: 12px 14px;
+    white-space: nowrap;
+  }
+
+  .tableCell {
+    padding: 12px 14px;
+    white-space: nowrap;
+  }
+
+  .cardsInfos {
+    gap: 1.2rem;
+  }
+
+  .card {
+    width: calc(50% - 0.6rem);
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .cardsInfos .cardHead h2 {
+    font-size: 1.1rem;
+  }
+
+  .cardsInfos .cardHead .badge {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  /* CHAMADA PARA TRIAGEM */
+  .donate {
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .donate .colLeft .titleCard h2 {
+    font-size: 1.3rem;
+  }
+
+  .donate .colLeft a {
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+
+  .donate .listCont {
+    gap: 1rem;
+  }
+
+  /* SISTEMA */
+  .system {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 5%;
+  }
+
+  .colLeft img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .colRight {
+    gap: 1.5rem;
+  }
+
+  .colRight .title h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .colRight .title p {
+    line-height: 1.6;
+  }
+
+  .list {
+    gap: 1.5rem;
+  }
+
+  .FAQ .sectionTitle h2 {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+  }
+
+}
+
+
+@media screen and (max-width: 850px) {
+
+  /* HERO */
+  .heroContent {
+    max-width: 500px;
+    gap: 1.5rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2.7rem;
+  }
+
+  .heroContent p {
+    font-size: 0.95rem;
+  }
+
+  /* POR QUE DOAR */
+  .whyDonate {
+    padding: 2.5rem 5%;
+  }
+
+  .reasons {
+    align-items: flex-start;
+  }
+
+  .listReasons {
+    gap: 1.5rem;
+  }
+
+  .listReasons ul {
+    gap: 1.5rem;
+  }
+
+  .reason {
+    height: auto;
+  }
+
+  .reasonContent {
+    justify-content: center;
+  }
+
+  /* CARDS INFORMATIVOS */
+  .cardsInfos {
+    align-items: stretch;
+  }
+
+  .card {
+    padding: 1.3rem 1rem;
+  }
+
+  .cardsInfos ul {
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  /* TRIAGEM */
+  .donate {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .donate .colLeft,
+  .donate .colRight {
+    min-width: 0;
+  }
+
+  .donate .colRight .listItem {
+    font-size: 0.9rem;
+  }
+
+  .donate .colRight .listItem .icon {
+    flex-shrink: 0;
+  }
+
+  /* SISTEMA */
+  .colRight .title h2 {
+    font-size: 1.6rem;
+  }
+
+  .item .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .itemContent h3 {
+    font-size: 1rem;
+  }
+
+  .itemContent p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  /* HERO */
+  .hero {
+    min-height: 520px;
+    height: calc(100svh - 5rem);
+  }
+
+  .heroContent {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 6%;
+    gap: 1.5rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+
+  .heroContent p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .heroContent .buttons {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .heroContent .heroButton {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .heroImage img {
+    object-position: 60% center;
+  }
+
+  .shape {
+    background: linear-gradient(90deg,
+        var(--branco) 0%,
+        var(--branco-50) 70%,
+        var(--branco-0) 100%);
+  }
+
+  /* POR QUE DOAR */
+  .whyDonate {
+    padding: 2.5rem 5%;
+  }
+
+  .whyDonate .sectionTitle h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .reasons {
+    padding: 1.5rem 0;
+  }
+
+  .reasons .image {
+    display: none;
+  }
+
+  .reasons .listReasons {
+    width: 100%;
+    flex: 1;
+  }
+
+  .listReasons ul {
+    width: 100%;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .reason {
+    width: 100%;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .reason .iconReason {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .reasonContent {
+    flex: 1;
+    min-width: 0;
+    gap: 0.3rem;
+  }
+
+  .reasonContent h3 {
+    font-size: 0.95rem;
+  }
+
+  .reasonContent p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .donateButton {
+    align-self: center;
+    text-align: center;
+  }
+
+  /* PROCESSO */
+  .process {
+    padding: 2.5rem 5%;
+  }
+
+  .buttonCTA .primary {
+    width: auto;
+    max-width: 100%;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* COMPATIBILIDADE */
+  .compatibility {
+    padding: 2.5rem 5%;
+    gap: 1.5rem;
+  }
+
+  .compatibility .sectionTitle h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .compatibility .sectionTitle p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .cardsInfos {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .cardsInfos .card {
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .cardsInfos .cardHead {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .cardsInfos .cardHead h2 {
+    font-size: 1.15rem;
+  }
+
+  .cardsInfos .card p,
+  .cardsInfos .card li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* CHAMADA PARA TRIAGEM */
+  .donate {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .donate .colLeft {
+    gap: 1.5rem;
+  }
+
+  .donate .colLeft .titleCard {
+    gap: 0.6rem;
+  }
+
+  .donate .colLeft .titleCard h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .donate .colLeft a {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .donate .colRight {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .donate .listCont {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .donate .colRight .listItem {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* SISTEMA */
+  .system {
+    padding: 2.5rem 5%;
+    gap: 1.5rem;
+  }
+
+  .colLeft img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .colRight {
+    gap: 1.5rem;
+  }
+
+  .colRight .title {
+    gap: 0.8rem;
+  }
+
+  .colRight .title h2 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+
+  .colRight .title p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .list {
+    gap: 1.3rem;
+  }
+
+  .list .item {
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .item .icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .itemContent {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .itemContent h3 {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .itemContent p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .button a {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  /* HERO */
+  .hero {
+    min-height: 480px;
+  }
+
+  .heroContent {
+    padding: 0 5%;
+    gap: 1.2rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 0.85rem;
+  }
+
+  .heroContent .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .heroContent .heroButton {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  /* SEÇÕES */
+  .whyDonate,
+  .process,
+  .compatibility,
+  .FAQ {
+    padding: 2rem 5%;
+  }
+
+  .whyDonate .sectionTitle h2,
+  .process .sectionTitle h2,
+  .compatibility .sectionTitle h2,
+  .FAQ .sectionTitle h2 {
+    font-size: 1.3rem;
+    line-height: 1.35;
+  }
+
+  .process .sectionTitle p,
+  .compatibility .sectionTitle p {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  /* CARDS STEP */
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .step {
+    height: auto;
+    min-height: 160px;
+    padding: 1rem;
+    gap: 0.7rem;
+  }
+
+  .stepNumber {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 0.85rem;
+  }
+
+  .step h3 {
+    font-size: 0.95rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .buttonCTA .primary,
+  a.processSection {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  /* MATRIZ */
+
+  .tableContainer {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0px;
+  }
+
+  .table {
+    min-width: 600px;
+  }
+
+  .tableHeader {
+    padding: 10px 12px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .cardsInfos .cardHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  /* TRIAGEM */
+  .donate {
+    padding: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .donate .colLeft .titleCard h2 {
+    font-size: 1.05rem;
+  }
+
+  .donate .colRight .listItem {
+    font-size: 0.85rem;
+  }
+
+  /* SISTEMA */
+  .system {
+    padding: 2rem 5%;
+    gap: 1.5rem;
+  }
+
+  .colLeft img {
+    max-height: 240px;
+  }
+
+  .colRight .title h2 {
+    font-size: 1.3rem;
+  }
+
+  .itemContent h3 {
+    font-size: 0.9rem;
+  }
+
+  .itemContent p {
+    font-size: 0.82rem;
+  }
+
+  .button a {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+
+}
