@@ -192,3 +192,11 @@ input:focus{
 .termosGrupo p:hover {
   color: var(--vermelhoCadastro);
 }
+
+.errorMessage {
+  color: var(--vermelhoFonte);
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
