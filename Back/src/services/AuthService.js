@@ -19,16 +19,16 @@ class AuthService {
             telefone,
             dataNascimento,
             cidade,
-            tipoSanguineo,
-            peso,
-            sexo
+            // tipoSanguineo,
+            // peso,
+            // sexo
         } = dados;
 
         // 1. Validar campos obrigatórios
         if (
             !nome || !email || !senha ||
-            !cpf || !telefone || !cidade ||!dataNascimento ||
-            !tipoSanguineo || peso === undefined || peso === null
+            !cpf || !telefone || !cidade ||!dataNascimento 
+            // !tipoSanguineo || peso === undefined || peso === null
         ) {
             throw new Error("Preencha todos os campos obrigatórios.");
         }
@@ -77,9 +77,9 @@ class AuthService {
                 telefone,
                 dataNascimento,
                 cidade,
-                tipoSanguineo,
-                peso: String(peso),
-                sexo: sexo || null
+                tipoSanguineo: null,
+                peso: null,
+                sexo: null
             });
 
             return novoUsuario;
