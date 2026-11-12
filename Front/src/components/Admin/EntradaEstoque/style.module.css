@@ -82,20 +82,6 @@
     display: none;
 }
 
-.avatarDoador {
-    flex-shrink: 0;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9px;
-    background: var(--primary);
-    color: #ffffff;
-    font-size: .9rem;
-    font-weight: 700;
-}
-
 .doadorTexto {
     display: flex;
     flex-direction: column;

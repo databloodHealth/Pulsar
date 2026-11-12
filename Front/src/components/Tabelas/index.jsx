@@ -7,7 +7,7 @@ export default function Doador({ nome, email, documento, tipo, data, status }) {
             <div className={style.containerConteudo}>
 
                 <ul>
-                    <AvatarComNumero nome={nome} sobrenome={email.split(' ')[1]} />
+                    <AvatarComNumero nome={nome} sobrenome={email.split(' ')[1]} largura='50px' fontSize="18px"/>
                     <li>
                         <div className={`${style.infoUser} ${style.campoInfo}`}>
                             <h4 className={`${style.nome} ${style.campoInfo}`}>{nome}</h4>

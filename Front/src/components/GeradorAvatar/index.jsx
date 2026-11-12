@@ -26,7 +26,7 @@ function gerarAvatarData(nome, sobrenome, numero) {
   return { iniciais, corFundo };
 }
 
-export default function AvatarComNumero({ nome = '', sobrenome = '', numero = '' }) {
+export default function AvatarComNumero({ nome = '', sobrenome = '', numero = '', largura = '', fontSize = '' }) {
   const { iniciais, corFundo } = gerarAvatarData(nome, sobrenome, numero);
 
   return (
@@ -35,13 +35,13 @@ export default function AvatarComNumero({ nome = '', sobrenome = '', numero = ''
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '50px',
-        height: '50px',
+        width: largura,
+        height: largura,
         borderRadius: '50%',
         backgroundColor: corFundo,
         color: '#FFFFFF',
         fontWeight: 'bold',
-        fontSize: '18px',
+        fontSize: fontSize,
         userSelect: 'none',
         position: 'relative'
       }}

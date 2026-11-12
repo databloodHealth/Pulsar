@@ -8,6 +8,7 @@ import { IoShieldCheckmarkOutline } from 'react-icons/io5';
 import { FaRegCheckCircle } from 'react-icons/fa';
 
 
+
 const opcoesDoadores = doadoresLista.map((doador) => ({
     value: doador.value,
     label: doador.nome,
@@ -34,11 +35,14 @@ const unidades = [
 ];
 
 export default function ModalEntradaEstoque({ onClose, onConfirm }) {
+
+    const [menuDoadorAberto, setMenuDoadorAberto] = useState(false);
+
     const [isClosing, setIsClosing] = useState(false);
     const [doador, setDoador] = useState(
         opcoesDoadores[0] ?? null
     );
-    const [dataDoacao, setDataDoacao] = useState('2023-10-27');
+    const [dataDoacao, setDataDoacao] = useState('2027-01-01');
     const [unidadeDoacao, setUnidadeDoacao] = useState(unidades[0]);
 
     function handleClose() {
@@ -107,6 +111,7 @@ export default function ModalEntradaEstoque({ onClose, onConfirm }) {
         input: (base) => ({
             ...base,
             fontSize: '0.9rem',
+            minHeight: '42px'
         }),
 
         indicatorSeparator: () => ({
@@ -161,6 +166,8 @@ export default function ModalEntradaEstoque({ onClose, onConfirm }) {
                     nome={nome}
                     sobrenome={sobrenome}
                     numero={option.value}
+                    largura='44px'
+                    fontSize='1rem'
                 />
 
                 <div className={styles.doadorTexto}>
@@ -210,19 +217,31 @@ export default function ModalEntradaEstoque({ onClose, onConfirm }) {
                 </div>
 
                 <div className={styles.doador}>
+
                     <Select
                         inputId="doadorDoacao"
                         aria-label="Selecionar doador"
                         options={opcoesDoadores}
                         value={doador}
                         onChange={setDoador}
-                        styles={selectStyles}
+                        styles={{
+                            ...selectStyles,
+
+                            singleValue: (base) => ({
+                                ...base,
+                                display: menuDoadorAberto ? 'none' : 'block',
+                            }),
+                        }}
+                        menuIsOpen={menuDoadorAberto}
+                        onMenuOpen={() => setMenuDoadorAberto(true)}
+                        onMenuClose={() => setMenuDoadorAberto(false)}
                         formatOptionLabel={formatDoador}
                         placeholder="Buscar doador..."
                         noOptionsMessage={() => 'Nenhum doador encontrado'}
                         isSearchable
                         isClearable={false}
                     />
+
                 </div>
 
                 <div className={styles.data}>
