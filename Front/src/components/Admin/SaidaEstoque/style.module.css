@@ -1,0 +1,319 @@
+.fundoModalEstoque {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: rgba(20, 29, 43, 0.62);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: animAbrirFundo 0.3s ease both;
+}
+
+.modalSaidaEstoque {
+    position: relative;
+    width: 100%;
+    max-width: 35rem;
+    max-height: 95dvh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.55rem;
+    padding: 2rem 1.8rem 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    animation: animAbrirModal 0.3s ease both;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.65rem;
+}
+
+.title h1 {
+    margin: 0;
+    color: #303030;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.title h2 {
+    margin: 0.3rem 0 0;
+    color: #647b92;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.fecharBotao {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #a9c9f5;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.fecharBotao:hover {
+    color: #547eaf;
+}
+
+.topInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.tipoSanguineo,
+.quantidade,
+.doadorOrigem,
+.dataUtilizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    width: 100%;
+}
+
+.tipoSanguineo label,
+.quantidade label,
+.doadorOrigem label,
+.dataUtilizacao label {
+    color: #647b92;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.055em;
+}
+
+.quantidade input,
+.dataUtilizacao input {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    background: #efeded;
+    color: #000;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease;
+}
+
+.quantidade input::placeholder {
+    color: #7b8490;
+}
+
+.quantidade input:focus,
+.dataUtilizacao input:focus {
+    border-color: #8ba6c3;
+}
+
+.quantidade input::-webkit-inner-spin-button,
+.quantidade input::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.buscaDoador {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: 100%;
+    min-height: 3rem;
+    padding: 0 0.85rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: #efeded;
+    transition: border-color 0.2s ease;
+}
+
+.buscaDoador:focus-within {
+    border-color: #8ba6c3;
+}
+
+.buscaDoador>svg {
+    flex-shrink: 0;
+    color: #a18a84;
+    font-size: 1.25rem;
+}
+.buscaDoador>div {
+    flex: 1;
+}
+
+.dataUtilizacao input {
+    cursor: pointer;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+.confirmarUtilizacao,
+.cancelar {
+    width: 100%;
+    min-height: 3.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.confirmarUtilizacao {
+    background: #a72218;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(167, 34, 24, 0.2);
+}
+
+.confirmarUtilizacao:hover {
+    background: #8f1d15;
+}
+
+.cancelar {
+    min-height: 2.5rem;
+    background: transparent;
+    color: #647b92;
+}
+
+.cancelar:hover {
+    color: #303030;
+    background: #f7f5f5;
+}
+
+.confirmarUtilizacao:disabled,
+.cancelar:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+
+@keyframes animAbrirFundo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animAbrirModal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.closing {
+    pointer-events: none;
+    animation: animFecharFundo 0.3s ease both;
+}
+
+.closing .modalSaidaEstoque {
+    animation: animFecharModal 0.3s ease both;
+}
+
+@keyframes animFecharFundo {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes animFecharModal {
+    to {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+    .fundoModalEstoque {
+        padding: 0.8rem;
+    }
+
+    .modalSaidaEstoque {
+        max-width: 100%;
+        max-height: calc(100dvh - 1.6rem);
+        padding: 1.3rem 1.2rem 1rem;
+        gap: 1.3rem;
+        border-radius: 12px 12px 7px 7px;
+    }
+
+    .title {
+        margin-bottom: 0.2rem;
+    }
+
+    .title h1 {
+        font-size: 1.2rem;
+    }
+
+    .title h2 {
+        font-size: 0.8rem;
+    }
+
+    .fecharBotao {
+        font-size: 2.2rem;
+    }
+
+    .topInputs {
+        gap: 0.65rem;
+    }
+
+    .tipoSanguineo label,
+    .quantidade label,
+    .doadorOrigem label,
+    .dataUtilizacao label {
+        font-size: 0.65rem;
+    }
+
+    .quantidade input,
+    .dataUtilizacao input {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .confirmarUtilizacao {
+        min-height: 3.1rem;
+        font-size: 0.85rem;
+    }
+
+    .cancelar {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .topInputs {
+        grid-template-columns: 1fr;
+    }
+}

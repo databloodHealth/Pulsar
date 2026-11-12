@@ -22,6 +22,7 @@ export default function CampaignDetailsModal({ data, publico, nome, local, durac
 
     return (
         <div className={`${styles.fundoTransModal} ${isClosing ? styles.closing : ''}`} onClick={handleClose}>
+            
             <div
                 className={styles.CampaignMcontainer}
                 role="dialog"

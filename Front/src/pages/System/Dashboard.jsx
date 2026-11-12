@@ -126,10 +126,7 @@ export default function DonnorDashboard() {
         </section>
 
         {selectedCampaign && (
-          <CampaignDetailsModal
-            {...selectedCampaign}
-            onClose={() => setSelectedCampaign(null)}
-          />
+          <CampaignDetailsModal {...selectedCampaign} onClose={() => setSelectedCampaign(null)} />
         )}
 
         <section className={style.donateTable}>
