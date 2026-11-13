@@ -7,8 +7,8 @@ RUN npm ci --omit=dev
 
 COPY --chown=node:node Back/ .
 
-ENV NODE_ENV=production PORT=3333
-EXPOSE 3333
+ENV NODE_ENV=production PORT=3000
+EXPOSE 3000
 
 USER node
 

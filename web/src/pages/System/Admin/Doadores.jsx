@@ -5,7 +5,7 @@ import { IoPersonAdd } from "react-icons/io5";
 import { GoDownload } from "react-icons/go";
 import { MdFilterList } from "react-icons/md";
 import Doador from "@/components/Tabelas";
-import doadoresLista from '@/Data/Doadores';
+import doadoresLista from '@/data/doadores';
 
 export default function Doadores() {
 

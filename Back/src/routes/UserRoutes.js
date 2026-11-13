@@ -11,6 +11,12 @@ router.get(
   (req, res) => UserController.listarTodos(req, res)
 );
 
+router.get(
+  "/users",
+  (req, res) => UserController.listarTodos(req, res)
+);
+
+
 router.patch(
   "/edit/:id",
   AuthMiddleware.authenticate,

@@ -11,6 +11,7 @@ const connection = mysql.createPool({
   database: process.env.DB_NAME,
   port: Number(process.env.DB_PORT || 3306)
 });
+console.log( connection ) ;
 
 const db = drizzle({
   client: connection,
