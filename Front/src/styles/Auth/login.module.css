@@ -102,6 +102,10 @@
   color: var(--vermelhoBotao);
 }
 
+.inputGrupo:has(:user-invalid) label{
+  color: var(--vermelhoBotao);
+}
+
 input:focus{
   border: solid 1.9px var(--vermelhoBotao);
 }
@@ -193,13 +197,59 @@ input:focus{
   color: var(--vermelhoCadastro);
 }
 
-.errorMessage {
-  color: var(--vermelhoFonte);
-  font-size: 14px;
-  font-weight: 600;
-  width: 100%;
-  text-align: center;
+.errorMessageContainer {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+.errorMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--branco);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.errorMessage h2 {
+  color: var(--vermelhoBotao);
+  font-size: 1.5rem;
+}
+
+.errorMessage p {
+  color: var(--cinzaFonte);
+  font-size: 1.25rem;
+}
+
+.errorMessage button {
+  background-color: var(--vermelhoBotao);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+@keyframes animFecharModal {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(2rem) scale(0.8);
+    }
+}
+
+
 
 /* Tablets e telas menores */
 @media screen and (max-width: 768px) {

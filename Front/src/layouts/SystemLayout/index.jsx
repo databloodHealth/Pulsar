@@ -8,14 +8,23 @@ import { FaUserGroup } from "react-icons/fa6";
 import { TbDropletHalfFilled } from "react-icons/tb";
 import { IoMdMegaphone } from "react-icons/io";
 import { LuUserCog } from "react-icons/lu";
-import { NavLink, useSearchParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import { useAuthStore } from '@/stores/auth';
+import { useUser } from '@/hooks/useUser';
 
 export default function SystemLayout({ children }) {
 
-  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
-  const isAdmin = searchParams.get('mode') === 'admin'
+  const {primeiroNome, isAdmin} = useUser()
+  const logout = useAuthStore((state) => state.logout);
+
+  const handleLogout = () => { 
+    logout();
+    navigate('/login', { replace: true });
+  }
+
 
 
   return (
@@ -25,26 +34,15 @@ export default function SystemLayout({ children }) {
           <img src={blackLogo} alt="Logo Pulsar" />
         </div>
 
-       {isAdmin ? (
-         <div className={styles.boxUsuario}>
-          <img src={userAdminAvatar} alt="userFoto" className={styles.fotoUser} />
+        <div className={styles.boxUsuario}>
+          <img src={isAdmin ? userAdminAvatar : userAvatar} alt="userFoto" className={styles.fotoUser} />
           <div className={styles.infoUsuario}>
-            <p id={styles.statusUsuario}>Administrador</p>
-            <p id={styles.nomeUsuario}>João Silva</p>
+            <p id={styles.statusUsuario}>{isAdmin ? 'Administrador' : 'Doador'}</p>
+            <p id={styles.nomeUsuario}>{primeiroNome}</p>
           </div>
-          <i className={`fa-solid fa-arrow-right-from-bracket ${styles.exitIcon}`}></i>
+          <i className={`fa-solid fa-arrow-right-from-bracket ${styles.exitIcon}`} onClick={handleLogout} title='Sair'></i>
         </div>
-       ) : (
-         <div className={styles.boxUsuario}>
-          <img src={userAvatar} alt="userFoto" className={styles.fotoUser} />
-          <div className={styles.infoUsuario}>
-            <p id={styles.statusUsuario}>Doador Inapto</p>
-            <p id={styles.nomeUsuario}>João Silva</p>
-          </div>
-          <i className={`fa-solid fa-arrow-right-from-bracket ${styles.exitIcon}`}></i>
-        </div>
-       )}
-      </header>
+        </header>
 
       {isAdmin ? (
         <aside className={styles.sidebar}>
@@ -59,7 +57,7 @@ export default function SystemLayout({ children }) {
         </div>
 
         <nav className={styles.anchorContainer}>
-          <NavLink to="/admin/adminDashboard" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
+          <NavLink to="/admin/dashboard" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
             <MdOutlineDashboard size={20} /> Dashboard
           </NavLink>
           <NavLink to="/admin/doadores" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
@@ -71,7 +69,7 @@ export default function SystemLayout({ children }) {
            <NavLink to="/admin/campanhas" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <IoMdMegaphone size={20}/> Campanhas
           </NavLink>
-           <NavLink to="/admin/campanhas" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
+           <NavLink to="/admin/usuarios" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
             <LuUserCog size={20}/> Usuarios
           </NavLink>
         </nav>
@@ -96,7 +94,7 @@ export default function SystemLayout({ children }) {
         </div>
 
         <nav className={styles.anchorContainer}>
-          <NavLink to="/Donnordashboard" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
+          <NavLink to="/dashboard" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>
             <i className="fa-solid fa-house"></i>Início
           </NavLink>
           <NavLink to="/historico" className={({isActive}) => `${styles.link} ${isActive ? styles.activeLink : ""} `}>
