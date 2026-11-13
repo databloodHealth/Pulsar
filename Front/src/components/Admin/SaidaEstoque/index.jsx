@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Select from 'react-select';
 
 import styles from './style.module.css';
-import doadores from '@/data/doadores';
+import doadoresLista from '@/Data/Doadores';
 
 import { IoIosClose } from 'react-icons/io';
 import { IoSearchOutline } from 'react-icons/io5';
@@ -19,7 +19,7 @@ const tiposSanguineos = [
     { value: 'O-', label: 'O-' },
 ];
 
-const opcoesDoadores = doadores.map((doador) => ({
+const opcoesDoadores = doadoresLista.map((doador) => ({
     value: doador.value,
     label: doador.nome,
     documento: doador.documento,

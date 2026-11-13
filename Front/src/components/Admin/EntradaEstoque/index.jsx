@@ -2,7 +2,7 @@ import AvatarComNumero from '@/components/GeradorAvatar';
 import { useState } from 'react';
 import Select from 'react-select';
 import styles from './style.module.css';
-import doadoresLista from '@/data/doadores';
+import doadoresLista from '@/Data/Doadores';
 import { IoIosClose } from 'react-icons/io';
 import { IoShieldCheckmarkOutline } from 'react-icons/io5';
 import { FaRegCheckCircle } from 'react-icons/fa';
