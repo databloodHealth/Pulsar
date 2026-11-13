@@ -110,6 +110,8 @@ a {
   --laranja-100: #ffdfbd91;
   --laranja-bg: #ff9b30;
 
+ --amareloc:#FFCB59;
+
   --cinzaBody: var(--cinza-fundo);
   --cinzaFonte: var(--cinza-texto);
   --cinzaInput: var(--cinza-input);
