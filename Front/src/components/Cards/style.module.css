@@ -1,17 +1,5 @@
 :root {
-    --vermelho-fonte: #b41b0f;
-    --vermelho-fundo: #FF1300;
-    --verde-icone-fundo: #86f8c9;
-    --branco: #ffffff;
-    --preto: #000000;
-    --cinza-900: #475569;
-    --verde-500: #005331;
-    --azul-label: #416084;
-    --cinza-400: #e4e2e2;
-    --cinza-fundo-claro: #f5f3f3;
-    --verde-icone-fundo: #86f8c9;
-
-
+    --borderPadrao: 1px solid var(--preto);
 }
 
 .cardDois {
@@ -108,7 +96,8 @@
         right: 1rem;
         top: 1rem;
     }
-    .statusCampanha p{
+
+    .statusCampanha p {
         color: var(--verde-500);
         font-size: .9rem;
         font-weight: 600;
@@ -193,10 +182,123 @@
             color: var(--vermelho-fonte);
             font-size: .9rem;
             font-weight: 600;
-        } 
+        }
 
         .iconeConfig {
             cursor: pointer;
         }
     }
+}
+
+.cardDashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    border-radius: 10px;
+    background-color: var(--branco);
+    border: 2px solid var(--cinza-400);
+}
+
+.cardDashboard .boxTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cardDashboard .boxValores {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cardDashboard .boxValores .icone {
+    background-color: var(--cinza-400);
+    padding: .5rem;
+    border-radius: 6px;
+}
+
+.cardDashboard .boxTop .porcentagem {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--verde-500);
+
+}
+
+.cardDashboard .boxValores .titulo {
+
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--azul-label);
+}
+
+.cardDashboard .boxValores .valor {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--preto);
+}
+
+.vermelhoFundo {
+    background-color: var(--vermelho-100);
+    border: 2px solid var(--vermelho-500);
+
+
+    .boxValores .valor,
+    .boxValores .titulo,
+    .boxTop .icone {
+        color: var(--vermelho-500);
+    }
+
+
+}
+
+.cardAlerta {
+    width: 100%;
+    background-color: var(--cinza-50);
+    padding: 1.5rem 2rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+
+.cardAlerta h4 {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--vermelho-fonte);
+}
+
+.cardAlerta h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--vermelho-fonte);
+}
+
+.cardAlerta p {
+    color: var(--azul-label);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.alerta {
+    border-left: 3px solid var(--amareloc);
+}
+
+.aviso {
+    border-left: 3px solid var(--azul-500);
+
+    h4,
+    h5 {
+        color: var(--azul-500);
+    }
+
+
+}
+
+.critico {
+    border-left: 3px solid var(--vermelho-500);
 }
