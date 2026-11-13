@@ -27,7 +27,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const usuario = await login(formData.email, formData.senha);
-      navigate(usuario.tipoUsuario === "admin" ? "/admin/adminDashboard" : "/donnorDashboard");
+      navigate(usuario.tipoUsuario === "admin" ? "/admin/dashboard" : "/dashboard");
     } catch (error) {
       setErr(error.response?.data?.message || "Erro ao realizar login.");
     }
@@ -80,7 +80,15 @@ export default function Login() {
               </div>
             </div>
 
-            {err && <p className={styles.errorMessage}>{err}</p>}
+            {err && 
+            <div className={styles.errorMessageContainer}>
+            <div className={styles.errorMessage}>
+            <h2>Ops! Algo deu errado</h2>
+            <p>{err}</p>
+            <button onClick={() => setErr("")}>Tente novamente</button>   
+            </div>
+            </div>
+            }
 
             <button className={styles.entrarBotao} type="submit">
               Entrar

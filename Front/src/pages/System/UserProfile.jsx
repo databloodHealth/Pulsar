@@ -6,8 +6,11 @@ import ChangePassword from "@/components/User/ChangePassword";
 import { Shield } from 'lucide-react'
 import TwoFactorAuthentication from "@/components/User/TwoFactorAuthentication";
 import PageTitle from "@/components/ui/PageTitle";
+import { useUser } from "@/hooks/useUser";
 
 export default function UserProfile() {
+
+    const {nome, email} = useUser();
     return (
         <SystemLayout>
             <div className={style.content}>
@@ -54,25 +57,25 @@ export default function UserProfile() {
                                             email
                                         </h1>
                                         <h2 className={style.infoData}>
-                                            otavio@gmail.com
+                                            {email}
                                         </h2>
                                     </div>
 
                                     <div className={style.indContainer}>
                                         <h1 className={style.dataTitle}>
-                                            email
+                                            telefone
                                         </h1>
                                         <h2 className={style.infoData}>
-                                            otavio@gmail.com
+                                            (16) 99999-9999
                                         </h2>
                                     </div>
 
                                     <div className={style.indContainer}>
                                         <h1 className={style.dataTitle}>
-                                            email
+                                            nascimento
                                         </h1>
                                         <h2 className={style.infoData}>
-                                            otavio@gmail.com
+                                            20/05/1999
                                         </h2>
                                     </div>
 

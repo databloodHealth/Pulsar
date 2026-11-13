@@ -6,9 +6,13 @@ import CampaignDetailsModal from '@/components/User/CampaignsDetails';
 import Banner1 from '@/assets/BannersCampanhas/Banner-01.png'
 import Banner2 from '@/assets/BannersCampanhas/Banner-02.png'
 import Banner3 from '@/assets/BannersCampanhas/Banner-03.png'
+import { useUser } from '@/hooks/useUser';
+import { FaClipboardList } from 'react-icons/fa6';
 
 export default function DonnorDashboard() {
   const [selectedCampaign, setSelectedCampaign] = useState(null);
+  
+  const {primeiroNome} = useUser();
 
   const campaigns = [
     {
@@ -48,25 +52,26 @@ export default function DonnorDashboard() {
         <div className={style.userDonateWrapper}>
           <div className={style.userInfoContainer}>
             <div className={style.greetings}>
-              <h1>Olá João!</h1>
-              <h1>Você está apto para doar!</h1>
+              <h1>Olá {primeiroNome}!</h1>
+              <h1>Realize a triagem online para doar.</h1>
             </div>
 
             <div className={style.userInfo}>
               <div className={style.info}>
                 <p>TIPO SANGUÍNEO</p>
-                <span>O+ Positivo</span>
+                <span>-</span>
               </div>
 
               <div className={style.info}>
                 <p>ÚLTIMA DOAÇÃO</p>
-                <span>15 de Julho, 2024</span>
+                <span>-</span>
               </div>
             </div>
 
             <a href="#" className={style.scheduleButton}>
-              <Calendar />
-              Agendar doação
+              {/* <Calendar /> */}
+              <FaClipboardList size={20} />
+              Realizar triagem online
             </a>
           </div>
 

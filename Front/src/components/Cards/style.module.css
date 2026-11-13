@@ -30,7 +30,7 @@
 }
 
 .vermelhoBackground {
-    background: linear-gradient(90deg, var(--vermelho-fonte) 0%, var(--vermelho-fundo) 100%);
+     background: var(--card-red-bg)
 }
 
 
