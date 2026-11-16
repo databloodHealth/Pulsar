@@ -68,7 +68,7 @@
 
 .inputGrupo label {
   font-weight: 600;
-  color: var(--cinzaFonte);
+  color: var(--escritaForte);
   transition: color 0.3s;
 }
 
@@ -89,16 +89,18 @@
 
 .inputGrupo input {
   background-color: var(--cinzaInput);
-  border: none;
+  border: 1.9px solid transparent;
   height: 2.9rem;
   border-radius: 4px;
   padding-left: 3rem;
   padding-right: 1rem;
   width: 100%;
   outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.inputGrupo:focus-within label{
+.inputGrupo:focus-within label,
+.inputGrupo:focus-within svg {
   color: var(--vermelhoBotao);
 }
 
@@ -106,8 +108,12 @@
   color: var(--vermelhoBotao);
 }
 
-input:focus{
-  border: solid 1.9px var(--vermelhoBotao);
+.inputGrupo:focus-within input{
+  border-color: var(--vermelhoBotao);
+}
+
+.inputGrupo:has(:user-invalid) input{
+  border-color: var(--vermelhoBotao);
 }
 
 .entrarBotao {
@@ -200,53 +206,118 @@ input:focus{
 .errorMessageContainer {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
+  animation: overlayFadeIn 0.2s ease;
 }
 
 .errorMessage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  width: 100%;
+  max-width: 26rem;
   background-color: var(--branco);
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 2rem 2rem 1.75rem;
+  border-radius: 16px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18), 0 2px 8px rgba(15, 23, 42, 0.06);
+  animation: modalIn 0.25s ease;
+}
+
+.closeErrorBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--cinzaFonte);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.closeErrorBtn:hover {
+  background-color: var(--cinzaInput);
+  color: var(--escritaForte);
+}
+
+.errorIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #fee2e2;
+  color: #dc2626;
+  margin-bottom: 0.25rem;
 }
 
 .errorMessage h2 {
-  color: var(--vermelhoBotao);
-  font-size: 1.5rem;
+  color: var(--escritaForte);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 .errorMessage p {
   color: var(--cinzaFonte);
-  font-size: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.errorMessage button {
+.retryBtn {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2.75rem;
   background-color: var(--vermelhoBotao);
   color: var(--branco);
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
 }
 
-@keyframes animFecharModal {
-    from {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+.retryBtn:hover {
+  background-color: var(--vermelho-600);
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.3);
+}
 
-    to {
-        opacity: 0;
-        transform: translateY(2rem) scale(0.8);
-    }
+.retryBtn:active {
+  transform: scale(0.98);
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 

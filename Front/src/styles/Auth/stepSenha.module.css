@@ -51,7 +51,7 @@ body {
 
 .jornada p {
   font-size: 16px;
-  color: var(--azulLabel);
+  color: var(--escritaCinzaClara);
   opacity: 80%;
   font-weight: 500;
   line-height: 1.6;
@@ -121,20 +121,25 @@ body {
   color: var(--escritaForte);
   font-weight: 500;
   outline: 0;
-  border: 0;
+  border: 1.9px solid transparent;
   padding: 1rem 3rem 1rem 1rem;
   background-color: var(--cinzaInput);
   border-radius: 4px;
-}
-
-.createSenhaForm .inputWrapper input:focus {
-  border: 1px solid var(--vermelhoFonte);
+  transition: border-color 0.3s ease;
 }
 
 .createSenhaForm label {
   font-size: 15px;
   font-weight: 600;
   color: var(--escritaForte);
+}
+
+.createSenhaForm .inputWrapper input:focus {
+  border-color: var(--vermelhoFonte);
+}
+
+ .senhaFill:focus-within label {
+  color: var(--vermelhoFonte);
 }
 
 .eyeBtn {
@@ -242,7 +247,7 @@ body {
   background: transparent;
   border: 0;
   outline: 0;
-  color: var(--azulLabel);
+  color: var(--cinzaFonte);
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -251,7 +256,7 @@ body {
 }
 
 .btnVoltar:hover {
-  color: var(--aHoverAzul);
+  color: var(--vermelhoHover);
 }
 
 .lgpd {

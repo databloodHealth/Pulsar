@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/Auth/login.module.css";
 import HeaderAuth from "@/components/ui/HeaderAuth/index";
-import { LockKeyhole, Mail } from "lucide-react";
+import { AlertCircle, LockKeyhole, Mail, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "@/stores/auth.js";
 
@@ -80,15 +80,33 @@ export default function Login() {
               </div>
             </div>
 
-            {err && 
-            <div className={styles.errorMessageContainer}>
-            <div className={styles.errorMessage}>
-            <h2>Ops! Algo deu errado</h2>
-            <p>{err}</p>
-            <button onClick={() => setErr("")}>Tente novamente</button>   
-            </div>
-            </div>
-            }
+            {err && (
+              <div
+                className={styles.errorMessageContainer}
+                onClick={() => setErr("")}
+                role="dialog"
+                aria-modal="true"
+              >
+                <div className={styles.errorMessage} onClick={(e) => e.stopPropagation()}>
+                  <button
+                    type="button"
+                    className={styles.closeErrorBtn}
+                    onClick={() => setErr("")}
+                    aria-label="Fechar"
+                  >
+                    <X size={18} />
+                  </button>
+                  <div className={styles.errorIcon}>
+                    <AlertCircle size={28} />
+                  </div>
+                  <h2>Não foi possível entrar</h2>
+                  <p>{err}</p>
+                  <button type="button" className={styles.retryBtn} onClick={() => setErr("")}>
+                    Tentar novamente
+                  </button>
+                </div>
+              </div>
+            )}
 
             <button className={styles.entrarBotao} type="submit">
               Entrar

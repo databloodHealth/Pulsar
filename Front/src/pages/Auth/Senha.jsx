@@ -1,12 +1,30 @@
-import { useState } from "react";
-import styles from "@/styles/Auth/stepSenha.module.css";
-import logoImg from "@/assets/images/BlackLogo.png";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
+import styles from "@/styles/Auth/stepSenha.module.css";
+import HeaderAuth from "@/components/ui/HeaderAuth/index";
+import { registrar } from "@/services/auth";
 
-export default function RegisterPassword({ formData, setFormData, onPrev, onSubmit }) {
+export default function Password() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const cadastro = location.state?.cadastro;
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState("");
+  const [formData, setFormData] = useState({
+    senha: "",
+    verificarSenha: "",
+  });
+
+  useEffect(() => {
+    if (!cadastro) {
+      navigate("/cadastro", { replace: true });
+    }
+  }, [cadastro, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,23 +32,43 @@ export default function RegisterPassword({ formData, setFormData, onPrev, onSubm
       ...prev,
       [name]: value,
     }));
+    setErr("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!cadastro) return;
     if (!acceptedTerms) {
-      alert("Você precisa aceitar os termos de uso para continuar.");
+      setErr("Você precisa aceitar os termos de uso para continuar.");
       return;
     }
-    if (onSubmit) {
-      onSubmit(e);
+    if (formData.senha !== formData.verificarSenha) {
+      setErr("As senhas não coincidem.");
+      return;
+    }
+    if (formData.senha.length < 6) {
+      setErr("A senha deve ter pelo menos 6 caracteres.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      await registrar({ ...cadastro, senha: formData.senha });
+      navigate("/login");
+    } catch (error) {
+      setErr(error.response?.data?.message || "Erro ao realizar cadastro.");
+    } finally {
+      setLoading(false);
     }
   };
 
+  if (!cadastro) return null;
+
   return (
+    <>
+      <HeaderAuth />
       <main className={styles.main}>
         <div className={styles.content}>
-          {/* Conteúdo Principal */}
           <div className={styles.container}>
             <section className={styles.jornada}>
               <h1>
@@ -62,6 +100,7 @@ export default function RegisterPassword({ formData, setFormData, onPrev, onSubm
                       type="button"
                       className={styles.eyeBtn}
                       onClick={() => setShowPassword((prev) => !prev)}
+                      aria-label="Mostrar senha"
                     >
                       {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                     </button>
@@ -83,11 +122,14 @@ export default function RegisterPassword({ formData, setFormData, onPrev, onSubm
                       type="button"
                       className={styles.eyeBtn}
                       onClick={() => setShowConfirmPassword((prev) => !prev)}
+                      aria-label="Mostrar confirmação de senha"
                     >
                       {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                     </button>
                   </div>
                 </div>
+
+                {err && <p className={styles.errorMessage}>{err}</p>}
 
                 <div className={styles.termosCheckbox}>
                   <button
@@ -96,6 +138,7 @@ export default function RegisterPassword({ formData, setFormData, onPrev, onSubm
                     onClick={() => setAcceptedTerms((prev) => !prev)}
                     aria-checked={acceptedTerms}
                     role="checkbox"
+                    aria-label="Aceitar termos de uso"
                   >
                     {acceptedTerms && <div className={styles.checkmark} />}
                   </button>
@@ -113,11 +156,15 @@ export default function RegisterPassword({ formData, setFormData, onPrev, onSubm
                 </div>
 
                 <div className={styles.botForm}>
-                  <button type="button" onClick={onPrev} className={styles.btnVoltar}>
+                  <button
+                    type="button"
+                    onClick={() => navigate("/cadastro", { state: { cadastro } })}
+                    className={styles.btnVoltar}
+                  >
                     Voltar
                   </button>
-                  <button type="submit" id="finalizarCadastro">
-                    Finalizar Cadastro
+                  <button type="submit" id="finalizarCadastro" disabled={loading}>
+                    {loading ? "Cadastrando..." : "Finalizar Cadastro"}
                   </button>
                 </div>
               </form>
@@ -125,5 +172,7 @@ export default function RegisterPassword({ formData, setFormData, onPrev, onSubm
           </div>
         </div>
       </main>
-  );
+    </>
+
+);
 }
