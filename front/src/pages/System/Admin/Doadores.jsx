@@ -6,6 +6,7 @@ import { GoDownload } from "react-icons/go";
 import { MdFilterList } from "react-icons/md";
 import Doador from "@/components/Tabelas";
 import doadoresLista from '@/Data/Doadores';
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function Doadores() {
 
@@ -15,10 +16,8 @@ export default function Doadores() {
 
                 <div className={style.containerTitulos}>
                     <div className={style.titulos}>
-                        <h1>Doadores</h1>
-                        <p>
-                            Gerenciamento completo da base de doadores ativos e inaptos.
-                        </p></div>
+                        <PageTitle title={'Doadores'} subtitle="Gerenciamento completo da base de doadores ativos e inaptos." />
+                    </div>
 
                     <div className={style.botoesTitulo}>
                         <button id={style.botaoNovo}>
@@ -41,26 +40,26 @@ export default function Doadores() {
                     />
 
                     <div className={style.tipoSanguineoCaixa}>
-                        <label id={style.labelSelect}>
-                            Tipo Sanguíneo
-                        </label>
-
-                        <select name="Tipo Sanguíneo" id={style.tpSanguineo}>
-                            <option value="">O-</option>
-                            <option value="">A+</option>
-                            <option value="">A-</option>
-                            <option value="">AB-</option>
+                        <label htmlFor="tpSanguineo" className={style.labelFiltro}>Tipo sanguíneo</label>
+                        <select name="tipoSanguineo" id="tpSanguineo" className={style.selectCampo} defaultValue="">
+                            <option value="">Todos</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
                         </select>
                     </div>
 
                     <div className={style.filtroContainer}>
-                        <MdFilterList size={20} />
-
-                        <select name="Filtro" id={style.filtro}>
-                            <option value="">Selecione</option>
-                            <option value="teste1">Teste 1</option>
-                            <option value="teste2">Teste 2</option>
-                            <option value="teste3">Teste 3</option>
+                        <MdFilterList size={20} className={style.filtroIcone} />
+                        <select name="filtroStatus" id="filtroStatus" className={style.selectCampo} defaultValue="">
+                            <option value="">Todos os status</option>
+                            <option value="Ativo">Ativos</option>
+                            <option value="Inapto">Inaptos</option>
                         </select>
                     </div>
                 </div>
