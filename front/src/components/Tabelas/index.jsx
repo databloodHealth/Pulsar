@@ -2,31 +2,31 @@ import AvatarComNumero from "../GeradorAvatar";
 import style from "./style.module.css";
 
 export default function Doador({ nome, email, documento, tipo, data, status }) {
+    const sobrenome = email?.split("@")[0]?.split(/[._-]/)[1] || "";
+
     return (
-        <div className={style.containerDoador}>
-            <div className={style.containerConteudo}>
-
-                <ul>
-                    <AvatarComNumero nome={nome} sobrenome={email.split(' ')[1]} largura='50px' fontSize="18px"/>
-                    <li>
-                        <div className={`${style.infoUser} ${style.campoInfo}`}>
-                            <h4 className={`${style.nome} ${style.campoInfo}`}>{nome}</h4>
-                            <p className={`${style.email} ${style.campoInfo}`}>{email}</p>
-                        </div>
-
-                        <p className={`${style.documento} ${style.campoInfo}`}>{documento}</p>
-
-                        <p className={`${style.tipo} ${style.campoInfo}`}>{tipo}</p>
-
-                        <p className={`${style.data} ${style.campoInfo}`}>{data}</p>
-
-                        <div className={`${style.statusBox} ${style.campoInfo}`}>
-                            <div className={`${style.bolinha} ${style.campoInfo}`}>•</div>
-                            <span className={`${style.status} ${style.campoInfo}`}>{status}</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <tr className={style.row}>
+            <td className={style.doadorCell}>
+                <div className={style.doadorInfo}>
+                    <AvatarComNumero nome={nome} sobrenome={sobrenome} largura="50px" fontSize="18px" />
+                    <div className={style.infoUser}>
+                        <h4 className={style.nome}>{nome}</h4>
+                        <p className={style.email}>{email}</p>
+                    </div>
+                </div>
+            </td>
+            <td className={style.documento}>{documento}</td>
+            <td>
+                <span className={style.tipo}>{tipo}</span>
+            </td>
+            <td className={style.data}>{data}</td>
+            <td>
+                <span className={`${style.statusBox} ${status === "Inapto" ? style.statusInapto : style.statusAtivo}`}>
+                    <span className={style.bolinha}>•</span>
+                    <span className={style.status}>{status}</span>
+                </span>
+            </td>
+            <td className={style.acoes}>⋯</td>
+        </tr>
     );
 }
