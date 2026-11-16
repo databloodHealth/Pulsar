@@ -1,84 +1,140 @@
-import style from '@/styles/System/estoque.module.css'
+import style from "@/styles/System/estoque.module.css";
 import ButtonSystem from "@/components/ui/Button";
 import PageTitle from "@/components/ui/PageTitle";
 import SystemLayout from "@/layouts/SystemLayout";
 import { FiDownload } from "react-icons/fi";
 import { RiExportLine } from "react-icons/ri";
-import StockCard from '@/components/ui/StorageCard';
-import Graphic from '@/components/ui/Graphic';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import ModalEntradaEstoque from '@/components/Admin/EntradaEstoque';
-import ModalSaidaEstoque from '@/components/Admin/SaidaEstoque';
+import StockCard from "@/components/ui/StorageCard";
+import Graphic from "@/components/ui/Graphic";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import ModalEntradaEstoque from "@/components/Admin/EntradaEstoque";
+import ModalSaidaEstoque from "@/components/Admin/SaidaEstoque";
 
 const transactions = [
   {
     id: 1,
-    date: 'Hoje, 14:20',
-    type: 'O-',
-    action: 'Saída de Emergência',
-    actionType: 'emergency',
-    units: '04',
-    destination: 'UTI Geral - Ala Norte',
+    date: "Hoje, 14:20",
+    type: "O-",
+    action: "Saída de Emergência",
+    actionType: "emergency",
+    units: "04",
+    destination: "UTI Geral - Ala Norte",
   },
   {
     id: 2,
-    date: 'Hoje, 09:15',
-    type: 'A+',
-    action: 'Entrada Processada',
-    actionType: 'entry',
-    units: '12',
-    destination: 'Laboratório Central',
+    date: "Hoje, 09:15",
+    type: "A+",
+    action: "Entrada Processada",
+    actionType: "entry",
+    units: "12",
+    destination: "Laboratório Central",
   },
   {
     id: 3,
-    date: 'Ontem, 18:45',
-    type: 'B-',
-    action: 'Saída Programada',
-    actionType: 'scheduled',
-    units: '02',
-    destination: 'Centro Cirúrgico B',
+    date: "Ontem, 18:45",
+    type: "B-",
+    action: "Saída Programada",
+    actionType: "scheduled",
+    units: "02",
+    destination: "Centro Cirúrgico B",
   },
 ];
 
-
-
 export default function EstoqueAdmin() {
-
   const [modalEntrada, setModalEntrada] = useState(false);
   const [modalSaida, setModalSaida] = useState(false);
 
   return (
     <SystemLayout>
-      <PageTitle title={'Estoque de Hemocomponentes'} subtitle={'Monitoramento em tempo real dos níveis de suprimento sanguíneo.'} />
       <main className={style.mainIndex}>
+        <div className={style.header}>
+          <PageTitle
+            title={"Estoque de Hemocomponentes"}
+            subtitle={"Monitoramento em tempo real dos níveis de suprimento sanguíneo."}
+          />
+
         <div className={style.headerButtons}>
-          <ButtonSystem type={'secondary'} icon={FiDownload} value={'Registrar Entrada'} action={() => setModalEntrada(true)} />
-          <ButtonSystem type={'primary'} icon={RiExportLine} value={'Registrar Saiída'} action={() => setModalSaida(true)} />
+          <ButtonSystem
+            type={"secondary"}
+            icon={FiDownload}
+            value={"Registrar Entrada"}
+            action={() => setModalEntrada(true)}
+          />
+          <ButtonSystem
+            type={"primary"}
+            icon={RiExportLine}
+            value={"Registrar Saiída"}
+            action={() => setModalSaida(true)}
+          />
 
           {modalEntrada && (
-            <ModalEntradaEstoque
-              onClose={() => setModalEntrada(false)}
-            />
+            <ModalEntradaEstoque onClose={() => setModalEntrada(false)} />
           )}
 
           {modalSaida && (
-            <ModalSaidaEstoque
-              onClose={() => setModalSaida(false)}
-            />
+            <ModalSaidaEstoque onClose={() => setModalSaida(false)} />
           )}
-
+        </div>
         </div>
 
         <div className={style.gridTypes}>
-          <StockCard type={'A+'} quantity={'42'} badge={'Normal'} min={12} variant={'normal'} />
-          <StockCard type={'A-'} quantity={'13'} badge={'Normal'} min={10} variant={'warning'} />
-          <StockCard type={'B+'} quantity={'31'} badge={'Normal'} min={10} variant={'normal'} />
-          <StockCard type={'B-'} quantity={'3'} badge={'Normal'} min={10} variant={'critical'} />
-          <StockCard type={'AB+'} quantity={'13'} badge={'Normal'} min={10} variant={'warning'} />
-          <StockCard type={'AB-'} quantity={'4'} badge={'Normal'} min={10} variant={'critical'} />
-          <StockCard type={'O+'} quantity={'88'} badge={'Normal'} min={10} variant={'normal'} />
-          <StockCard type={'O-'} quantity={'14'} badge={'Normal'} min={10} variant={'warning'} />
+          <StockCard
+            type={"A+"}
+            quantity={"42"}
+            badge={"Normal"}
+            min={12}
+            variant={"normal"}
+          />
+          <StockCard
+            type={"A-"}
+            quantity={"13"}
+            badge={"Normal"}
+            min={10}
+            variant={"warning"}
+          />
+          <StockCard
+            type={"B+"}
+            quantity={"31"}
+            badge={"Normal"}
+            min={10}
+            variant={"normal"}
+          />
+          <StockCard
+            type={"B-"}
+            quantity={"3"}
+            badge={"Normal"}
+            min={10}
+            variant={"critical"}
+          />
+          <StockCard
+            type={"AB+"}
+            quantity={"13"}
+            badge={"Normal"}
+            min={10}
+            variant={"warning"}
+          />
+          <StockCard
+            type={"AB-"}
+            quantity={"4"}
+            badge={"Normal"}
+            min={10}
+            variant={"critical"}
+          />
+          <StockCard
+            type={"O+"}
+            quantity={"88"}
+            badge={"Normal"}
+            min={10}
+            variant={"normal"}
+          />
+          <StockCard
+            type={"O-"}
+            quantity={"14"}
+            badge={"Normal"}
+            min={10}
+            variant={"warning"}
+          />
         </div>
 
         <div className={style.dataArea}>
@@ -120,9 +176,7 @@ export default function EstoqueAdmin() {
 
                     <td className={style.units}>{item.units}</td>
 
-                    <td className={style.destination}>
-                      {item.destination}
-                    </td>
+                    <td className={style.destination}>{item.destination}</td>
                   </tr>
                 ))}
               </tbody>
@@ -131,5 +185,5 @@ export default function EstoqueAdmin() {
         </div>
       </main>
     </SystemLayout>
-  )
+  );
 }
