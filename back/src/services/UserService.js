@@ -1,6 +1,6 @@
 import db from "../config/database.js";
 import { doador, usuario } from "../db/schema.js";
-import { eq } from "drizzle-orm";
+import { and, eq, ne } from "drizzle-orm";
 import bcrypt from "bcryptjs";
 
 class UserService {
@@ -11,14 +11,21 @@ class UserService {
         nome: usuario.nome,
         email: usuario.email,
         tipoUsuario: usuario.tipoUsuario,
-        createdAt: usuario.createdAt
+        createdAt: usuario.createdAt,
+        cpf: doador.cpf,
+        telefone: doador.telefone,
+        dataNascimento: doador.dataNascimento,
+        cidade: doador.cidade,
+        tipoSanguineo: doador.tipoSanguineo
       })
-      .from(usuario);
+      .from(usuario)
+      .leftJoin(doador, eq(usuario.id, doador.usuarioId))
+      .orderBy(usuario.id);
   }
 
   async atualizar(id, dados) {
-    const { senha, telefone, cidade, peso, sexo } = dados;
-    const camposDoador = { telefone, cidade, peso, sexo };
+    const { nome, email, cpf, senha, telefone, cidade, peso, sexo } = dados;
+    const camposDoador = { cpf, telefone, cidade, peso, sexo };
     const atualizacaoDoador = Object.fromEntries(
       Object.entries(camposDoador).filter(([, valor]) => valor !== undefined)
     );
@@ -31,6 +38,44 @@ class UserService {
 
       if (!usuarioExistente) {
         return "USER_NOT_FOUND";
+      }
+
+      if (email !== undefined) {
+        const [emailEmUso] = await tx
+          .select({ id: usuario.id })
+          .from(usuario)
+          .where(and(eq(usuario.email, email), ne(usuario.id, id)));
+
+        if (emailEmUso) {
+          return "EMAIL_IN_USE";
+        }
+      }
+
+      if (cpf !== undefined) {
+        const [cpfEmUso] = await tx
+          .select({ id: doador.id })
+          .from(doador)
+          .where(and(eq(doador.cpf, cpf), ne(doador.usuarioId, id)));
+
+        if (cpfEmUso) {
+          return "CPF_IN_USE";
+        }
+      }
+
+      const atualizacaoUsuario = {};
+
+      if (nome !== undefined) atualizacaoUsuario.nome = nome;
+      if (email !== undefined) atualizacaoUsuario.email = email;
+
+      if (senha !== undefined) {
+        atualizacaoUsuario.senha = await bcrypt.hash(senha, 10);
+      }
+
+      if (Object.keys(atualizacaoUsuario).length > 0) {
+        await tx
+          .update(usuario)
+          .set(atualizacaoUsuario)
+          .where(eq(usuario.id, id));
       }
 
       if (Object.keys(atualizacaoDoador).length > 0) {
@@ -50,14 +95,6 @@ class UserService {
             ...(peso !== undefined ? { peso: String(peso) } : {})
           })
           .where(eq(doador.usuarioId, id));
-      }
-
-      if (senha !== undefined) {
-        const senhaHash = await bcrypt.hash(senha, 10);
-        await tx
-          .update(usuario)
-          .set({ senha: senhaHash })
-          .where(eq(usuario.id, id));
       }
 
       return "UPDATED";

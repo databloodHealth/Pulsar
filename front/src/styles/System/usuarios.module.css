@@ -1,0 +1,355 @@
+.containerUsuarios {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.containerTitulos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerPesquisas {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: 1;
+    min-width: 240px;
+    height: 44px;
+    padding: 0 1rem;
+    border-radius: 8px;
+    background-color: var(--cinza-400);
+    border: 1px solid var(--cinza-500);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.inputWrapper:focus-within {
+    border-color: var(--vermelho-botao);
+    background-color: #fff;
+}
+
+.inputIcone {
+    color: var(--cinza-600);
+    flex-shrink: 0;
+}
+
+.inputPesquisa {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--azul-label);
+}
+
+.inputPesquisa::placeholder {
+    font-size: 1rem;
+    color: var(--cinza-600);
+    font-weight: 400;
+}
+
+.erro {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    background-color: var(--vermelhocc);
+    color: var(--vermelho-500);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.containerTabela {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.tabela thead tr {
+    background-color: #f5f4f4;
+}
+
+.tabela th {
+    padding: 12px 18px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #6480a3;
+    white-space: nowrap;
+}
+
+.tabela .thUsuario {
+    text-align: left;
+}
+
+.row {
+    border-bottom: 1px solid var(--cinza-400);
+    transition: background-color 0.2s ease;
+}
+
+.row:hover {
+    background-color: #f9f7f7;
+}
+
+.row td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: var(--cinza-600);
+}
+
+.usuarioCell {
+    text-align: left;
+}
+
+.usuarioInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.infoUser {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left;
+}
+
+.nome {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--azul-label);
+    margin: 0;
+}
+
+.email {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--cinza-600);
+    margin: 0;
+}
+
+.documento {
+    color: var(--azul-label) !important;
+    white-space: nowrap;
+}
+
+.telefone,
+.cidade {
+    white-space: nowrap;
+}
+
+.tipo {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.35rem 0.85rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.tipoDoador {
+    background-color: var(--vermelhocc);
+    color: var(--vermelho-400);
+}
+
+.tipoAdmin {
+    background-color: var(--azul-icone-fundo);
+    color: var(--azul-icone);
+}
+
+.data {
+    white-space: nowrap;
+}
+
+.acoes {
+    white-space: nowrap;
+}
+
+.acaoBotao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    margin: 0 0.2rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cinza-400);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.editarBotao {
+    color: var(--azul-label);
+}
+
+.editarBotao:hover {
+    background-color: var(--azul-icone-fundo);
+    color: var(--azul-icone);
+}
+
+.excluirBotao {
+    color: var(--vermelho-500);
+}
+
+.excluirBotao:hover {
+    background-color: var(--vermelhocc);
+    color: var(--vermelho-600);
+}
+
+.estado {
+    padding: 2rem 1rem !important;
+    text-align: center;
+    color: var(--cinza-600);
+    font-size: 1rem;
+}
+
+.rodapeTabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #35577e;
+}
+
+.fundoModal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(20, 29, 43, 0.62);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    animation: animAbrirFundo 0.3s ease both;
+}
+
+.modalConfirmacao {
+    width: 100%;
+    max-width: 27rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 2rem 1.8rem 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    animation: animAbrirModal 0.3s ease both;
+}
+
+.iconeExcluir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    background-color: var(--vermelhocc);
+    color: var(--vermelho-500);
+}
+
+.modalConfirmacao h2 {
+    color: #303030;
+    font-size: 1.3rem;
+}
+
+.modalConfirmacao p {
+    color: #647b92;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.modalConfirmacao p strong {
+    color: #303030;
+}
+
+.botoesConfirmacao {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.cancelarBotao,
+.confirmarBotao {
+    flex: 1;
+    min-height: 2.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.cancelarBotao {
+    background: #eeebeb;
+    color: #647b92;
+}
+
+.cancelarBotao:hover {
+    background: #e3dfdf;
+}
+
+.confirmarBotao {
+    background: var(--vermelho-botao);
+    color: #ffffff;
+}
+
+.confirmarBotao:hover {
+    background: var(--vermelho-600);
+}
+
+.cancelarBotao:disabled,
+.confirmarBotao:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@keyframes animAbrirFundo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animAbrirModal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

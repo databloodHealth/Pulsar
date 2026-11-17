@@ -7,4 +7,21 @@ const api = axios.create({
     }
 })
 
+api.interceptors.request.use((config) => {
+    let token = null;
+
+    try {
+        const persistido = JSON.parse(localStorage.getItem("auth-pulsar"));
+        token = persistido?.state?.token ?? null;
+    } catch {
+        token = null;
+    }
+
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+})
+
 export default api;
