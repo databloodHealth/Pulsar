@@ -1,8 +1,6 @@
 import styles from './style.module.css';
-import whiteLogo from '@/assets/images/WhiteLogo.png';
 import blackLogo from '@/assets/images/BlackLogo.png';
-import userAvatar from '@/assets/images/DoctorTech.jpg';
-import userAdminAvatar from '@/assets/images/AdminImage.png';
+import AvatarComNumero from '@/components/GeradorAvatar';
 import { MdOutlineDashboard } from "react-icons/md";
 import { FaUserGroup } from "react-icons/fa6";
 import { TbDropletHalfFilled } from "react-icons/tb";
@@ -17,7 +15,7 @@ export default function SystemLayout({ children }) {
 
   const navigate = useNavigate();
 
-  const {primeiroNome, isAdmin} = useUser()
+  const {nome, primeiroNome, isAdmin} = useUser()
   const logout = useAuthStore((state) => state.logout);
 
   const handleLogout = () => { 
@@ -35,7 +33,7 @@ export default function SystemLayout({ children }) {
         </div>
 
         <div className={styles.boxUsuario}>
-          <img src={isAdmin ? userAdminAvatar : userAvatar} alt="userFoto" className={styles.fotoUser} />
+          <AvatarComNumero nome={nome} largura="2.6rem" fontSize="0.95rem" />
           <div className={styles.infoUsuario}>
             <p id={styles.statusUsuario}>{isAdmin ? 'Administrador' : 'Doador'}</p>
             <p id={styles.nomeUsuario}>{primeiroNome}</p>

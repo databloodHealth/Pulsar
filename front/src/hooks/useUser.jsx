@@ -9,7 +9,7 @@ export function useUser(){
         usuario,
         nome: usuario?.nome,
         primeiroNome: usuario?.nome.split(' ')[0],
-        egimail: usuario?.email,
+        email: usuario?.email,
         isAdmin: usuario?.tipoUsuario === 'admin',
         isDonnor: usuario?.tipoUsuario === 'doador',
     }

@@ -6,6 +6,7 @@ import ChangePassword from "@/components/User/ChangePassword";
 import { Shield } from 'lucide-react'
 import TwoFactorAuthentication from "@/components/User/TwoFactorAuthentication";
 import PageTitle from "@/components/ui/PageTitle";
+import AvatarComNumero from "@/components/GeradorAvatar";
 import { useUser } from "@/hooks/useUser";
 
 export default function UserProfile() {
@@ -33,9 +34,9 @@ export default function UserProfile() {
                                 <div className={style.doador}>
 
                                     <div>
-                                        <img src="https://i0.wp.com/espaferro.com.br/wp-content/uploads/2024/06/placeholder-2.png?ssl=1" alt="Foto de perfil do usuário"/>
+                                        <AvatarComNumero nome={nome} largura="130px" fontSize="3rem" />
                                         <div>
-                                            <h1 className={style.username}>Otávio Palese</h1>
+                                            <h1 className={style.username}>{nome}</h1>
 
                                             <div>
                                                 <p className={style.tipoSanguineo}>O+</p>
