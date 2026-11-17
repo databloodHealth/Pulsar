@@ -2,11 +2,14 @@ import { useState } from "react";
 import styles from "@/styles/Auth/cadastro.module.css";
 import HeaderAuth from "@/components/ui/HeaderAuth/index";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "@/hooks/useForm";
+import { maskCPF, maskPhone } from "@/utils/masks";
+import { validateCPF, validatePhone, validateEmail} from '@/utils/validators'
 
 export default function Cadastro() {
   const navigate = useNavigate();
   const [err, setErr] = useState("");
-  const [formData, setFormData] = useState({
+  const { formData, handleChange } = useForm({
     nome: "",
     email: "",
     cidade: "",
@@ -15,17 +18,33 @@ export default function Cadastro() {
     cpf: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    setErr("");
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  //   setErr("");
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if(!validateCPF(formData.cpf)){
+    setErr("CPF inválido");
+    return;
+  }
+
+  if(!validatePhone(formData.telefone)){
+    setErr("Telefone inválido");
+    return;
+  }
+
+  if(!validateEmail(formData.email)){
+    setErr("Email inválido");
+    return;
+  }
+  
     navigate("/senha", { state: { cadastro: formData } });
   };
 
@@ -94,8 +113,8 @@ export default function Cadastro() {
                     name="telefone"
                     required
                     placeholder="(00) 0000-0000"
-                    value={formData.telefone}
-                    onChange={handleChange}
+                    value={maskPhone(formData.telefone)}
+                    onChange={(e) => handleChange(e, maskPhone)}
                   />
                 </div>
               </div>
@@ -120,8 +139,8 @@ export default function Cadastro() {
                     name="cpf"
                     required
                     placeholder="000.000.000-00"
-                    value={formData.cpf}
-                    onChange={handleChange}
+                    value={maskCPF(formData.cpf)}
+                    onChange={(e) => handleChange(e, maskCPF)}
                   />
                 </div>
               </div>

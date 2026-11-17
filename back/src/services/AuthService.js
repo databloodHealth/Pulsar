@@ -35,6 +35,18 @@ class AuthService {
 
         const emailNormalizado = email.trim().toLowerCase();
 
+        // Normalizar e validar CPF e telefone
+        const cpfNormalizado = String(cpf).replace(/\D/g, "");
+        const telefoneNormalizado = String(telefone).replace(/\D/g, "");
+
+        if (!/^\d{11}$/.test(cpfNormalizado)) {
+            throw new Error("CPF inválido.");
+        }
+
+        if (!/^\d{10,11}$/.test(telefoneNormalizado)) {
+            throw new Error("Telefone inválido.");
+        }
+
         // 2. Verificar se o e-mail já existe
         const [emailExistente] = await db
             .select()
@@ -49,7 +61,7 @@ class AuthService {
         const [cpfExistente] = await db
             .select()
             .from(doador)
-            .where(eq(doador.cpf, cpf));
+            .where(eq(doador.cpf, cpfNormalizado));
 
         if (cpfExistente) {
             throw new Error("Este CPF já está cadastrado.");
@@ -73,8 +85,8 @@ class AuthService {
 
             await tx.insert(doador).values({
                 usuarioId: novoUsuario.id,
-                cpf,
-                telefone,
+                cpf: cpfNormalizado,
+                telefone: telefoneNormalizado,
                 dataNascimento,
                 cidade,
                 tipoSanguineo: null,
