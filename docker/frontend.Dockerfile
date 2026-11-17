@@ -2,10 +2,10 @@ FROM node:22-alpine AS build
 
 WORKDIR /app
 
-COPY Front/package.json Front/package-lock.json ./
+COPY front/package.json front/package-lock.json ./
 RUN npm ci
 
-COPY Front/ .
+COPY front/ .
 RUN npx vite build
 
 FROM nginx:1.27-alpine

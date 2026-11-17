@@ -1,0 +1,199 @@
+.fundoModal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(20, 29, 43, 0.62);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    animation: animAbrirFundo 0.3s ease both;
+}
+
+.modal {
+    width: 100%;
+    max-width: 40rem;
+    max-height: 95vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.8rem 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    animation: animAbrirModal 0.3s ease both;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.title h1 {
+    color: #303030;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.title h2 {
+    margin-top: 0.3rem;
+    color: #647b92;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.fecharBotao {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #a9c9f5;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.fecharBotao:hover {
+    color: #547eaf;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.campoLargo {
+    grid-column: 1 / -1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo label {
+    color: #647b92;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    min-height: 2.9rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    background: #efeded;
+    color: #3f3f3f;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #8ba6c3;
+    background: #ffffff;
+}
+
+.erro {
+    padding: 0.75rem 0.9rem;
+    border-radius: 4px;
+    background: #fbeceb;
+    color: #b42318;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.botoes {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.cancelarBotao,
+.salvarBotao {
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.cancelarBotao {
+    flex: 0.8;
+    background: #eeebeb;
+    color: #647b92;
+}
+
+.cancelarBotao:hover {
+    background: #e3dfdf;
+}
+
+.salvarBotao {
+    flex: 1.4;
+    background: var(--vermelho-botao);
+    color: #ffffff;
+}
+
+.salvarBotao:hover {
+    background: var(--vermelho-600);
+}
+
+.cancelarBotao:disabled,
+.salvarBotao:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@keyframes animAbrirFundo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animAbrirModal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 560px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding: 1.4rem 1.2rem;
+    }
+}

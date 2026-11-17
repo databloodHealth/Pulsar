@@ -5,4 +5,4 @@
 **/*.log
 **/.env
 **/.env.*
-Back/drizzle
+back/drizzle
