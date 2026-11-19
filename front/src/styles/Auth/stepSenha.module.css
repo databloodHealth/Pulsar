@@ -60,13 +60,13 @@ body {
 
 .container {
   display: flex;
-  width: 50%;
+  width: 60%;
   justify-content: space-between;
 }
 
 .senhaContainer {
-  width: 530px;
-  background: var(--branco);
+  width: 700px;
+  background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.012);
   box-shadow: 10px 20px 40px 0px rgba(0, 0, 0, 0.04);
   padding: 40px 40px 55px 40px;
