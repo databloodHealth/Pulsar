@@ -1,6 +1,6 @@
 # Backend via Docker
 
-O backend deve ser iniciado pelo Docker Compose na raiz do repositório. O Compose inicia o MySQL e o backend, e publica a API somente no loopback da máquina na porta `3333`.
+O backend deve ser iniciado pelo Docker Compose na raiz do repositório. O Compose inicia o MySQL, aplica o schema/seed e publica a API na porta `3333` (`BACKEND_HOST_PORT`).
 
 ```powershell
 docker compose up --build -d backend
@@ -9,12 +9,17 @@ docker compose ps
 
 Espere os serviços `db` e `backend` ficarem saudáveis. Teste a API em `http://localhost:3333/health`; a resposta esperada é `{"status":"ok"}`.
 
-No Insomnia, use `http://localhost:3333` como base URL. Por exemplo:
+No Insomnia, use `http://<ip-do-host>:3333` como base URL (ou `http://localhost:3333` na própria máquina). Pelo frontend, as requisições usam `/api` e são proxyadas pelo nginx. Por exemplo:
 
 - `POST /api/auth/register`
 - `POST /api/auth/login`
 - `PATCH /edit/:id` com `Authorization: Bearer <token>`
 - `GET /api/admin/doadores` com token de administrador
+
+Usuários iniciais criados pelo seed (senhas `admin123` e `doador123`):
+
+- `admin@pulsar.com` (`admin`)
+- `doador@pulsar.com` (`doador`)
 
 Para acompanhar o backend ou pará-lo:
 
