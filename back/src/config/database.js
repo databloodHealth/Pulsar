@@ -4,7 +4,7 @@ import { drizzle } from "drizzle-orm/mysql2";
 import * as schema from "../db/schema.js";
 import * as relations from "../db/relations.js";
 
-const connection = mysql.createPool({
+export const connection = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,

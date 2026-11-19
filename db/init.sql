@@ -36,3 +36,21 @@ CREATE TABLE IF NOT EXISTS `doador` (
   KEY `fk_usuario_id` (`usuario_id`),
   CONSTRAINT `fk_usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT IGNORE INTO `usuario` (`email`, `senha`, `nome`, `tipo_usuario`) VALUES
+  ('admin@pulsar.com', '$2b$10$ALOhUBG2WuK.A2Gv6CgW1eJquqahDAYHZdJDQjYrvLEZLgbYB3XfG', 'Administrador Pulsar', 'admin'),
+  ('doador@pulsar.com', '$2b$10$eNIr72Z/9YqZqe1vfc51kerxJ83qvz/eq3kAC21FvEhBiz.cwJ77y', 'Doador Exemplo', 'doador');
+
+INSERT IGNORE INTO `doador` (`usuario_id`, `cpf`, `telefone`, `data_nascimento`, `cidade`, `tipo_sanguineo`, `peso`, `sexo`)
+SELECT `id`, '12345678900', '11999999999', '1990-05-20', 'São Paulo', 'O+', 72.50, 'masculino'
+FROM `usuario` WHERE `email` = 'doador@pulsar.com';
+
+INSERT IGNORE INTO `estoque` (`tipo_sangue`, `quantidade`, `status_tipos`) VALUES
+  ('A+', 42, 'Estável'),
+  ('A-', 13, 'Moderado'),
+  ('B+', 31, 'Estável'),
+  ('B-', 3, 'Crítico'),
+  ('AB+', 13, 'Moderado'),
+  ('AB-', 4, 'Crítico'),
+  ('O+', 88, 'Estável'),
+  ('O-', 14, 'Moderado');
