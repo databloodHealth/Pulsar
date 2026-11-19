@@ -9,7 +9,7 @@ import {
 }
   from "react-icons/io";
 import { FiMessageCircle } from "react-icons/fi";
-import { MdAddChart } from "react-icons/md";
+import { MdShareLocation } from "react-icons/md";
 import { useState } from "react";
 
 export default function Header() {
@@ -77,13 +77,13 @@ export default function Header() {
                 Contato
               </NavLink>
               <NavLink
-                to="/triagem"
+                to="/ondeDoar"
                 className={({ isActive }) =>
                   `${style.navLinkSide} ${isActive ? style.active : ""}`
                 }
               >
-                <MdAddChart size={22}/>
-                Triagem Online
+                <MdShareLocation  size={22}/>
+                Onde doar
               </NavLink>
             </nav>
 
@@ -144,12 +144,12 @@ export default function Header() {
             Contato
           </NavLink>
           <NavLink
-            to="/triagem"
+            to="/ondeDoar"
             className={({ isActive }) =>
               `${style.navLink} ${isActive ? style.active : ""}`
             }
           >
-            Triagem Online
+            Onde doar
           </NavLink>
         </nav>
         <div className={style.actions}>
