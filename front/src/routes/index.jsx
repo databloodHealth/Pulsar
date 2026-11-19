@@ -12,6 +12,7 @@ import AdminDashboard from "@/pages/System/Admin/AdminDashboard";
 import Campanhas from "@/pages/System/Admin/Campanhas";
 import EstoqueAdmin from "@/pages/System/Admin/Estoque";
 import Contato from "@/pages/Landing/Contato";
+import OndeDoar from "@/pages/Landing/OndeDoar";
 import Doadores from "@/pages/System/Admin/Doadores";
 import Usuarios from "@/pages/System/Admin/Usuarios";
 import Password from "@/pages/Auth/Senha";
@@ -31,6 +32,7 @@ function AppRoutes() {
       <Route path="/admin/campanhas" element={<Campanhas />}/>
       <Route path="/admin/estoque" element={<EstoqueAdmin/>}/>
       <Route path="/contato" element={<Contato/>}/>
+      <Route path="/ondeDoar" element={<OndeDoar/>}/>
       <Route path="/admin/doadores" element={<Doadores/>}></Route>
       <Route path="/admin/usuarios" element={<Usuarios/>}></Route>
       <Route path="/senha" element={<Password />}></Route>

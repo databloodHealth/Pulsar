@@ -1,0 +1,456 @@
+
+.ondeDoarMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 6%;
+    gap: 2rem;
+    background-color: var(--cinza-fundo);
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.introducao .title {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.introducao .title h1 {
+    color: var(--cinza-800);
+    font-size: 2.1rem;
+}
+
+.introducao > p {
+    color: var(--cinza-900);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.conteudoContainer {
+    display: grid;
+    grid-template-columns: minmax(0, 28%) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    gap: 2%;
+    align-items: stretch;
+
+    aspect-ratio: 2.28 / 1;
+}
+
+.painelLocais {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+
+    padding: 1.6rem;
+
+    overflow: hidden;
+
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-borda-escura);
+    border-radius: 5px;
+
+    box-shadow: 0 0 4px 0 var(--sombra-negra);
+}
+
+.localizacaoWrapper {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.localizacaoWrapper select {
+    appearance: none;
+    width: 100%;
+
+    padding: .85rem 2.8rem;
+
+    font-size: .9rem;
+    color: var(--cinza-800);
+
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-borda-escura);
+    border-radius: 4px;
+
+    cursor: pointer;
+    outline: none;
+    transition: background-color .2s, border-color .2s;
+}
+
+.localizacaoWrapper select:focus {
+    border-color: var(--cinza-500);
+    background-color: var(--cinza-50);
+}
+
+.localizacaoIcon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--cinza-600);
+    font-size: 1rem;
+
+    pointer-events: none;
+}
+
+.selectArrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--cinza-600);
+    font-size: .85rem;
+
+    pointer-events: none;
+}
+
+.filtrosContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    flex-shrink: 0;
+}
+
+.filtrosContainer h2,
+.locaisContainer h2 {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--cinza-800);
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+}
+
+.filtros button {
+    padding: .45rem 1rem;
+
+    font-size: .8rem;
+    font-weight: 500;
+
+    color: var(--cinza-600);
+    background-color: var(--branco);
+
+    border: 1px solid var(--cinza-500);
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.filtros button:hover {
+    background-color: var(--cinza-300);
+}
+
+.filtros button.filtroAtivo {
+    background-color: var(--vermelho-500);
+    border-color: var(--vermelho-500);
+    color: var(--cinza-200);
+}
+
+.locaisContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.listaLocais {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+}
+
+.listaLocais::-webkit-scrollbar {
+    display: none;
+}
+
+.localItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: .9rem;
+    padding: 1rem 0.5rem;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--cinza-300);
+    transition: background-color .2s;
+}
+
+.localItem:hover {
+    background-color: var(--cinza-50);
+}
+
+.localIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid var(--cinza-300);
+    border-radius: 50%;
+
+    color: var(--vermelho-500);
+    font-size: 1.05rem;
+}
+
+.localInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: .35rem;
+}
+
+.localInfo h3 {
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--cinza-800);
+}
+
+.categoriaLocal {
+    width: fit-content;
+
+    padding: .15rem .5rem;
+
+    font-size: .65rem;
+    color: var(--cinza-700);
+
+    background-color: var(--cinza-300);
+    border-radius: 20px;
+}
+
+.localInfo p {
+    display: flex;
+    align-items: flex-start;
+    gap: .4rem;
+
+    font-size: .7rem;
+    line-height: 1.4;
+
+    color: var(--cinza-600);
+}
+
+.localInfo p svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.localArrow {
+    flex-shrink: 0;
+    color: var(--cinza-600);
+    font-size: 1rem;
+}
+
+.mapaContainer {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
+
+    background-color: var(--cinza-200);
+    border: 1px solid var(--cinza-borda-escura);
+    border-radius: 5px;
+
+    box-shadow: 0 0 4px 0 var(--sombra-negra);
+}
+
+.mapa {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-color: var(--cinza-200);
+}
+
+.rua {
+    position: absolute;
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-300);
+}
+
+.ruaHorizontal {
+    width: 120%;
+    height: 32px;
+
+    top: 35%;
+    left: -10%;
+
+    transform: rotate(-8deg);
+}
+
+.ruaVertical {
+    width: 30px;
+    height: 120%;
+
+    top: -10%;
+    left: 48%;
+
+    transform: rotate(13deg);
+}
+
+.ruaDiagonal {
+    width: 120%;
+    height: 24px;
+
+    top: 68%;
+    left: -10%;
+
+    transform: rotate(-24deg);
+}
+
+.ruaSecundaria {
+    width: 24px;
+    height: 120%;
+
+    top: -10%;
+    left: 78%;
+
+    transform: rotate(25deg);
+}
+
+.marcadorMapa {
+    position: absolute;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: var(--branco);
+    background-color: var(--vermelho-500);
+
+    border: 2px solid var(--branco);
+    border-radius: 50% 50% 50% 0;
+
+    box-shadow: 0 2px 5px var(--sombra-card);
+
+    transform: translate(-50%, -100%) rotate(-45deg);
+
+    cursor: pointer;
+    transition: background-color .2s, box-shadow .2s;
+}
+
+.marcadorMapa svg {
+    font-size: 17px;
+    transform: rotate(45deg);
+}
+
+.marcadorMapa:hover {
+    background-color: var(--vermelho-600);
+    box-shadow: 0 3px 7px var(--sombra-card);
+}
+
+.mapaLegenda {
+    position: absolute;
+    z-index: 3;
+
+    bottom: 18px;
+    left: 18px;
+
+    padding: .6rem .9rem;
+
+    font-size: .85rem;
+    font-weight: 500;
+
+    color: var(--cinza-800);
+    background-color: var(--branco);
+
+    border-radius: 4px;
+    box-shadow: 0 1px 4px var(--sombra-card);
+}
+
+@media screen and (max-width: 1115px) {
+
+    .ondeDoarMain {
+        padding: 5% 7%;
+        gap: 2rem;
+    }
+
+    .conteudoContainer {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto;
+
+        aspect-ratio: auto;
+        gap: 1.5rem;
+    }
+
+    .painelLocais,
+    .mapaContainer {
+        height: auto;
+        aspect-ratio: 1.59 / 1;
+    }
+
+    .introducao .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .introducao > p {
+        font-size: .9rem;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .painelLocais {
+        padding: 1.2rem;
+        gap: 1.2rem;
+    }
+
+    .painelLocais,
+    .mapaContainer {
+        aspect-ratio: 1 / 1;
+    }
+
+    .introducao .title h1 {
+        font-size: 1.4rem;
+    }
+
+    .filtros {
+        gap: .4rem;
+    }
+
+    .filtros button {
+        padding: .4rem .7rem;
+        font-size: .7rem;
+    }
+
+    .localInfo h3 {
+        font-size: .78rem;
+    }
+
+    .localInfo p {
+        font-size: .65rem;
+    }
+
+}
